@@ -766,17 +766,35 @@ async function rawSearch(kind, query, sp) {
   }
 }
 
+// singer channel: the singer's name as whole word(s), little else (bilingual official names are fine, e.g.
+// "محمد عبده | Mohammed Abdu"), and nothing that marks a news / TV / fan / lyrics channel
+const NOT_ARTIST =
+  /قناة|الفضائية|أخبار|اخبار|news|\btv\b|fan|محبي|عشاق|كليبات|اغاني|أغاني|lyrics|كاريوكي|karaoke|film|drama|دراما|مسلسل/i;
+const spaced = (s) =>
+  String(s || '')
+    .toLowerCase()
+    .replace(/[أإآ]/g, 'ا')
+    .replace(/ة/g, 'ه')
+    .replace(/ى/g, 'ي')
+    .replace(/[^\p{L}\p{N}]+/gu, ' ')
+    .trim();
+
+function isArtistChannel(title, name) {
+  const T = ` ${spaced(title)} `;
+  const N = ` ${spaced(name)} `;
+  if (!T.includes(N) || NOT_ARTIST.test(title)) return false;
+  return T.replace(N, ' ').trim().length <= 30;
+}
 async function resolveArtist(kind, name) {
-  const ids = read('artistIds', {});
+  const ids = read('artistIds2', {}); // v2: stricter matching (v1 matched e.g. a news channel for "بلقيس")
   const hit = ids[name];
   if (hit && Date.now() - hit.at < 30 * 86400e3)
     return hit.id ? { channelId: hit.id, name } : null;
-  const want = norm(name);
   const ch = (await rawSearch(kind, name, SP_CHANNEL)).find(
-    (c) => c.type === 'channel' && norm(c.title).includes(want)
+    (c) => c.type === 'channel' && isArtistChannel(c.title, name)
   );
   ids[name] = { id: ch?.id || '', at: Date.now() };
-  write('artistIds', ids);
+  write('artistIds2', ids);
   return ch ? { channelId: ch.id, name } : null;
 }
 
@@ -867,12 +885,12 @@ export async function music(which, fresh) {
     if (hit) return hit.map((i) => ({ ...i, age: itemAge(i) }));
   }
   const known = () => {
-    const ids = read('artistIds', {});
+    const ids = read('artistIds2', {});
     return cfg.artists
       .map((n) => (ids[n]?.id ? { channelId: ids[n].id, name: n } : null))
       .filter(Boolean);
   };
-  const ids0 = read('artistIds', {});
+  const ids0 = read('artistIds2', {});
   const unresolved = cfg.artists.filter(
     (n) => !ids0[n] || Date.now() - ids0[n].at > 30 * 86400e3
   );
