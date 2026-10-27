@@ -132,16 +132,17 @@ const say = (s) => {
       `PAGE ${id}: first cards after ${shown < 0 ? 'never' : shown + ' ms'}, searches ${searches - before}`
     );
   };
-  // a channel page: how YouTube's TV app shows a channel (to sort its videos newest first)
+  for (const id of ['FEytlg_trendWorld', 'FEytlg_exploreEgypt', 'FEytlg_travelNew', 'FEytlg_musicEgypt', 'FEytlg_trendMusic'])
+    await open(id, 30000, 'p-' + id);
   await p.evaluate(() => { location.hash = '#/browse?c=UCX6OQ3DkcsbYNE6H8uQQuVA'; });
   await p.waitForTimeout(12000);
+  await p.keyboard.press('ArrowDown');
+  await p.waitForTimeout(2500);
   await p.screenshot({ path: `${OUT}/c1-channel.png` });
-  for (let i = 0; i < 4; i++) {
-    await p.keyboard.press('ArrowDown');
-    await p.waitForTimeout(3000);
-    await p.screenshot({ path: `${OUT}/c2-down-${i}.png` });
-  }
-  say('channel hash: ' + (await p.evaluate(() => location.hash)));
+  const rows = await p.evaluate(() =>
+    [...document.querySelectorAll('ytlr-shelf-renderer, [class*="shelf"]')].slice(0, 6).map((e) => (e.innerText || '').replace(/\s+/g, ' ').slice(0, 160))
+  );
+  say('channel rows: ' + JSON.stringify(rows, null, 1));
   fs.writeFileSync(`${OUT}/log.txt`, log.join('\n'));
   await b.close();
 })();
