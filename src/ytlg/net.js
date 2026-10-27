@@ -46,13 +46,22 @@ function remember(body, hdrs) {
   }
 }
 
-async function build(id, j) {
-  try {
-    return await pages.get(id)(j);
-  } catch (e) {
-    console.warn('[ytlg] page failed', id, e);
-    return errorPage(e?.message || String(e));
-  }
+const inflight = new Map(); // browseId -> promise: the TV app may ask again while a page is still being built
+
+function build(id, j) {
+  if (inflight.has(id)) return inflight.get(id);
+  const p = (async () => {
+    try {
+      return await pages.get(id)(j);
+    } catch (e) {
+      console.warn('[ytlg] page failed', id, e);
+      return errorPage(e?.message || String(e));
+    } finally {
+      setTimeout(() => inflight.delete(id), 0);
+    }
+  })();
+  inflight.set(id, p);
+  return p;
 }
 
 const isOurPage = (url, j) =>

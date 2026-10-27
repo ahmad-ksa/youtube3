@@ -40,6 +40,7 @@ const say = (s) => {
   }
   const p = await ctx.newPage();
   let n = 0;
+  let searches = 0;
   p.on('console', (m) => {
     if (!/WebGL|adapters/.test(m.text()))
       say(`  [${m.type()}] ${m.text().slice(0, 300)}`);
@@ -49,6 +50,10 @@ const say = (s) => {
     const u = r.url();
     const m = u.match(/youtubei\/v1\/(\w+)/);
     if (!m) return;
+    if (m[1] === 'search') {
+      searches++;
+      return;
+    }
     try {
       const body = await r.text();
       let req = null;
@@ -103,17 +108,38 @@ const say = (s) => {
   await p.waitForTimeout(1500);
   await p.screenshot({ path: `${OUT}/3-menu.png` });
   // our pages, opened the way the app opens a page
-  for (const id of [
-    'FEytlg_exploreArab',
-    'FEytlg_trendWorld',
-    'FEytlg_musicArab'
-  ]) {
+  const open = async (id, wait, shot) => {
+    const before = searches;
+    const t0 = Date.now();
     await p.evaluate((x) => {
       location.hash = '#/browse?c=' + x;
     }, id);
-    await p.waitForTimeout(id === 'FEytlg_musicArab' ? 45000 : 25000);
-    await p.screenshot({ path: `${OUT}/4-${id}.png` });
-  }
+    // wait until a card shows (or the time is up)
+    let shown = -1;
+    while (Date.now() - t0 < wait) {
+      await p.waitForTimeout(500);
+      const n = await p.evaluate(
+        () =>
+          document.querySelectorAll(
+            'ytlr-tile-renderer, [class*="lockup"], ytlr-lockup-view-model'
+          ).length
+      );
+      if (n > 0 && shown < 0) shown = Date.now() - t0;
+      if (shown >= 0 && Date.now() - t0 > shown + 2500) break;
+    }
+    await p.screenshot({ path: `${OUT}/${shot}.png` });
+    say(
+      `PAGE ${id}: first cards after ${shown < 0 ? 'never' : shown + ' ms'}, searches ${searches - before}`
+    );
+  };
+  await open('FEytlg_exploreArab', 30000, '4-exploreArab');
+  await open('FEytlg_trendWorld', 30000, '4-trendWorld');
+  await open('FEytlg_musicArab', 30000, '4-musicArab-first');
+  await p.evaluate(() => {
+    location.hash = '#/';
+  });
+  await p.waitForTimeout(70000); // background: remaining singers + albums
+  await open('FEytlg_musicArab', 30000, '5-musicArab-second');
   const hooks = await p.evaluate(() => ({
     yttv:
       typeof window._yttv === 'object' ? Object.keys(window._yttv).length : 0,

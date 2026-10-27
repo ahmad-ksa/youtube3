@@ -842,22 +842,70 @@ const MUSIC = {
 };
 
 /** الموسيقى العربية / الأجنبية: newest song + newest album of each singer, one list newest first. */
-export function music(which, fresh) {
+const sleep = (ms) => new Promise((ok) => setTimeout(ok, ms));
+const busy = {};
+
+/** an album already in the 12 h cache (no request); undefined when not looked up yet */
+function cachedAlbum(c) {
+  const hit = cached('album.' + c.channelId, 12 * 3600e3);
+  if (hit === null) return undefined;
+  if (!hit) return null;
+  const age = itemAge(hit);
+  return { ...hit, age, meta: `ألبوم • ${relTime(age)}` };
+}
+
+/**
+ * الموسيقى العربية / الأجنبية: newest song + newest album of each singer, one list newest first.
+ * Answers within ~8 s: singers whose channel is already known, their songs (RSS) and the albums already
+ * cached. Unknown singers and missing albums are looked up quietly in the background (paced), so the page
+ * fills in on the next open instead of making the TV wait (it re-asks for a page that takes too long).
+ */
+export async function music(which, fresh) {
   const cfg = MUSIC[which];
-  return cachedList(
-    'music.' + which,
-    async () => {
-      const singers = (
-        await pool(cfg.artists, 2, (n) => resolveArtist(cfg.kind, n))
-      ).filter(Boolean);
-      const [songs, albums] = await Promise.all([
-        pool(singers, 6, newestSong),
-        pool(singers, 2, (c) => newestAlbum(cfg.kind, c, cfg.word))
-      ]);
-      const out = [...songs, ...albums].filter(Boolean);
-      out.sort((a, b) => a.age - b.age);
-      return out;
-    },
-    fresh
+  if (!fresh) {
+    const hit = cached('list.music.' + which, 30 * 60e3);
+    if (hit) return hit.map((i) => ({ ...i, age: itemAge(i) }));
+  }
+  const known = () => {
+    const ids = read('artistIds', {});
+    return cfg.artists
+      .map((n) => (ids[n]?.id ? { channelId: ids[n].id, name: n } : null))
+      .filter(Boolean);
+  };
+  const ids0 = read('artistIds', {});
+  const unresolved = cfg.artists.filter(
+    (n) => !ids0[n] || Date.now() - ids0[n].at > 30 * 86400e3
   );
+  const resolving = pool(unresolved, 2, (n) => resolveArtist(cfg.kind, n));
+  await Promise.race([resolving, sleep(8000)]);
+  const singers = known();
+  const songs = await pool(singers, 6, (c) => newestSong(c).catch(() => null));
+  const albums = singers.map(cachedAlbum);
+  const missing = singers.filter((c, i) => albums[i] === undefined);
+  const out = [...songs, ...albums].filter(Boolean);
+  out.sort((a, b) => a.age - b.age);
+  const complete =
+    !missing.length &&
+    singers.length === known().length &&
+    (await Promise.race([
+      resolving.then(() => true),
+      sleep(0).then(() => false)
+    ]));
+  if (complete) cache('list.music.' + which, out);
+  else if (!busy[which]) {
+    busy[which] = true;
+    resolving
+      .then(() =>
+        pool(
+          known().filter((c) => cachedAlbum(c) === undefined),
+          2,
+          (c) => newestAlbum(cfg.kind, c, cfg.word)
+        )
+      )
+      .catch(() => {})
+      .finally(() => {
+        busy[which] = false;
+      });
+  }
+  return out;
 }
