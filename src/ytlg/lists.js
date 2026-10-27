@@ -482,7 +482,7 @@ const NON_WEST_SCRIPT =
   /[\u0590-\u08FF\u0900-\u0DFF\u0E00-\u0EFF\u1000-\u109F\u1780-\u17FF\u3040-\u30FF\u3400-\u4DBF\u4E00-\u9FFF]/;
 const VIETNAMESE = /[ăđơưạảấầẩẫậắằẳẵặẹẻẽếềểễệỉịọỏốồổỗộớờởỡợụủứừửữựỳỵỷỹ]/i;
 const NON_WEST_WORDS =
-  /\b(indonesia|indonesian|jakarta|malaysia|malay|vietnam|viet|thailand|thai|cambodia|myanmar|lagu|terbaru|sinetron|dangdut|resmi|bahasa|nigeria|nigerian|naija|afrobeats?|ghana|kenya|amapiano|china|chinese|japan|japanese|anime)\b/i;
+  /\b(indonesia|indonesian|jakarta|malaysia|malay|vietnam|viet|thailand|thai|cambodia|myanmar|lagu|terbaru|sinetron|dangdut|resmi|bahasa|nigeria|nigerian|naija|afrobeats?|ghana|kenya|amapiano|china|chinese|japan|japanese|anime|pptv|thairath|workpoint|one31|gmmtv|vtv|abp|aaj tak|ndtv|zee|sony sab|colors tv|star plus)\b/i;
 // romanized Hindi / Urdu / Tagalog / Indonesian words, Indian and Pakistani surnames and big South-Asian labels
 const ROMANIZED_SOUTH =
   /\b(hai|hain|tum|tera|teri|mera|meri|mujhe|tujhe|pyar|pyaar|ishq|zindagi|sanam|yaar|bhai|bhaiya|nahi|nahin|kya|kaise|gaana|gana|bhajan|shayari|naat|qawwali|ghazal|singh|kaur|sharma|verma|gupta|yadav|reddy|chauhan|thakur|mishra|pandey|tiwari|arijit|kakkar|badshah|diljit|t-series|tseries|saregama|zee music|yrf|shemaroo|goldmines|aditya music|lahari|desi music|speed records|ary digital|har pal geo|hum tv|mga|naman|talaga|kasi|yang|untuk|dengan|nggak|banget|kocak)\b/i;
