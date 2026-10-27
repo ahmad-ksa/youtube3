@@ -148,10 +148,13 @@ const say = (s) => {
   });
   fs.writeFileSync(`${OUT}/player-component.json`, JSON.stringify(comp, null, 1));
   say('player component (before video): ' + comp.map((c) => c.k + ' len ' + c.len + ' wrapped ' + c.wrapped).join(', '));
-  await p.keyboard.press('Escape');
-  await p.waitForTimeout(1500);
-  await p.screenshot({ path: `${OUT}/5-home.png` });
-  await p.keyboard.press('Enter'); // first video on the home page
+  await p.evaluate(() => { location.hash = '#/browse?c=FEytlg_trendWorld'; });
+  await p.waitForTimeout(25000);
+  await p.screenshot({ path: `${OUT}/5-page.png` });
+  await p.keyboard.press('ArrowLeft'); // RTL: from the side menu into the cards
+  await p.waitForTimeout(1000);
+  await p.screenshot({ path: `${OUT}/5-page-focus.png` });
+  await p.keyboard.press('Enter'); // play the focused video
   await p.waitForTimeout(15000);
   await p.screenshot({ path: `${OUT}/6-player.png` });
   for (const [i, k] of ['Enter', 'ArrowDown', 'ArrowDown', 'ArrowDown'].entries()) {
