@@ -180,7 +180,6 @@ const WORLD_TREND = [
   'reaction',
   'interview',
   'documentary',
-  'anime',
   'clip officiel',
   'canción',
   'клип',
@@ -201,7 +200,6 @@ const MUSIC_TREND = [
   'hip hop',
   'rap song',
   'reggaeton',
-  'afrobeats',
   'rock song',
   'EDM',
   'country song',
@@ -210,8 +208,6 @@ const MUSIC_TREND = [
   'клип',
   'фит',
   'Musikvideo',
-  'فيديو كليب',
-  'أغنية',
   '뮤직비디오',
   'live performance'
 ];
@@ -359,6 +355,93 @@ const GULF_TREND = [
   'كليب خليجي'
 ];
 const GULF_SESSIONS = ['gl:SA', 'gl:AE', 'gl:KW', 'gl:QA', 'gl:BH', 'gl:OM'];
+// world trending / world songs: searched as viewers in Europe, the Americas and Korea (English interface)
+const WEST_SESSIONS = [
+  'w:US',
+  'w:GB',
+  'w:CA',
+  'w:DE',
+  'w:FR',
+  'w:ES',
+  'w:IT',
+  'w:NL',
+  'w:BR',
+  'w:MX',
+  'w:KR'
+];
+
+// Egypt: cities, football, food, cinema / series, daily life
+const EGYPT_EXPLORE = [
+  'مصر',
+  'القاهرة',
+  'الإسكندرية',
+  'الأقصر',
+  'أسوان',
+  'الغردقة',
+  'شرم الشيخ',
+  'الصعيد',
+  'أكل مصري',
+  'أكل شارع مصري',
+  'مطبخ مصري',
+  'فلوق مصري',
+  'يوميات مصرية',
+  'الدوري المصري',
+  'الأهلي',
+  'الزمالك',
+  'مسلسل مصري',
+  'فيلم مصري',
+  'برنامج مصري',
+  'كوميديا مصرية',
+  'سوالف مصرية',
+  'مقلب مصري',
+  'ستاند اب مصري',
+  'وسط البلد',
+  'خان الخليلي',
+  'النيل',
+  'الأهرامات',
+  'سيارات مصر',
+  'أسعار مصر',
+  'تجربة مطعم مصري'
+];
+
+// travel: the newest Arabic travel videos (trips, tours, hotels, places)
+const TRAVEL = [
+  'سياحة',
+  'رحلة',
+  'رحلتي إلى',
+  'جولة في',
+  'فلوق سفر',
+  'السفر',
+  'أماكن سياحية',
+  'تجربة فندق',
+  'منتجع',
+  'سياحة في تركيا',
+  'سياحة في أوروبا',
+  'سياحة في السعودية',
+  'سياحة في مصر',
+  'سياحة في دبي',
+  'سياحة في جورجيا',
+  'سياحة في أذربيجان',
+  'سياحة في ماليزيا',
+  'سياحة في إندونيسيا',
+  'سياحة في تايلند',
+  'سياحة في المالديف',
+  'سياحة في سويسرا',
+  'سياحة في إيطاليا',
+  'سياحة في إسبانيا',
+  'سياحة في لندن',
+  'سياحة في باريس',
+  'سياحة في اليابان',
+  'سياحة في كوريا',
+  'سياحة في أمريكا',
+  'العلا',
+  'أبها',
+  'رحلة برية',
+  'كشتة',
+  'تخييم',
+  'رحلة بحرية',
+  'طيران تجربة'
+];
 
 // whole-word place / nationality markers (with or without "ال", and nisba endings: سعودي، سعودية، سعوديين…)
 const W = (words) =>
@@ -377,6 +460,13 @@ const NON_GULF = W(
   'مصر|قاهرة|قاهره|إسكندرية|اسكندرية|مغرب|جزائر|تونس|ليبيا|ليب|عراق|بغداد|سوريا|سوري|شام|دمشق|حلب|لبنان|بيروت|أردن|اردن|فلسطين|غزة|غزه|سودان|يمن|صنعاء|موريتاني|صومال'
 );
 
+const EGYPT_MARK = W(
+  'مصر|قاهرة|قاهره|إسكندرية|اسكندرية|اسكندريه|جيزة|جيزه|أقصر|اقصر|أسوان|اسوان|صعيد|غردقة|غردقه|شرم الشيخ|بورسعيد|منصورة|منصوره|طنطا|زقازيق|زمالك|بيراميدز|إسماعيلي|اسماعيلي|نيل|أهرامات|اهرامات|خليلي|مصرى'
+);
+const NON_EGYPT = W(
+  'سعود|رياض|جدة|جده|دمام|مكة|مكه|أبها|ابها|قصيم|حائل|تبوك|نجد|حجاز|روشن|كويت|قطر|إمارات|امارات|دبي|أبوظبي|ابوظبي|بحرين|سلطنة عمان|عماني|مسقط|مغرب|جزائر|تونس|ليبيا|عراق|بغداد|سوريا|شام|دمشق|لبنان|بيروت|أردن|اردن|فلسطين|غزة|غزه|يمن|صنعاء|خليج'
+);
+
 // ---------------------------------------------------------------- filters
 
 const ARABIC = /[؀-ۿ]/;
@@ -385,24 +475,47 @@ const URDU_PERSIAN = /[ٹڈڑںھہےیکگپچژ]/;
 // Indic scripts, Tagalog/Filipino and South-Asian markers (for "Explore the World")
 const SOUTH_ASIA_SCRIPT = /[ऀ-෿]/; // Devanagari, Bengali, Gurmukhi, Gujarati, Oriya, Tamil, Telugu, Kannada, Malayalam, Sinhala
 const SOUTH_ASIA_WORDS =
-  /\b(hindi|bollywood|tamil|telugu|punjabi|bhojpuri|marathi|kannada|malayalam|bangla|bengali|urdu|desi|india|indian|pakistan|pakistani|lahore|karachi|mumbai|delhi|pinoy|filipino|filipina|tagalog|philippines|manila|ofw|kapuso|kapamilya)\b/i;
+  /\b(hindi|bollywood|tollywood|tamil|telugu|punjabi|bhojpuri|marathi|kannada|malayalam|bangla|bengali|bangladesh|urdu|desi|india|indian|pakistan|pakistani|lahore|karachi|islamabad|mumbai|delhi|hyderabad|kolkata|nepal|nepali|sri lanka|pinoy|filipino|filipina|tagalog|philippines|manila|ofw|kapuso|kapamilya|teleserye|abs-cbn|gma)\b/i;
+// "world" lists are Europe, the Americas and Korea only: no other scripts (Hebrew, Arabic, Indic, Thai, Lao,
+// Myanmar, Khmer, Japanese kana, Chinese), no Vietnamese, and no South / South-East Asian or African markers
+const NON_WEST_SCRIPT =
+  /[\u0590-\u08FF\u0900-\u0DFF\u0E00-\u0EFF\u1000-\u109F\u1780-\u17FF\u3040-\u30FF\u3400-\u4DBF\u4E00-\u9FFF]/;
+const VIETNAMESE = /[ăđơưạảấầẩẫậắằẳẵặẹẻẽếềểễệỉịọỏốồổỗộớờởỡợụủứừửữựỳỵỷỹ]/i;
+const NON_WEST_WORDS =
+  /\b(indonesia|indonesian|jakarta|malaysia|malay|vietnam|viet|thailand|thai|cambodia|myanmar|lagu|terbaru|sinetron|dangdut|resmi|bahasa|nigeria|nigerian|naija|afrobeats?|ghana|kenya|amapiano|china|chinese|japan|japanese|anime)\b/i;
+// romanized Hindi / Urdu / Tagalog / Indonesian words, Indian and Pakistani surnames and big South-Asian labels
+const ROMANIZED_SOUTH =
+  /\b(hai|hain|tum|tera|teri|mera|meri|mujhe|tujhe|pyar|pyaar|ishq|zindagi|sanam|yaar|bhai|bhaiya|nahi|nahin|kya|kaise|gaana|gana|bhajan|shayari|naat|qawwali|ghazal|singh|kaur|sharma|verma|gupta|yadav|reddy|chauhan|thakur|mishra|pandey|tiwari|arijit|kakkar|badshah|diljit|t-series|tseries|saregama|zee music|yrf|shemaroo|goldmines|aditya music|lahari|desi music|speed records|ary digital|har pal geo|hum tv|mga|naman|talaga|kasi|yang|untuk|dengan|nggak|banget|kocak)\b/i;
+const isWest = (it) => {
+  const t = `${it.title} ${it.sub}`;
+  return (
+    !ARABIC.test(t) &&
+    !NON_WEST_SCRIPT.test(t) &&
+    !VIETNAMESE.test(t) &&
+    !SOUTH_ASIA_WORDS.test(t) &&
+    !ROMANIZED_SOUTH.test(t) &&
+    !NON_WEST_WORDS.test(t)
+  );
+};
 // sexual / adult content (titles or channel names), several languages; Restricted Mode is the main filter
 const ADULT =
   /\b(sex|sexy|porn|nsfw|nude|naked|erotic|onlyfans|18\+|xxx|hot girl|bikini try|lingerie|strip|секс|эрот|порно|섹시|노출|야한)\b|سكس|إباح|اباح|عاري|جنس|مثيرة?\s|بدون ملابس/i;
 
 export const isAdult = (it) => ADULT.test(`${it.title} ${it.sub}`);
 const RULES = {
-  world: (it) =>
-    !isAdult(it) &&
-    !ARABIC.test(it.title) &&
-    !SOUTH_ASIA_SCRIPT.test(`${it.title} ${it.sub}`) &&
-    !SOUTH_ASIA_WORDS.test(`${it.title} ${it.sub}`),
+  world: (it) => !isAdult(it) && isWest(it),
   arab: (it) =>
     !isAdult(it) &&
     ARABIC.test(it.title) &&
     !URDU_PERSIAN.test(it.title) &&
     !SOUTH_ASIA_SCRIPT.test(it.title),
-  worldTrend: (it) => !isAdult(it),
+  worldTrend: (it) => !isAdult(it) && isWest(it),
+  // Egypt: Arabic; kept when it names Egypt, dropped when it points to another Arab country
+  egypt: (it) => {
+    if (!RULES.arab(it)) return false;
+    const t = `${it.title} ${it.sub}`;
+    return EGYPT_MARK.test(t) || !NON_EGYPT.test(t);
+  },
   // Saudi lists: Arabic; kept when it names Saudi places / clubs, dropped when it points to another country
   saudi: (it) => {
     if (!RULES.arab(it)) return false;
@@ -422,6 +535,7 @@ const RULES = {
 /** kind -> request overrides: region + language of the search, Restricted Mode always on */
 function regionOf(kind) {
   if (kind === 'world') return { gl: 'US', hl: 'en', safe: true };
+  if (kind.startsWith('w:')) return { gl: kind.slice(2), hl: 'en', safe: true };
   if (kind.startsWith('gl:'))
     return { gl: kind.slice(3), hl: 'ar', safe: true };
   return { gl: 'SA', hl: 'ar', safe: true };
@@ -572,11 +686,36 @@ export const LISTS = {
         excludePersonal: true
       })
   },
+  exploreEgypt: {
+    title: 'استكشف مصر',
+    make: () =>
+      feed({
+        kind: 'gl:EG',
+        queries: EGYPT_EXPLORE,
+        perQuery: 6,
+        sort: 'relevance',
+        perChannel: 1,
+        rule: RULES.egypt,
+        excludePersonal: true
+      })
+  },
+  travelNew: {
+    title: 'جديد السياحة',
+    make: () =>
+      feed({
+        kind: 'arab',
+        queries: TRAVEL,
+        perQuery: 8,
+        sort: 'relevance',
+        perChannel: 1,
+        rule: RULES.arab
+      })
+  },
   trendWorld: {
     title: 'تريند العالم',
     make: () =>
       feed({
-        kind: 'world',
+        kind: WEST_SESSIONS,
         queries: WORLD_TREND,
         perQuery: 8,
         sort: 'views',
@@ -624,7 +763,7 @@ export const LISTS = {
     title: 'تريند الأغاني العالمي',
     make: () =>
       feed({
-        kind: 'world',
+        kind: WEST_SESSIONS,
         queries: MUSIC_TREND,
         perQuery: 8,
         sort: 'views',
@@ -703,6 +842,33 @@ const ARAB_ARTISTS = [
   'سعد لمجرد',
   'حاتم عمور',
   'الشاب خالد'
+];
+const EGYPT_ARTISTS = [
+  'عمرو دياب',
+  'تامر حسني',
+  'محمد حماقي',
+  'شيرين عبد الوهاب',
+  'أنغام',
+  'أحمد سعد',
+  'محمد منير',
+  'ويجز',
+  'مروان موسى',
+  'مروان بابلو',
+  'رامي صبري',
+  'رامي جمال',
+  'بهاء سلطان',
+  'حمزة نمرة',
+  'محمود العسيلي',
+  'آمال ماهر',
+  'روبي',
+  'كارمن سليمان',
+  'مصطفى قمر',
+  'محمد فؤاد',
+  'هاني شاكر',
+  'كايروكي',
+  'محمد رمضان',
+  'أحمد كامل',
+  'تامر عاشور'
 ];
 const WORLD_ARTISTS = [
   'Taylor Swift',
@@ -856,7 +1022,8 @@ async function newestAlbum(kind, c, word) {
 
 const MUSIC = {
   arab: { kind: 'arab', artists: ARAB_ARTISTS, word: 'ألبوم' },
-  world: { kind: 'world', artists: WORLD_ARTISTS, word: 'album' }
+  world: { kind: 'world', artists: WORLD_ARTISTS, word: 'album' },
+  egypt: { kind: 'gl:EG', artists: EGYPT_ARTISTS, word: 'ألبوم' }
 };
 
 /** الموسيقى العربية / الأجنبية: newest song + newest album of each singer, one list newest first. */
