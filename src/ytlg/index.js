@@ -8,6 +8,7 @@ import { datedPage } from './render.js';
 import { LISTS, list, favoritesList, newList, music } from './lists.js';
 import { favorites, history } from './util.js';
 import { ResolveCommandRegistry } from '../app_api';
+import { installPlayerButton } from './playerButton.js';
 
 const isFav = (id) => favorites.has(id);
 
@@ -159,12 +160,27 @@ function addFavItems(o, depth = 0) {
   }
 }
 
+// the playing video's channel (for the ❤ button in YouTube's player bar)
+const channelOf = new Map(); // videoId -> { channelId, name }
+let lastVideo = '';
+function currentChannel() {
+  const v = (location.hash.match(/[?&]v=([\w-]{11})/) || [])[1] || lastVideo;
+  return channelOf.get(v) || null;
+}
+
 JSON.parse = function (...args) {
   const r = origParse.apply(this, args);
   try {
     if (r && typeof r === 'object') {
       if (r.items?.[0]?.guideSectionRenderer) addGuide(r);
       const d = r.videoDetails;
+      if (d?.videoId && d.channelId) {
+        channelOf.set(d.videoId, {
+          channelId: d.channelId,
+          name: d.author || ''
+        });
+        lastVideo = d.videoId;
+      }
       if (d?.videoId && d.channelId)
         history.add({
           id: d.videoId,
@@ -184,7 +200,16 @@ JSON.parse = function (...args) {
 // ---------------------------------------------------------------- our commands (from the card menus)
 ResolveCommandRegistry.getInstance().then((reg) => {
   reg.setHook('ytlgCommand', (_orig, payload) => {
-    const c = /** @type {any} */ (payload).ytlgCommand || {};
+    let c = /** @type {any} */ (payload).ytlgCommand || {};
+    if (c.action === 'favoriteCurrent') {
+      const ch = currentChannel();
+      if (!ch) {
+        toast('تعذّر معرفة قناة هذا الفيديو');
+        return undefined;
+      }
+      // a copy: the button keeps the same command object for every press
+      c = { action: 'favorite', channelId: ch.channelId, name: ch.name };
+    }
     if (c.action === 'favorite' && c.channelId) {
       const on = favorites.toggle(c.channelId, c.name);
       toast(
@@ -197,5 +222,7 @@ ResolveCommandRegistry.getInstance().then((reg) => {
     return undefined;
   });
 });
+
+installPlayerButton(currentChannel, (id) => favorites.has(id));
 
 console.info('[ytlg] features loaded:', PAGES.length, 'pages');
