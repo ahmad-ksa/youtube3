@@ -2,6 +2,7 @@
 // - extra entries in its side menu (guide) that open our pages;
 // - those pages are answered locally (net.js) in YouTube's own page format (render.js);
 // - "❤ add channel to favourites" in the long-press menu of every video card;
+// - channel pages: uploads row first, every row newest -> oldest;
 // - the channel of every played video is remembered (for "الجديد" and to keep Explore free of your channels).
 import { definePage } from './net.js';
 import { datedPage } from './render.js';
@@ -9,6 +10,7 @@ import { LISTS, list, favoritesList, newList, music } from './lists.js';
 import { favorites, history } from './util.js';
 import { ResolveCommandRegistry } from '../app_api';
 import { installPlayerButton } from './playerButton.js';
+import { sortChannelPage } from './channelSort.js';
 
 const isFav = (id) => favorites.has(id);
 
@@ -45,6 +47,8 @@ const PAGES = [
   ['exploreArab', 'استكشف العرب', 'EXPLORE', null],
   ['exploreSaudi', 'استكشف السعودية', 'EXPLORE', null],
   ['exploreGulf', 'استكشف الخليج', 'EXPLORE', null],
+  ['exploreEgypt', 'استكشف مصر', 'EXPLORE', null],
+  ['travelNew', 'جديد السياحة', 'EXPLORE', null],
   ['trendWorld', 'تريند العالم', 'TRENDING', null],
   ['trendArab', 'الترند العربي', 'TRENDING', null],
   ['trendSaudi', 'الترند السعودي', 'TRENDING', null],
@@ -54,6 +58,13 @@ const PAGES = [
     'الموسيقى العربية',
     'YOUTUBE_MUSIC',
     async () => datedPage('الموسيقى العربية', await music('arab'), isFav)
+  ],
+  [
+    'musicEgypt',
+    'الأغاني المصرية الجديدة',
+    'YOUTUBE_MUSIC',
+    async () =>
+      datedPage('الأغاني المصرية الجديدة', await music('egypt'), isFav)
   ],
   [
     'musicWorld',
@@ -188,6 +199,7 @@ JSON.parse = function (...args) {
           sub: d.author,
           channelId: d.channelId
         });
+      if (r.contents?.tvBrowseRenderer) sortChannelPage(r);
       if (r.contents || r.onResponseReceivedActions || r.continuationContents)
         addFavItems(r);
     }
