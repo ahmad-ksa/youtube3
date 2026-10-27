@@ -15,6 +15,11 @@ const say = (s) => {
 };
 
 (async () => {
+  process.on('unhandledRejection', (e) => {
+    say('FATAL ' + ((e && e.stack) || e));
+    fs.writeFileSync(`${OUT}/log.txt`, log.join('\n'));
+    process.exit(1);
+  });
   const b = await chromium.launch({
     channel: process.env.CHANNEL || undefined,
     args: ['--autoplay-policy=no-user-gesture-required']
