@@ -132,43 +132,16 @@ const say = (s) => {
       `PAGE ${id}: first cards after ${shown < 0 ? 'never' : shown + ' ms'}, searches ${searches - before}`
     );
   };
-  // the player bar: the component our ❤ button patches, then a real video from the home page
-  const comp = await p.evaluate(() => {
-    const yt = window._yttv || {};
-    const out = [];
-    for (const k of Object.keys(yt)) {
-      let src = '';
-      try { src = typeof yt[k] === 'function' ? Function.prototype.toString.call(yt[k]) : ''; } catch { /* */ }
-      if (src.includes('TRANSPORT_CONTROLS_BUTTON_TYPE_FEATURED_ACTION')) {
-        const i = src.indexOf('engagementActions');
-        out.push({ k, len: src.length, wrapped: !!yt[k].__ytlg, around: src.slice(Math.max(0, i - 400), i + 300) });
-      }
-    }
-    return out;
-  });
-  fs.writeFileSync(`${OUT}/player-component.json`, JSON.stringify(comp, null, 1));
-  say('player component (before video): ' + comp.map((c) => c.k + ' len ' + c.len + ' wrapped ' + c.wrapped).join(', '));
-  await p.evaluate(() => { location.hash = '#/browse?c=FEytlg_trendWorld'; });
-  await p.waitForTimeout(25000);
-  await p.screenshot({ path: `${OUT}/5-page.png` });
-  await p.keyboard.press('ArrowLeft'); // RTL: from the side menu into the cards
-  await p.waitForTimeout(1000);
-  await p.screenshot({ path: `${OUT}/5-page-focus.png` });
-  await p.keyboard.press('Enter'); // play the focused video
-  await p.waitForTimeout(15000);
-  await p.screenshot({ path: `${OUT}/6-player.png` });
-  for (const [i, k] of ['Enter', 'ArrowDown', 'ArrowDown', 'ArrowDown'].entries()) {
-    await p.keyboard.press(k);
-    await p.waitForTimeout(1500);
-    await p.screenshot({ path: `${OUT}/7-bar-${i}-${k}.png` });
-    const st = await p.evaluate(() => ({
-      hash: location.hash,
-      video: !!document.querySelector('video'),
-      heart: [...document.querySelectorAll('*')].some((e) => e.childElementCount === 0 && /المفضلة/.test(e.textContent || '')),
-      focused: (document.querySelector('[class*="focused"]')?.textContent || '').trim().slice(0, 80)
-    }));
-    say('bar ' + k + ': ' + JSON.stringify(st));
+  // a channel page: how YouTube's TV app shows a channel (to sort its videos newest first)
+  await p.evaluate(() => { location.hash = '#/browse?c=UCX6OQ3DkcsbYNE6H8uQQuVA'; });
+  await p.waitForTimeout(12000);
+  await p.screenshot({ path: `${OUT}/c1-channel.png` });
+  for (let i = 0; i < 4; i++) {
+    await p.keyboard.press('ArrowDown');
+    await p.waitForTimeout(3000);
+    await p.screenshot({ path: `${OUT}/c2-down-${i}.png` });
   }
+  say('channel hash: ' + (await p.evaluate(() => location.hash)));
   fs.writeFileSync(`${OUT}/log.txt`, log.join('\n'));
   await b.close();
 })();
