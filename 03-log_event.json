@@ -1,0 +1,1129 @@
+{
+ "url": "https://www.youtube.com/youtubei/v1/log_event?t=RqkgNkDYA0rb8pns",
+ "status": 200,
+ "request": {
+  "context": {
+   "client": {
+    "screenWidthPoints": 1920,
+    "screenHeightPoints": 1080,
+    "utcOffsetMinutes": 0,
+    "hl": "ar",
+    "gl": "US",
+    "remoteHost": "57.154.218.64",
+    "deviceMake": "LG",
+    "deviceModel": "",
+    "visitorData": "CgtGRGg2bW1FY0tQNCicoIPXBjIKCgJVUxIEGgAgMWKuAgqrAkN0MEJDQVVTandFQjhRWnVaaUFIZDhhTHU0bHRlOXN5Nnd0am56ZmxDV0VFV1Y3UFV5dV9WeE1TanUxcFFPQlBvMDh1UHQ2dWhScnRYS3d5b0pTaDdoMmYxUmVSRjQ1cVJKUmpRRWxCQTk4UWxJdzZhRHdOa2JqSjdFUGJCYnVia3BoN2JURDBhcnMySW5GTDQ0RDM4SHJUX0xqYVFYcGpRR2c3NHM1VWZHWGNLbXRBdHBRV1NITmZ0dkNrMWRjZTRLRkFVOWY1cFNnRk1rVUIzcW1kVHdSMlgwZVJBTklKa1B2UHRLczhueHZIRUQ4VUdBdnc5dnZteGI5cnVHVEZZUldQdktSQjJtZFRMVG1tanZQWVRCWktXRUFJcEF5WFVXazc4dVp3bGdR",
+    "userAgent": "Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 WebAppManager,gzip(gfe)",
+    "clientName": "TVHTML5",
+    "clientVersion": "7.20261025.19.00",
+    "osName": "webOS",
+    "osVersion": "",
+    "originalUrl": "https://www.youtube.com/tv",
+    "theme": "CLASSIC",
+    "platform": "TV",
+    "clientFormFactor": "UNKNOWN_FORM_FACTOR",
+    "webpSupport": false,
+    "configInfo": {
+     "appInstallData": "CJygg9cGEOrn0hwQyfaAExDK-4ATEPfo0hwQmP7SHBDV8dIcEJb90hwQwY_QHBDditMcEL22rgUQnOXSHBDxxtIcENut0hwQ18jSHBC45M4cENr3zhwQh6zOHBDlirgiEJ_PgBMQzN-uBRDevM4cEK_w0hwQ8N7RHBCBzc4cEJmNsQUQ9quwBRC-hNEcENPa0hwQoYDTHBD82tIcEOfr0RwQrt7RHBCkqdEcEMv70hwQrtbPHBDp8tIcEPyP0xwQ8bTQHBCQ79IcEJGB0xwQvoqwBRCe0LAFEJiv0hwQvKTQHBCl49IcEK6Z0hwQzqjRHBCv-NEcEImwzhwQtt7RHBC9-NIcEMvy0hwQwsDSHBCIi7giEOWfgRMQnf3SHCpsQ0FNU1RSVk8tWnEtRE1lVUVwVUNuQTc1Rlo0RnBfSVBnQTBIMVE3UUJQNEVvd2FuQnNpbDZRc3lxNndFazh3RHR1UUc1SVVYckxzRHlwa0ZCUVVGNVZpY2l3T243ZzdxZjJlQmt3YXpBeDBIMAA%3D"
+    },
+    "tvAppInfo": {
+     "appQuality": "TV_APP_QUALITY_FULL_ANIMATION",
+     "supportsNativeScrolling": false,
+     "signedInAccountCount": 0,
+     "watchPageInfo": {
+      "watchPageVersion": "WATCH_PAGE_VERSION_V2025",
+      "combineChannelSdEntrypoints": false,
+      "enableDirectToChannelPage": false,
+      "disableSpeedBumps": false
+     }
+    },
+    "browserName": "LG Browser",
+    "browserVersion": "120.0.0.0",
+    "acceptHeader": "text/html,application/xhtml+xml,application/xml;q=0.9,image/jxl,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+    "deviceExperimentId": "ChxOemN3TVRNNE5ERTRNVGd6TVRZek1UazRNQT09EJygg9cGGJygg9cG",
+    "rolloutToken": "CJmX2aC2w_rN6QEQlcuP_M3alwMYlcuP_M3alwM%3D",
+    "windowWidthPoints": 1920,
+    "windowHeightPoints": 1080,
+    "screenDensityFloat": 1,
+    "memoryTotalKbytes": "16000000"
+   },
+   "user": {
+    "enableSafetyMode": false
+   },
+   "request": {
+    "internalExperimentFlags": [],
+    "consistencyTokenJars": []
+   }
+  },
+  "events": [
+   {
+    "eventTimeMs": 1793118236566,
+    "latencyActionTicked": {
+     "tickName": "base_js_r",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "-1"
+    }
+   },
+   {
+    "eventTimeMs": 1793118236649,
+    "latencyActionTicked": {
+     "tickName": "tvcs",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "-1"
+    }
+   },
+   {
+    "eventTimeMs": 1793118236651,
+    "latencyActionTicked": {
+     "tickName": "main_js_rq",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "-1"
+    }
+   },
+   {
+    "eventTimeMs": 1793118236661,
+    "latencyActionTicked": {
+     "tickName": "br_r",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "-1"
+    }
+   },
+   {
+    "eventTimeMs": 1793118236784,
+    "latencyActionTicked": {
+     "tickName": "rps",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "-1"
+    }
+   },
+   {
+    "eventTimeMs": 1793118236792,
+    "latencyActionTicked": {
+     "tickName": "tvce",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "-1"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237256,
+    "latencyActionTicked": {
+     "tickName": "main_js_r",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "-1"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237261,
+    "screenCreated": {
+     "csn": "Pzn0xhQQ4rNlzYyy",
+     "pageVe": {
+      "veType": 37935,
+      "youtubeData": {
+       "servletData": {
+        "serializedServletEventId": "HNDgaoHGEry6kucPm_y6qQk"
+       }
+      }
+     }
+    },
+    "context": {
+     "lastActivityMs": "3"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237262,
+    "latencyActionInfo": {
+     "clientScreenNonce": "Pzn0xhQQ4rNlzYyy",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "3"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237262,
+    "foregroundHeartbeat": {
+     "firstActivityMs": "4",
+     "clientDocumentNonce": "ppvr8c_X9vBMHrsO",
+     "index": "0",
+     "lastEventDeltaMs": "-1",
+     "trigger": "FOREGROUND_HEARTBEAT_TRIGGER_ON_FOREGROUND"
+    },
+    "context": {
+     "lastActivityMs": "4"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237262,
+    "foregroundHeartbeatScreenAssociated": {
+     "clientDocumentNonce": "ppvr8c_X9vBMHrsO",
+     "clientScreenNonce": "Pzn0xhQQ4rNlzYyy"
+    },
+    "context": {
+     "lastActivityMs": "4"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237262,
+    "latencyActionInfo": {
+     "tvInfo": {
+      "appReload": false
+     },
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "4"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237263,
+    "tvhtml5Lifecycle": {
+     "eventType": "TVHTML5_LIFECYCLE_EVENT_TYPE_START"
+    },
+    "context": {
+     "lastActivityMs": "5"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237269,
+    "latencyActionTicked": {
+     "tickName": "nps",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "10"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237271,
+    "flowEvent": {
+     "flowNonce": "3G_t1x8147F6Wqr2",
+     "flowType": "FLOW_TYPE_YTLR_APP_START",
+     "flowEventType": {
+      "flowEventNamespace": "FLOW_EVENT_NAMESPACE_YTLR_APP_START",
+      "flowEventType": 2
+     },
+     "flowMetadata": {
+      "ytlrAppStartContext": {
+       "eventIndex": 0
+      }
+     }
+    },
+    "context": {
+     "lastActivityMs": "13"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237271,
+    "flowEvent": {
+     "flowNonce": "3G_t1x8147F6Wqr2",
+     "flowType": "FLOW_TYPE_YTLR_APP_START",
+     "flowEventType": {
+      "flowEventNamespace": "FLOW_EVENT_NAMESPACE_YTLR_APP_START",
+      "flowEventType": 13
+     },
+     "flowMetadata": {
+      "ytlrAppStartContext": {
+       "eventIndex": 1
+      }
+     }
+    },
+    "context": {
+     "lastActivityMs": "13"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237271,
+    "flowEvent": {
+     "flowNonce": "3G_t1x8147F6Wqr2",
+     "flowType": "FLOW_TYPE_YTLR_APP_START",
+     "flowEventType": {
+      "flowEventNamespace": "FLOW_EVENT_NAMESPACE_YTLR_APP_START",
+      "flowEventType": 16
+     },
+     "flowMetadata": {
+      "ytlrAppStartContext": {
+       "eventIndex": 2
+      }
+     }
+    },
+    "context": {
+     "lastActivityMs": "13"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237271,
+    "flowEvent": {
+     "flowNonce": "3G_t1x8147F6Wqr2",
+     "flowType": "FLOW_TYPE_YTLR_APP_START",
+     "flowEventType": {
+      "flowEventNamespace": "FLOW_EVENT_NAMESPACE_YTLR_APP_START",
+      "flowEventType": 17
+     },
+     "flowMetadata": {
+      "ytlrAppStartContext": {
+       "eventIndex": 3
+      }
+     }
+    },
+    "context": {
+     "lastActivityMs": "13"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237271,
+    "flowEvent": {
+     "flowNonce": "3G_t1x8147F6Wqr2",
+     "flowType": "FLOW_TYPE_YTLR_APP_START",
+     "flowEventType": {
+      "flowEventNamespace": "FLOW_EVENT_NAMESPACE_YTLR_APP_START",
+      "flowEventType": 19
+     },
+     "flowMetadata": {
+      "ytlrAppStartContext": {
+       "eventIndex": 4
+      }
+     }
+    },
+    "context": {
+     "lastActivityMs": "13"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237272,
+    "flowEvent": {
+     "flowNonce": "3G_t1x8147F6Wqr2",
+     "flowType": "FLOW_TYPE_YTLR_APP_START",
+     "flowEventType": {
+      "flowEventNamespace": "FLOW_EVENT_NAMESPACE_YTLR_APP_START",
+      "flowEventType": 28
+     },
+     "flowMetadata": {
+      "ytlrAppStartContext": {
+       "eventIndex": 5
+      }
+     }
+    },
+    "context": {
+     "lastActivityMs": "13"
+    }
+   },
+   {
+    "eventTimeMs": 1793118236346,
+    "latencyActionTicked": {
+     "tickName": "srt",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "-1"
+    }
+   },
+   {
+    "eventTimeMs": 1793118236281,
+    "latencyActionBaselined": {
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "-1"
+    }
+   },
+   {
+    "eventTimeMs": 1793118236573,
+    "latencyActionTicked": {
+     "tickName": "fpt",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "-1"
+    }
+   },
+   {
+    "eventTimeMs": 1793118236297,
+    "latencyActionTicked": {
+     "tickName": "nreqs",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "-1"
+    }
+   },
+   {
+    "eventTimeMs": 1793118236346,
+    "latencyActionTicked": {
+     "tickName": "nress",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "-1"
+    }
+   },
+   {
+    "eventTimeMs": 1793118236364,
+    "latencyActionTicked": {
+     "tickName": "nrese",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "-1"
+    }
+   },
+   {
+    "eventTimeMs": 1793118236289,
+    "latencyActionTicked": {
+     "tickName": "ntcps",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "-1"
+    }
+   },
+   {
+    "eventTimeMs": 1793118236295,
+    "latencyActionTicked": {
+     "tickName": "ntcpe",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "-1"
+    }
+   },
+   {
+    "eventTimeMs": 1793118236289,
+    "latencyActionTicked": {
+     "tickName": "nstcps",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "-1"
+    }
+   },
+   {
+    "eventTimeMs": 1793118236295,
+    "latencyActionTicked": {
+     "tickName": "ntcpe",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "-1"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237275,
+    "latencyActionInfo": {
+     "isNavigation": true,
+     "actionType": "LATENCY_ACTION_ONBOARDING",
+     "httpProtocol": "h2",
+     "transportProtocol": "tcp",
+     "clientScreenNonce": "Pzn0xhQQ4rNlzYyy",
+     "isVisible": true,
+     "loadType": "cold",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "17"
+    }
+   },
+   {
+    "eventTimeMs": 1793118236513,
+    "latencyActionTicked": {
+     "tickName": "hs",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "-1"
+    }
+   },
+   {
+    "eventTimeMs": 1793118236518,
+    "latencyActionTicked": {
+     "tickName": "veb_s",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "-1"
+    }
+   },
+   {
+    "eventTimeMs": 1793118236520,
+    "latencyActionTicked": {
+     "tickName": "br_s",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "-1"
+    }
+   },
+   {
+    "eventTimeMs": 1793118236541,
+    "latencyActionTicked": {
+     "tickName": "ld_s",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "-1"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237275,
+    "latencyActionInfo": {
+     "serverTimeMs": 41,
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "17"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237276,
+    "latencyActionInfo": {
+     "tvInfo": {
+      "label": "web_20261025_19_RC00",
+      "isPreloaded": false,
+      "appQuality": "TV_APP_QUALITY_LIMITED_MEMORY",
+      "isMdx": false
+     },
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "17"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237271,
+    "latencyActionTicked": {
+     "tickName": "is_sd",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "-1"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237272,
+    "latencyActionTicked": {
+     "tickName": "is_bcs",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "-1"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237272,
+    "latencyActionTicked": {
+     "tickName": "is_bce",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "-1"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237276,
+    "latencyActionInfo": {
+     "kabukiInfo": {
+      "navigationType": "TV_NAVIGATION_TYPE_FORWARD"
+     },
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "17"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237277,
+    "latencyActionTicked": {
+     "tickName": "npe",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "18"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237278,
+    "latencyActionTicked": {
+     "tickName": "c_rns",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "20"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237294,
+    "latencyActionTicked": {
+     "tickName": "c_rnf",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "36"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237295,
+    "screenCreated": {
+     "csn": "V0_Pm0mVkhqcyCG9",
+     "pageVe": {
+      "veType": 93044
+     },
+     "implicitGesture": {
+      "parentCsn": "Pzn0xhQQ4rNlzYyy",
+      "gesturedVe": {
+       "veType": 37935
+      }
+     }
+    },
+    "context": {
+     "lastActivityMs": "36"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237295,
+    "visualElementHidden": {
+     "csn": "Pzn0xhQQ4rNlzYyy",
+     "ve": {
+      "veType": 37935
+     },
+     "eventType": 16
+    },
+    "context": {
+     "lastActivityMs": "36"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237295,
+    "latencyActionInfo": {
+     "clientScreenNonce": "V0_Pm0mVkhqcyCG9",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "36"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237295,
+    "visualElementAttached": {
+     "csn": "V0_Pm0mVkhqcyCG9",
+     "parentVe": {
+      "veType": 93044
+     },
+     "childVes": [
+      {
+       "veType": 352819,
+       "veCounter": 1
+      }
+     ]
+    },
+    "context": {
+     "lastActivityMs": "37"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237295,
+    "visualElementAttached": {
+     "csn": "V0_Pm0mVkhqcyCG9",
+     "parentVe": {
+      "veType": 93044
+     },
+     "childVes": [
+      {
+       "veType": 272991,
+       "veCounter": 2
+      }
+     ]
+    },
+    "context": {
+     "lastActivityMs": "37"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237306,
+    "latencyActionTicked": {
+     "tickName": "css_e",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "48"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237307,
+    "latencyActionTicked": {
+     "tickName": "remove_splash",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "48"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237307,
+    "foregroundHeartbeatScreenAssociated": {
+     "clientDocumentNonce": "ppvr8c_X9vBMHrsO",
+     "clientScreenNonce": "Pzn0xhQQ4rNlzYyy"
+    },
+    "context": {
+     "lastActivityMs": "48"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237311,
+    "latencyActionTicked": {
+     "tickName": "cpt",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "52"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237345,
+    "visualElementAttached": {
+     "csn": "V0_Pm0mVkhqcyCG9",
+     "parentVe": {
+      "veType": 93044
+     },
+     "childVes": [
+      {
+       "veType": 18440,
+       "veCounter": 3
+      }
+     ]
+    },
+    "context": {
+     "lastActivityMs": "87"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237350,
+    "foregroundHeartbeatScreenAssociated": {
+     "clientDocumentNonce": "ppvr8c_X9vBMHrsO",
+     "clientScreenNonce": "V0_Pm0mVkhqcyCG9"
+    },
+    "context": {
+     "lastActivityMs": "91"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237389,
+    "visualElementAttached": {
+     "csn": "V0_Pm0mVkhqcyCG9",
+     "parentVe": {
+      "veType": 93044
+     },
+     "childVes": [
+      {
+       "veType": 303301,
+       "veCounter": 10
+      }
+     ]
+    },
+    "context": {
+     "lastActivityMs": "130"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237400,
+    "derpLogEvent": {
+     "serializedDerpToken": "CL_U67eOBQ%3D%3D",
+     "deviceAppState": "DEVICE_APP_STATE_FOREGROUND"
+    },
+    "context": {
+     "lastActivityMs": "141"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237415,
+    "tvhtml5LaunchUrlComponentChanged": {
+     "launchUrlComponentType": "LAUNCH_URL_COMPONENT_TYPE_PREFIX",
+     "clientScreenNonce": "V0_Pm0mVkhqcyCG9",
+     "inApp": false
+    },
+    "context": {
+     "lastActivityMs": "157"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237435,
+    "latencyActionTicked": {
+     "tickName": "rps",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "176"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237454,
+    "visualElementAttached": {
+     "csn": "V0_Pm0mVkhqcyCG9",
+     "parentVe": {
+      "veType": 93044
+     },
+     "childVes": [
+      {
+       "trackingParams": "CAAQumkiEwiCy9L8zdqXAxVXBdYAHeRhFLvKAQTfrSlb"
+      }
+     ]
+    },
+    "context": {
+     "lastActivityMs": "195"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237549,
+    "latencyActionTicked": {
+     "tickName": "pljs_rq",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "290"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237611,
+    "visualElementShown": {
+     "csn": "V0_Pm0mVkhqcyCG9",
+     "ve": {
+      "veType": 272991,
+      "veCounter": 2
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "353"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237611,
+    "visualElementShown": {
+     "csn": "V0_Pm0mVkhqcyCG9",
+     "ve": {
+      "veType": 352819,
+      "veCounter": 1
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "353"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237611,
+    "visualElementShown": {
+     "csn": "V0_Pm0mVkhqcyCG9",
+     "ve": {
+      "veType": 18440,
+      "veCounter": 3
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "353"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237800,
+    "latencyActionTicked": {
+     "tickName": "pljs_r",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "542"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237800,
+    "latencyActionTicked": {
+     "tickName": "pem_rq",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "542"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237825,
+    "latencyActionTicked": {
+     "tickName": "wasm_s",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "566"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237833,
+    "latencyActionTicked": {
+     "tickName": "fs",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "575"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237849,
+    "latencyActionTicked": {
+     "tickName": "wasm_fa",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "590"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237853,
+    "latencyActionTicked": {
+     "tickName": "pem_r",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "595"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237861,
+    "clientError": {
+     "errorMetadata": {
+      "pageUrl": "https://www.youtube.com/tv#/",
+      "kvPairs": [
+       {
+        "key": "client.name",
+        "value": "7"
+       },
+       {
+        "key": "client.version",
+        "value": "7.20261025.19.00"
+       },
+       {
+        "key": "client.params.0",
+        "value": "rr4---sn-aj2im9-5q.c.youtube.com"
+       },
+       {
+        "key": "client.params.1",
+        "value": "su"
+       },
+       {
+        "key": "client.device.vendor",
+        "value": "Google Inc."
+       },
+       {
+        "key": "client.params.errorServiceSignature",
+        "value": "msg=0&cb=2"
+       },
+       {
+        "key": "client.params.serviceWorker",
+        "value": "false"
+       },
+       {
+        "key": "client.params.fscripts",
+        "value": "0"
+       },
+       {
+        "key": "server.name",
+        "value": "WebFE"
+       },
+       {
+        "key": "server.version",
+        "value": "prod"
+       },
+       {
+        "key": "client.player.version",
+        "value": "1.20261021.08.00"
+       }
+      ],
+      "experimentIds": [
+       52146636,
+       52251755,
+       52253088,
+       52265818,
+       52269476,
+       52286676,
+       52299916
+      ]
+     },
+     "stackTrace": {
+      "isObfuscated": true,
+      "browserStackInfo": {
+       "stackTrace": "    at new Ir (https://www.youtube.com/s/player/6b2fce74/tv-player-ias-tcl.vflset/tv-player-ias-tcl.js:3574:57)\n    at Ob.K (https://www.youtube.com/s/player/6b2fce74/tv-player-ias-tcl.vflset/tv-player-ias-tcl.js:9470:148)\n    at $K (https://www.youtube.com/s/player/6b2fce74/tv-player-ias-tcl.vflset/tv-player-ias-tcl.js:1055:40)\n    at Xk.next (https://www.youtube.com/s/player/6b2fce74/tv-player-ias-tcl.vflset/tv-player-ias-tcl.js:1056:95)\n    at M (https://www.youtube.com/s/player/6b2fce74/tv-player-ias-tcl.vflset/tv-player-ias-tcl.js:1061:40)",
+       "filename": "https://www.youtube.com/tv#/"
+      }
+     },
+     "logMessage": {
+      "level": "ERROR_LEVEL_WARNNING",
+      "message": "b204258371_untrusted",
+      "errorClassName": "Error",
+      "sampleWeight": 1
+     }
+    },
+    "context": {
+     "lastActivityMs": "603"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237899,
+    "latencyActionTicked": {
+     "tickName": "pot_ist",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "641"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237903,
+    "latencyActionTicked": {
+     "tickName": "pot_csms",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "645"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237904,
+    "latencyActionTicked": {
+     "tickName": "pot_csmf",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "646"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237995,
+    "streamzIncremented": {
+     "serializedIncrementBatch": "ChUvY2xpZW50X3N0cmVhbXovYmcvZWMSEAoOCghib3RndWFyZBICNTMaAmVuGgJtayIRCgMKAW8KBgoEYUdJZhICCAEiEQoDCgF0CgYKBGFHSWYSAggB"
+    },
+    "context": {
+     "lastActivityMs": "736"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237995,
+    "streamzIncremented": {
+     "serializedIncrementBatch": "ChUvY2xpZW50X3N0cmVhbXovYmcvZWwSEAoOCghib3RndWFyZBICNTMaAmVuGgJtayIYCgMKAWMKBgoEYUdJZhIJEQAAAAAAAAAAIhgKAwoBUgoGCgRhR0lmEgkRAACgmZmZuT8iGAoDCgFxCgYKBGFHSWYSCREAAJiZmZm5PyIYCgMKAVMKBgoEYUdJZhIJEQAAmpmZmdk/IhgKAwoBdAoGCgRhR0lmEgkRADIzMzNTUkA="
+    },
+    "context": {
+     "lastActivityMs": "737"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237995,
+    "streamzIncremented": {
+     "serializedIncrementBatch": "ChkvY2xpZW50X3N0cmVhbXovYmcvcG8vY3NjEhAKDgoIYm90Z3VhcmQSAjUzGgJjcxoCbWsiEAoCEAIKBgoEYUdJZhICCAE="
+    },
+    "context": {
+     "lastActivityMs": "737"
+    }
+   },
+   {
+    "eventTimeMs": 1793118237996,
+    "streamzIncremented": {
+     "serializedIncrementBatch": "ChovY2xpZW50X3N0cmVhbXovYmcvcG8vY3RhdhIQCg4KCGJvdGd1YXJkEgI1MxoCYXYaAm1rIhEKAwoBbQoGCgRhR0lmEgIIAQ=="
+    },
+    "context": {
+     "lastActivityMs": "737"
+    }
+   },
+   {
+    "eventTimeMs": 1793118238053,
+    "latencyActionTicked": {
+     "tickName": "r_construction",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "794"
+    }
+   },
+   {
+    "eventTimeMs": 1793118238059,
+    "latencyActionTicked": {
+     "tickName": "pot_if",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "801"
+    }
+   },
+   {
+    "eventTimeMs": 1793118238059,
+    "latencyActionTicked": {
+     "tickName": "pot_cms",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "801"
+    }
+   },
+   {
+    "eventTimeMs": 1793118238060,
+    "latencyActionTicked": {
+     "tickName": "pot_cmf",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "802"
+    }
+   },
+   {
+    "eventTimeMs": 1793118238063,
+    "deviceStartupMetrics": {
+     "accountMetrics": {
+      "numberOfAccounts": 0,
+      "numberOfSignedOutAccounts": 0,
+      "numberOfFamilyGroups": 0,
+      "hasParentCode": false,
+      "hasAccountLock": false,
+      "hasYtkGuest": false
+     }
+    },
+    "context": {
+     "lastActivityMs": "804"
+    }
+   },
+   {
+    "eventTimeMs": 1793118238082,
+    "tvhtml5DeviceStorageStatus": {
+     "storageCapabilities": "TV_DEVICE_STORAGE_STATE_ALL",
+     "storageState": "TV_DEVICE_STORAGE_STATE_NONE"
+    },
+    "context": {
+     "lastActivityMs": "823"
+    }
+   },
+   {
+    "eventTimeMs": 1793118238265,
+    "latencyActionTicked": {
+     "tickName": "aast_fl",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "1006"
+    }
+   }
+  ],
+  "serializedClientEventId": {
+   "serializedEventId": "HNDgaoHGEry6kucPm_y6qQk",
+   "clientCounter": "14266"
+  }
+ },
+ "response": {
+  "responseContext": {}
+ }
+}

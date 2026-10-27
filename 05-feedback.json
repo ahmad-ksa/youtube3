@@ -1,0 +1,99 @@
+{
+ "url": "https://www.youtube.com/youtubei/v1/feedback?t=Vpb51wkCUr3bb12V",
+ "status": 200,
+ "request": {
+  "context": {
+   "client": {
+    "screenWidthPoints": 1920,
+    "screenHeightPoints": 1080,
+    "utcOffsetMinutes": 0,
+    "hl": "ar",
+    "gl": "US",
+    "remoteHost": "57.154.218.64",
+    "deviceMake": "LG",
+    "deviceModel": "",
+    "visitorData": "CgtGRGg2bW1FY0tQNCicoIPXBjIKCgJVUxIEGgAgMWKuAgqrAkN0MEJDQVVTandFQjhRWnVaaUFIZDhhTHU0bHRlOXN5Nnd0am56ZmxDV0VFV1Y3UFV5dV9WeE1TanUxcFFPQlBvMDh1UHQ2dWhScnRYS3d5b0pTaDdoMmYxUmVSRjQ1cVJKUmpRRWxCQTk4UWxJdzZhRHdOa2JqSjdFUGJCYnVia3BoN2JURDBhcnMySW5GTDQ0RDM4SHJUX0xqYVFYcGpRR2c3NHM1VWZHWGNLbXRBdHBRV1NITmZ0dkNrMWRjZTRLRkFVOWY1cFNnRk1rVUIzcW1kVHdSMlgwZVJBTklKa1B2UHRLczhueHZIRUQ4VUdBdnc5dnZteGI5cnVHVEZZUldQdktSQjJtZFRMVG1tanZQWVRCWktXRUFJcEF5WFVXazc4dVp3bGdR",
+    "userAgent": "Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 WebAppManager,gzip(gfe)",
+    "clientName": "TVHTML5",
+    "clientVersion": "7.20261025.19.00",
+    "osName": "webOS",
+    "osVersion": "",
+    "originalUrl": "https://www.youtube.com/tv",
+    "theme": "CLASSIC",
+    "platform": "TV",
+    "clientFormFactor": "UNKNOWN_FORM_FACTOR",
+    "webpSupport": false,
+    "configInfo": {
+     "appInstallData": "CJygg9cGEOrn0hwQyfaAExDK-4ATEPfo0hwQmP7SHBDV8dIcEJb90hwQwY_QHBDditMcEL22rgUQnOXSHBDxxtIcENut0hwQ18jSHBC45M4cENr3zhwQh6zOHBDlirgiEJ_PgBMQzN-uBRDevM4cEK_w0hwQ8N7RHBCBzc4cEJmNsQUQ9quwBRC-hNEcENPa0hwQoYDTHBD82tIcEOfr0RwQrt7RHBCkqdEcEMv70hwQrtbPHBDp8tIcEPyP0xwQ8bTQHBCQ79IcEJGB0xwQvoqwBRCe0LAFEJiv0hwQvKTQHBCl49IcEK6Z0hwQzqjRHBCv-NEcEImwzhwQtt7RHBC9-NIcEMvy0hwQwsDSHBCIi7giEOWfgRMQnf3SHCpsQ0FNU1RSVk8tWnEtRE1lVUVwVUNuQTc1Rlo0RnBfSVBnQTBIMVE3UUJQNEVvd2FuQnNpbDZRc3lxNndFazh3RHR1UUc1SVVYckxzRHlwa0ZCUVVGNVZpY2l3T243ZzdxZjJlQmt3YXpBeDBIMAA%3D"
+    },
+    "tvAppInfo": {
+     "appQuality": "TV_APP_QUALITY_FULL_ANIMATION",
+     "supportsNativeScrolling": false,
+     "signedInAccountCount": 0,
+     "watchPageInfo": {
+      "watchPageVersion": "WATCH_PAGE_VERSION_V2025",
+      "combineChannelSdEntrypoints": false,
+      "enableDirectToChannelPage": false,
+      "disableSpeedBumps": false
+     },
+     "voiceCapability": {
+      "hasSoftMicSupport": false,
+      "hasHardMicSupport": false,
+      "useHoldToTalkPrompt": false
+     }
+    },
+    "browserName": "LG Browser",
+    "browserVersion": "120.0.0.0",
+    "acceptHeader": "text/html,application/xhtml+xml,application/xml;q=0.9,image/jxl,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+    "deviceExperimentId": "ChxOemN3TVRNNE5ERTRNVGd6TVRZek1UazRNQT09EJygg9cGGJygg9cG",
+    "rolloutToken": "CJmX2aC2w_rN6QEQlcuP_M3alwMYlcuP_M3alwM%3D",
+    "windowWidthPoints": 1920,
+    "windowHeightPoints": 1080,
+    "screenDensityFloat": 1,
+    "memoryTotalKbytes": "16000000",
+    "mediaCapabilities": {
+     "videoFormatCapabilities": [
+      {
+       "videoCodec": 4
+      }
+     ]
+    }
+   },
+   "user": {
+    "enableSafetyMode": false
+   },
+   "request": {
+    "internalExperimentFlags": [],
+    "consistencyTokenJars": []
+   },
+   "clickTracking": {
+    "clickTrackingParams": "CAMQ7_AMGAEiEwi2zp38zdqXAxX43vIHHXWlOxrKAQTfrSlb"
+   },
+   "clientScreenNonce": "VeAjKwW1Sw3qlMJ9"
+  },
+  "feedbackTokens": [
+   "AB9zfpISS-Wr9PfHEApooKrA8yDCdwJjtQejP9o4VPaA1XG1pc41jK9SlSBm5EVxOgX_Fa6TSk9qWBInUNTwnX5HbTdY47SLtc-XRE3WsfWsZ4EmohjqwlG4UiBHavS6P1aOpl-8jG2szqzqLD8linAMa1CLdY-sPeVIiiIs2NKFETgmGxesvqnswwYd3TAdhpd9wwQ5f3qMitTqNr0I49NsCgdvlusjUw"
+  ]
+ },
+ "response": {
+  "responseContext": {
+   "serviceTrackingParams": [
+    {
+     "service": "GFEEDBACK",
+     "params": [
+      {
+       "key": "logged_in",
+       "value": "0"
+      }
+     ]
+    }
+   ],
+   "responseId": "IhMI5sGshc7alwMVru8_BB3D6ROd"
+  },
+  "feedbackResponses": [
+   {
+    "isProcessed": true
+   }
+  ]
+ }
+}

@@ -1,0 +1,394 @@
+{
+ "url": "https://www.youtube.com/youtubei/v1/guide?t=hIk3XyQjzdTagWtJ",
+ "status": 200,
+ "request": {
+  "context": {
+   "client": {
+    "screenWidthPoints": 1920,
+    "screenHeightPoints": 1080,
+    "utcOffsetMinutes": 0,
+    "hl": "ar",
+    "gl": "US",
+    "remoteHost": "57.154.218.64",
+    "deviceMake": "LG",
+    "deviceModel": "",
+    "visitorData": "CgtGRGg2bW1FY0tQNCicoIPXBjIKCgJVUxIEGgAgMWKuAgqrAkN0MEJDQVVTandFQjhRWnVaaUFIZDhhTHU0bHRlOXN5Nnd0am56ZmxDV0VFV1Y3UFV5dV9WeE1TanUxcFFPQlBvMDh1UHQ2dWhScnRYS3d5b0pTaDdoMmYxUmVSRjQ1cVJKUmpRRWxCQTk4UWxJdzZhRHdOa2JqSjdFUGJCYnVia3BoN2JURDBhcnMySW5GTDQ0RDM4SHJUX0xqYVFYcGpRR2c3NHM1VWZHWGNLbXRBdHBRV1NITmZ0dkNrMWRjZTRLRkFVOWY1cFNnRk1rVUIzcW1kVHdSMlgwZVJBTklKa1B2UHRLczhueHZIRUQ4VUdBdnc5dnZteGI5cnVHVEZZUldQdktSQjJtZFRMVG1tanZQWVRCWktXRUFJcEF5WFVXazc4dVp3bGdR",
+    "userAgent": "Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 WebAppManager,gzip(gfe)",
+    "clientName": "TVHTML5",
+    "clientVersion": "7.20261025.19.00",
+    "osName": "webOS",
+    "osVersion": "",
+    "originalUrl": "https://www.youtube.com/tv",
+    "theme": "CLASSIC",
+    "platform": "TV",
+    "clientFormFactor": "UNKNOWN_FORM_FACTOR",
+    "webpSupport": false,
+    "configInfo": {
+     "appInstallData": "CJygg9cGEOrn0hwQyfaAExDK-4ATEPfo0hwQmP7SHBDV8dIcEJb90hwQwY_QHBDditMcEL22rgUQnOXSHBDxxtIcENut0hwQ18jSHBC45M4cENr3zhwQh6zOHBDlirgiEJ_PgBMQzN-uBRDevM4cEK_w0hwQ8N7RHBCBzc4cEJmNsQUQ9quwBRC-hNEcENPa0hwQoYDTHBD82tIcEOfr0RwQrt7RHBCkqdEcEMv70hwQrtbPHBDp8tIcEPyP0xwQ8bTQHBCQ79IcEJGB0xwQvoqwBRCe0LAFEJiv0hwQvKTQHBCl49IcEK6Z0hwQzqjRHBCv-NEcEImwzhwQtt7RHBC9-NIcEMvy0hwQwsDSHBCIi7giEOWfgRMQnf3SHCpsQ0FNU1RSVk8tWnEtRE1lVUVwVUNuQTc1Rlo0RnBfSVBnQTBIMVE3UUJQNEVvd2FuQnNpbDZRc3lxNndFazh3RHR1UUc1SVVYckxzRHlwa0ZCUVVGNVZpY2l3T243ZzdxZjJlQmt3YXpBeDBIMAA%3D"
+    },
+    "tvAppInfo": {
+     "appQuality": "TV_APP_QUALITY_FULL_ANIMATION",
+     "supportsNativeScrolling": false,
+     "signedInAccountCount": 0,
+     "watchPageInfo": {
+      "watchPageVersion": "WATCH_PAGE_VERSION_V2025",
+      "combineChannelSdEntrypoints": false,
+      "enableDirectToChannelPage": false,
+      "disableSpeedBumps": false
+     }
+    },
+    "browserName": "LG Browser",
+    "browserVersion": "120.0.0.0",
+    "acceptHeader": "text/html,application/xhtml+xml,application/xml;q=0.9,image/jxl,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+    "deviceExperimentId": "ChxOemN3TVRNNE5ERTRNVGd6TVRZek1UazRNQT09EJygg9cGGJygg9cG",
+    "rolloutToken": "CJmX2aC2w_rN6QEQlcuP_M3alwMYlcuP_M3alwM%3D",
+    "windowWidthPoints": 1920,
+    "windowHeightPoints": 1080,
+    "screenDensityFloat": 1,
+    "memoryTotalKbytes": "16000000"
+   },
+   "user": {
+    "enableSafetyMode": false
+   },
+   "request": {
+    "internalExperimentFlags": [],
+    "consistencyTokenJars": []
+   }
+  }
+ },
+ "response": {
+  "responseContext": {
+   "serviceTrackingParams": [
+    {
+     "service": "GFEEDBACK",
+     "params": [
+      {
+       "key": "logged_in",
+       "value": "0"
+      }
+     ]
+    }
+   ],
+   "responseId": "IhMIgsvS_M3alwMVVwXWAB3kYRS7"
+  },
+  "items": [
+   {
+    "guideSectionRenderer": {
+     "items": [
+      {
+       "guideEntryRenderer": {
+        "navigationEndpoint": {
+         "clickTrackingParams": "CBMQtSwYACITCILL0vzN2pcDFVcF1gAd5GEUu8oBBN-tKVs=",
+         "searchEndpoint": {
+          "query": ""
+         }
+        },
+        "icon": {
+         "iconType": "SEARCH"
+        },
+        "trackingParams": "CBMQtSwYACITCILL0vzN2pcDFVcF1gAd5GEUuw==",
+        "formattedTitle": {
+         "simpleText": "بحث"
+        }
+       }
+      },
+      {
+       "guideEntryRenderer": {
+        "navigationEndpoint": {
+         "clickTrackingParams": "CBIQtSwYASITCILL0vzN2pcDFVcF1gAd5GEUu8oBBN-tKVs=",
+         "browseEndpoint": {
+          "browseId": "FEtopics"
+         }
+        },
+        "icon": {
+         "iconType": "WHAT_TO_WATCH"
+        },
+        "trackingParams": "CBIQtSwYASITCILL0vzN2pcDFVcF1gAd5GEUuw==",
+        "formattedTitle": {
+         "simpleText": "الصفحة الرئيسية"
+        }
+       }
+      },
+      {
+       "guideEntryRenderer": {
+        "navigationEndpoint": {
+         "clickTrackingParams": "CBAQtSwYAiITCILL0vzN2pcDFVcF1gAd5GEUu5oBAgg6ygEE360pWw==",
+         "reelWatchEndpoint": {
+          "playerParams": "8AEBuAQPkAcC",
+          "overlay": {
+           "reelPlayerOverlayRenderer": {
+            "style": "REEL_PLAYER_OVERLAY_STYLE_SHORTS",
+            "trackingParams": "CBEQsLUEIhMIgsvS_M3alwMVVwXWAB3kYRS7",
+            "reelPlayerNavigationModel": "REEL_PLAYER_NAVIGATION_MODEL_UNSPECIFIED"
+           }
+          },
+          "params": "CA8%3D",
+          "sequenceProvider": "REEL_WATCH_SEQUENCE_PROVIDER_RPC",
+          "inputType": "REEL_WATCH_INPUT_TYPE_SEEDLESS",
+          "updateKey": "EhhTSE9SVFNfU0VFRExFU1NfRU5EUE9JTlQg5gEoAQ%3D%3D",
+          "loggingContext": {
+           "vssLoggingContext": {
+            "serializedContextData": "CgIIDA%3D%3D"
+           },
+           "qoeLoggingContext": {
+            "serializedContextData": "CgIIDA%3D%3D"
+           }
+          },
+          "ustreamerConfig": "CAw=",
+          "watchEndpointSource": "REEL_WATCH_ENDPOINT_SOURCE_SHORTS_PIVOT_BAR",
+          "videoType": "REEL_VIDEO_TYPE_VIDEO"
+         }
+        },
+        "icon": {
+         "iconType": "YOUTUBE_SHORTS_FILL_24"
+        },
+        "trackingParams": "CBAQtSwYAiITCILL0vzN2pcDFVcF1gAd5GEUuw==",
+        "formattedTitle": {
+         "simpleText": "Shorts"
+        }
+       }
+      },
+      {
+       "guideEntryRenderer": {
+        "navigationEndpoint": {
+         "clickTrackingParams": "CA8QtSwYAyITCILL0vzN2pcDFVcF1gAd5GEUu8oBBN-tKVs=",
+         "browseEndpoint": {
+          "browseId": "FEsubscriptions"
+         }
+        },
+        "icon": {
+         "iconType": "SUBSCRIPTIONS"
+        },
+        "trackingParams": "CA8QtSwYAyITCILL0vzN2pcDFVcF1gAd5GEUuw==",
+        "formattedTitle": {
+         "simpleText": "الاشتراكات"
+        }
+       }
+      },
+      {
+       "guideEntryRenderer": {
+        "navigationEndpoint": {
+         "clickTrackingParams": "CA4QtSwYBCITCILL0vzN2pcDFVcF1gAd5GEUu8oBBN-tKVs=",
+         "browseEndpoint": {
+          "browseId": "FElibrary"
+         }
+        },
+        "icon": {
+         "iconType": "TAB_LIBRARY"
+        },
+        "trackingParams": "CA4QtSwYBCITCILL0vzN2pcDFVcF1gAd5GEUuw==",
+        "formattedTitle": {
+         "simpleText": "المكتبة"
+        },
+        "dividerStyle": "GUIDE_ENTRY_RENDERER_DIVIDER_STYLE_PADDED_BAR"
+       }
+      },
+      {
+       "guideEntryRenderer": {
+        "navigationEndpoint": {
+         "clickTrackingParams": "CA0QtSwYBSITCILL0vzN2pcDFVcF1gAd5GEUu8oBBN-tKVs=",
+         "browseEndpoint": {
+          "browseId": "FEtopics_music"
+         }
+        },
+        "icon": {
+         "iconType": "YOUTUBE_MUSIC"
+        },
+        "trackingParams": "CA0QtSwYBSITCILL0vzN2pcDFVcF1gAd5GEUuw==",
+        "formattedTitle": {
+         "simpleText": "موسيقى"
+        }
+       }
+      },
+      {
+       "guideEntryRenderer": {
+        "navigationEndpoint": {
+         "clickTrackingParams": "CAwQnOQDGAYiEwiCy9L8zdqXAxVXBdYAHeRhFLvKAQTfrSlb",
+         "browseEndpoint": {
+          "browseId": "FEtopics_movies"
+         }
+        },
+        "icon": {
+         "iconType": "CLAPPERBOARD"
+        },
+        "trackingParams": "CAwQnOQDGAYiEwiCy9L8zdqXAxVXBdYAHeRhFLs=",
+        "formattedTitle": {
+         "simpleText": "أفلام وبرامج تلفزيونية"
+        }
+       }
+      },
+      {
+       "guideEntryRenderer": {
+        "navigationEndpoint": {
+         "clickTrackingParams": "CAsQtSwYByITCILL0vzN2pcDFVcF1gAd5GEUu8oBBN-tKVs=",
+         "browseEndpoint": {
+          "browseId": "FEtopics_live"
+         }
+        },
+        "icon": {
+         "iconType": "LIVE"
+        },
+        "trackingParams": "CAsQtSwYByITCILL0vzN2pcDFVcF1gAd5GEUuw==",
+        "formattedTitle": {
+         "simpleText": "مباشر"
+        }
+       }
+      },
+      {
+       "guideEntryRenderer": {
+        "navigationEndpoint": {
+         "clickTrackingParams": "CAoQtSwYCCITCILL0vzN2pcDFVcF1gAd5GEUu8oBBN-tKVs=",
+         "browseEndpoint": {
+          "browseId": "FEtopics_gaming"
+         }
+        },
+        "icon": {
+         "iconType": "GAMING"
+        },
+        "trackingParams": "CAoQtSwYCCITCILL0vzN2pcDFVcF1gAd5GEUuw==",
+        "formattedTitle": {
+         "simpleText": "ألعاب فيديو"
+        }
+       }
+      },
+      {
+       "guideEntryRenderer": {
+        "navigationEndpoint": {
+         "clickTrackingParams": "CAkQtSwYCSITCILL0vzN2pcDFVcF1gAd5GEUu8oBBN-tKVs=",
+         "browseEndpoint": {
+          "browseId": "FEtopics_news"
+         }
+        },
+        "icon": {
+         "iconType": "NEWS"
+        },
+        "trackingParams": "CAkQtSwYCSITCILL0vzN2pcDFVcF1gAd5GEUuw==",
+        "formattedTitle": {
+         "simpleText": "أخبار"
+        }
+       }
+      },
+      {
+       "guideEntryRenderer": {
+        "navigationEndpoint": {
+         "clickTrackingParams": "CAgQtSwYCiITCILL0vzN2pcDFVcF1gAd5GEUu8oBBN-tKVs=",
+         "browseEndpoint": {
+          "browseId": "FEtopics_sports"
+         }
+        },
+        "icon": {
+         "iconType": "TROPHY"
+        },
+        "trackingParams": "CAgQtSwYCiITCILL0vzN2pcDFVcF1gAd5GEUuw==",
+        "formattedTitle": {
+         "simpleText": "رياضة"
+        }
+       }
+      },
+      {
+       "guideEntryRenderer": {
+        "navigationEndpoint": {
+         "clickTrackingParams": "CAcQtSwYCyITCILL0vzN2pcDFVcF1gAd5GEUu8oBBN-tKVs=",
+         "browseEndpoint": {
+          "browseId": "FEtopics_podcasts"
+         }
+        },
+        "icon": {
+         "iconType": "BROADCAST"
+        },
+        "trackingParams": "CAcQtSwYCyITCILL0vzN2pcDFVcF1gAd5GEUuw==",
+        "formattedTitle": {
+         "simpleText": "بودكاست"
+        }
+       }
+      }
+     ],
+     "trackingParams": "CAYQ5isYACITCILL0vzN2pcDFVcF1gAd5GEUuw==",
+     "overflowBehavior": "OVERFLOW_BEHAVIOR_VERTICAL_SCROLL"
+    }
+   }
+  ],
+  "trackingParams": "CAAQumkiEwiCy9L8zdqXAxVXBdYAHeRhFLvKAQTfrSlb",
+  "footer": {
+   "guideSectionRenderer": {
+    "items": [
+     {
+      "guideEntryRenderer": {
+       "navigationEndpoint": {
+        "clickTrackingParams": "CAUQtSwYACITCILL0vzN2pcDFVcF1gAd5GEUu8oBBN-tKVs=",
+        "applicationSettingsEndpoint": {
+         "hack": true
+        }
+       },
+       "icon": {
+        "iconType": "SETTINGS"
+       },
+       "trackingParams": "CAUQtSwYACITCILL0vzN2pcDFVcF1gAd5GEUuw==",
+       "formattedTitle": {
+        "simpleText": "الإعدادات"
+       }
+      }
+     }
+    ],
+    "trackingParams": "CAQQ5isiEwiCy9L8zdqXAxVXBdYAHeRhFLs="
+   }
+  },
+  "topbar": {
+   "guideSectionRenderer": {
+    "items": [
+     {
+      "guideEntryRenderer": {
+       "navigationEndpoint": {
+        "clickTrackingParams": "CAMQtSwYACITCILL0vzN2pcDFVcF1gAd5GEUu8oBBN-tKVs=",
+        "signalNavigationEndpoint": {
+         "signal": "ACCOUNT_SETTINGS"
+        }
+       },
+       "icon": {
+        "iconType": "SIGN_IN"
+       },
+       "trackingParams": "CAMQtSwYACITCILL0vzN2pcDFVcF1gAd5GEUuw==",
+       "formattedTitle": {
+        "simpleText": "تسجيل الدخول"
+       }
+      }
+     }
+    ],
+    "trackingParams": "CAIQ5isiEwiCy9L8zdqXAxVXBdYAHeRhFLs="
+   }
+  },
+  "startupBehaviours": [
+   {
+    "launchToShorts": {
+     "resumeToShorts": {
+      "clickTrackingParams": "CAAQumkiEwiCy9L8zdqXAxVXBdYAHeRhFLuaAQMIpgHKAQTfrSlb",
+      "reelWatchEndpoint": {
+       "playerParams": "8AEBuAQbkAcC",
+       "overlay": {
+        "reelPlayerOverlayRenderer": {
+         "style": "REEL_PLAYER_OVERLAY_STYLE_SHORTS",
+         "trackingParams": "CAEQsLUEIhMIgsvS_M3alwMVVwXWAB3kYRS7",
+         "reelPlayerNavigationModel": "REEL_PLAYER_NAVIGATION_MODEL_UNSPECIFIED"
+        }
+       },
+       "params": "CBtCAggB",
+       "sequenceProvider": "REEL_WATCH_SEQUENCE_PROVIDER_RPC",
+       "inputType": "REEL_WATCH_INPUT_TYPE_SEEDLESS",
+       "loggingContext": {
+        "vssLoggingContext": {
+         "serializedContextData": "CgIIDA%3D%3D"
+        },
+        "qoeLoggingContext": {
+         "serializedContextData": "CgIIDA%3D%3D"
+        }
+       },
+       "ustreamerConfig": "CAw=",
+       "watchEndpointSource": "REEL_WATCH_ENDPOINT_SOURCE_SHORTS_PIVOT_BAR_RESUME_TO_SHORTS",
+       "videoType": "REEL_VIDEO_TYPE_VIDEO"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

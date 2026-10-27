@@ -1,0 +1,195 @@
+  [info] Config not set; using defaults.
+  [info] [ytlg] features loaded: 16 pages
+  [pageerror] Cannot read properties of null (reading 'appendChild')
+saved 01-browse-default.json (200, 5997 bytes)
+  [debug] [t] Hooked: function () { [native code] }
+saved 02-guide.json (200, 11230 bytes)
+saved 03-log_event.json (200, 28 bytes)
+  [info] [ytlg] player ❤ button installed on ZW
+  [startGroup] [t] Resolving
+  [debug] Command:
+  [debug] {startWelcomeCommand: Object}
+  [debug] Extra:
+  [debug] undefined
+  [endGroup] console.groupEnd
+  [startGroup] [t] Resolving
+  [debug] Command:
+  [debug] {commandExecutorCommand: Object}
+  [debug] Extra:
+  [debug] undefined
+  [endGroup] console.groupEnd
+saved 04-mdx.json (200, 39440 bytes)
+focused: تسجيل الدخول باستخدام الهاتف
+  [startGroup] [t] Resolving
+  [debug] Command:
+  [debug] {commandExecutorCommand: Object}
+  [debug] Extra:
+  [debug] undefined
+  [endGroup] console.groupEnd
+focused: تسجيل الدخول باستخدام جهاز التحكّم عن بُعد
+  [startGroup] [t] Resolving
+  [debug] Command:
+  [debug] {commandExecutorCommand: Object}
+  [debug] Extra:
+  [debug] undefined
+  [endGroup] console.groupEnd
+focused: إضافة حساب للأطفال
+  [startGroup] [t] Resolving
+  [debug] Command:
+  [debug] {commandExecutorCommand: Object}
+  [debug] Extra:
+  [debug] undefined
+  [endGroup] console.groupEnd
+focused: المشاهدة كضيف
+  [startGroup] [t] Resolving
+  [debug] Command:
+  [debug] {switchToGuestMode: Object}
+  [debug] Extra:
+  [debug] undefined
+  [endGroup] console.groupEnd
+  [startGroup] [t] Resolving
+  [debug] Command:
+  [debug] {onIdentityChanged: Object}
+  [debug] Extra:
+  [debug] undefined
+  [endGroup] console.groupEnd
+  [startGroup] [t] Resolving
+  [debug] Command:
+  [debug] {commandExecutorCommand: Object}
+  [debug] Extra:
+  [debug] undefined
+  [endGroup] console.groupEnd
+  [startGroup] [t] Resolving
+  [debug] Command:
+  [debug] {openPopupAction: Object}
+  [debug] Extra:
+  [debug] undefined
+  [endGroup] console.groupEnd
+  [startGroup] [t] Resolving
+  [debug] Command:
+  [debug] {clickTrackingParams: CAMQ7_AMGAEiEwi2zp38zdqXAxX43vIHHXWlOxrKAQTfrSlb, feedbackEndpoint: Object}
+  [debug] Extra:
+  [debug] undefined
+  [endGroup] console.groupEnd
+saved 05-feedback.json (200, 345 bytes)
+  [startGroup] [t] Resolving
+  [debug] Command:
+  [debug] {signalAction: Object}
+  [debug] Extra:
+  [debug] undefined
+  [endGroup] console.groupEnd
+  [startGroup] [t] Resolving
+  [debug] Command:
+  [debug] {signalAction: Object}
+  [debug] Extra:
+  [debug] undefined
+  [endGroup] console.groupEnd
+PAGE FEytlg_trendWorld: first cards after never, searches 16
+  [startGroup] [t] Resolving
+  [debug] Command:
+  [debug] {signalAction: Object}
+  [debug] Extra:
+  [debug] undefined
+  [endGroup] console.groupEnd
+  [startGroup] [t] Resolving
+  [debug] Command:
+  [debug] {signalAction: Object}
+  [debug] Extra:
+  [debug] undefined
+  [endGroup] console.groupEnd
+saved 06-log_event.json (200, 28 bytes)
+PAGE FEytlg_exploreEgypt: first cards after never, searches 12
+  [startGroup] [t] Resolving
+  [debug] Command:
+  [debug] {signalAction: Object}
+  [debug] Extra:
+  [debug] undefined
+  [endGroup] console.groupEnd
+  [startGroup] [t] Resolving
+  [debug] Command:
+  [debug] {signalAction: Object}
+  [debug] Extra:
+  [debug] undefined
+  [endGroup] console.groupEnd
+PAGE FEytlg_travelNew: first cards after never, searches 16
+  [startGroup] [t] Resolving
+  [debug] Command:
+  [debug] {signalAction: Object}
+  [debug] Extra:
+  [debug] undefined
+  [endGroup] console.groupEnd
+  [startGroup] [t] Resolving
+  [debug] Command:
+  [debug] {signalAction: Object}
+  [debug] Extra:
+  [debug] undefined
+  [endGroup] console.groupEnd
+PAGE FEytlg_musicEgypt: first cards after never, searches 38
+  [startGroup] [t] Resolving
+  [debug] Command:
+  [debug] {signalAction: Object}
+  [debug] Extra:
+  [debug] undefined
+  [endGroup] console.groupEnd
+  [startGroup] [t] Resolving
+  [debug] Command:
+  [debug] {signalAction: Object}
+  [debug] Extra:
+  [debug] undefined
+  [endGroup] console.groupEnd
+PAGE FEytlg_trendMusic: first cards after never, searches 16
+  [startGroup] [t] Resolving
+  [debug] Command:
+  [debug] {signalAction: Object}
+  [debug] Extra:
+  [debug] undefined
+  [endGroup] console.groupEnd
+  [startGroup] [t] Resolving
+  [debug] Command:
+  [debug] {signalAction: Object}
+  [debug] Extra:
+  [debug] undefined
+  [endGroup] console.groupEnd
+saved 07-browse-UCX6OQ3DkcsbYNE6H8uQQuVA.json (200, 1529988 bytes)
+  [startGroup] [t] Resolving
+  [debug] Command:
+  [debug] {clickTrackingParams: CA4Q3MoMGAAiEwjPrdjSztqXAxX0xj8EHc4bBaDKAQTfrSlb, startInlinePlaybackCommand: Object}
+  [debug] Extra:
+  [debug] {form: Object}
+  [endGroup] console.groupEnd
+  [startGroup] [t] Resolving
+  [debug] Command:
+  [debug] {setAppBackgroundCommand: Object}
+  [debug] Extra:
+  [debug] undefined
+  [endGroup] console.groupEnd
+  [startGroup] [t] Resolving
+  [debug] Command:
+  [debug] {signalAction: Object}
+  [debug] Extra:
+  [debug] undefined
+  [endGroup] console.groupEnd
+  [info] [JSON.stringify] Set isInlinePlaybackNoAd
+saved 08-player.json (200, 3123 bytes)
+  [startGroup] [t] Resolving
+  [debug] Command:
+  [debug] {clickTrackingParams: CAAQu2kiEwjC7LXUztqXAxUFgeQGHe2VA2DKAQTfrSlb, signalAction: Object}
+  [debug] Extra:
+  [debug] undefined
+  [endGroup] console.groupEnd
+  [startGroup] [t] Resolving
+  [debug] Command:
+  [debug] {setAppBackgroundCommand: Object}
+  [debug] Extra:
+  [debug] undefined
+  [endGroup] console.groupEnd
+  [startGroup] [t] Resolving
+  [debug] Command:
+  [debug] {signalAction: Object}
+  [debug] Extra:
+  [debug] undefined
+  [endGroup] console.groupEnd
+channel rows: [
+ "الفيديوهات 43:17 اخسر 68 كيلوغرام واربح 250,000 دولار! MrBeast ترجمة مصاحبة157 مليون مشاهدة•قبل 10 أيام 57:59 كل كل طعام السوبر ماركت واربح 1,000,000 دولار MrBe",
+ "New Uploads 43:17 اخسر 68 كيلوغرام واربح 250,000 دولار! MrBeast ترجمة مصاحبة157 مليون مشاهدة•قبل 10 أيام 57:59 كل كل طعام السوبر ماركت واربح 1,000,000 دولار MrB"
+]

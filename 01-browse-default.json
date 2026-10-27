@@ -1,0 +1,205 @@
+{
+ "url": "https://www.youtube.com/youtubei/v1/browse?key=AIzaSyAheDh9FTz9KuSkjfUs9eBlAkkRfIDe5u8",
+ "status": 200,
+ "request": {
+  "browseId": "default",
+  "context": {
+   "client": {
+    "hl": "ar",
+    "gl": "US",
+    "remoteHost": "57.154.218.64",
+    "deviceMake": "LG",
+    "deviceModel": "",
+    "visitorData": "CgtGRGg2bW1FY0tQNCicoIPXBjIKCgJVUxIEGgAgMWKuAgqrAkN0MEJDQVVTandFQjhRWnVaaUFIZDhhTHU0bHRlOXN5Nnd0am56ZmxDV0VFV1Y3UFV5dV9WeE1TanUxcFFPQlBvMDh1UHQ2dWhScnRYS3d5b0pTaDdoMmYxUmVSRjQ1cVJKUmpRRWxCQTk4UWxJdzZhRHdOa2JqSjdFUGJCYnVia3BoN2JURDBhcnMySW5GTDQ0RDM4SHJUX0xqYVFYcGpRR2c3NHM1VWZHWGNLbXRBdHBRV1NITmZ0dkNrMWRjZTRLRkFVOWY1cFNnRk1rVUIzcW1kVHdSMlgwZVJBTklKa1B2UHRLczhueHZIRUQ4VUdBdnc5dnZteGI5cnVHVEZZUldQdktSQjJtZFRMVG1tanZQWVRCWktXRUFJcEF5WFVXazc4dVp3bGdR",
+    "userAgent": "Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 WebAppManager,gzip(gfe)",
+    "clientName": "TVHTML5",
+    "clientVersion": "7.20261025.19.00",
+    "osName": "webOS",
+    "osVersion": "",
+    "originalUrl": "https://www.youtube.com/tv",
+    "theme": "CLASSIC",
+    "platform": "TV",
+    "clientFormFactor": "UNKNOWN_FORM_FACTOR",
+    "webpSupport": false,
+    "configInfo": {
+     "appInstallData": "CJygg9cGEOrn0hwQ1fHSHBCW_dIcENut0hwQ5Yq4IhCQ79IcEIiLuCIqFENBTVNDeFVBbXBfeUg5S0tCUjBIMAA%3D"
+    },
+    "tvAppInfo": {
+     "appQuality": "TV_APP_QUALITY_FULL_ANIMATION",
+     "supportsNativeScrolling": false
+    },
+    "browserName": "LG Browser",
+    "browserVersion": "120.0.0.0",
+    "acceptHeader": "text/html,application/xhtml+xml,application/xml;q=0.9,image/jxl,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+    "deviceExperimentId": "ChxOemN3TVRNNE5ERTRNVGd6TVRZek1UazRNQT09EJygg9cGGJygg9cG",
+    "rolloutToken": "CJmX2aC2w_rN6QEQlcuP_M3alwMYlcuP_M3alwM%3D",
+    "screenHeightPoints": 1080,
+    "screenWidthPoints": 1920,
+    "windowWidthPoints": 1920,
+    "windowHeightPoints": 1080,
+    "screenDensityFloat": 1,
+    "utcOffsetMinutes": 0,
+    "memoryTotalKbytes": "16000000"
+   },
+   "user": {
+    "lockedSafetyMode": false
+   },
+   "request": {
+    "useSsl": true
+   },
+   "clickTracking": {
+    "clickTrackingParams": "IhMIgcSP/M3alwMVPJ3kBh0bvi6V"
+   }
+  }
+ },
+ "response": {
+  "responseContext": {
+   "serviceTrackingParams": [
+    {
+     "service": "GFEEDBACK",
+     "params": [
+      {
+       "key": "browse_id",
+       "value": "FEtopics"
+      },
+      {
+       "key": "browse_id_prefix",
+       "value": ""
+      },
+      {
+       "key": "logged_in",
+       "value": "0"
+      }
+     ]
+    }
+   ],
+   "maxAgeSeconds": 0,
+   "responseId": "IhMIts6d_M3alwMV-N7yBx11pTsa"
+  },
+  "contents": {
+   "tvBrowseRenderer": {
+    "content": {
+     "tvSurfaceContentRenderer": {
+      "content": {
+       "sectionListRenderer": {
+        "contents": [
+         {
+          "searchBarRenderer": {
+           "trackingParams": "CAUQoqIKGAAiEwi2zp38zdqXAxX43vIHHXWlOxo=",
+           "hack": true
+          }
+         },
+         {
+          "feedNudgeRenderer": {
+           "title": {
+            "runs": [
+             {
+              "text": "تخصيص تجربتك في YouTube"
+             }
+            ],
+            "accessibility": {
+             "accessibilityData": {
+              "label": "تخصيص تجربتك في YouTube"
+             }
+            }
+           },
+           "subtitle": {
+            "runs": [
+             {
+              "text": "ما عليك سوى تسجيل الدخول للاطّلاع على آخر الفيديوهات المقترَحة حسب اهتماماتك، أو استخدام ميزة البحث للعثور على الفيديوهات بدون تسجيل الدخول."
+             }
+            ],
+            "accessibility": {
+             "accessibilityData": {
+              "label": "ما عليك سوى تسجيل الدخول للاطّلاع على آخر الفيديوهات المقترَحة حسب اهتماماتك، أو استخدام ميزة البحث للعثور على الفيديوهات بدون تسجيل الدخول."
+             }
+            }
+           },
+           "primaryButton": {
+            "buttonRenderer": {
+             "isDisabled": false,
+             "text": {
+              "runs": [
+               {
+                "text": "تسجيل الدخول"
+               }
+              ],
+              "accessibility": {
+               "accessibilityData": {
+                "label": "تسجيل الدخول"
+               }
+              }
+             },
+             "trackingParams": "CAQQ-McGIhMIts6d_M3alwMV-N7yBx11pTsa",
+             "command": {
+              "clickTrackingParams": "CAQQ-McGIhMIts6d_M3alwMV-N7yBx11pTsaygEE360pWw==",
+              "commandExecutorCommand": {
+               "commands": [
+                {
+                 "clickTrackingParams": "CAQQ-McGIhMIts6d_M3alwMV-N7yBx11pTsaygEE360pWw==",
+                 "signInEndpoint": {
+                  "nextEndpoint": {
+                   "clickTrackingParams": "CAQQ-McGIhMIts6d_M3alwMV-N7yBx11pTsaygEE360pWw==",
+                   "browseEndpoint": {
+                    "browseId": "FEwhat_to_watch"
+                   }
+                  }
+                 }
+                },
+                {
+                 "clickTrackingParams": "CAQQ-McGIhMIts6d_M3alwMV-N7yBx11pTsaygEE360pWw==",
+                 "feedbackEndpoint": {
+                  "feedbackToken": "AB9zfpLuj0KjslVcrMw5uR8sIpSBLTh5mJ8JrcNj0SFkzVH-plrQWrZcItpsYrPyVGxRuw--qP045wGmrwRaroHkm4WlUEG1jvHRNeA415GrpPjWtyL_aCh0fL4HFCVI06f-4iPHbxok-QC2WqEVUYGAnheDpv3G38Jto5yPXWwqg42HVEKVLrx6mNFwcG7Dt7CF5KM-bBnWZF40KJVRzPueUHFDgzeE0A"
+                 }
+                }
+               ]
+              }
+             }
+            }
+           },
+           "impressionEndpoint": {
+            "clickTrackingParams": "CAMQ7_AMGAEiEwi2zp38zdqXAxX43vIHHXWlOxrKAQTfrSlb",
+            "feedbackEndpoint": {
+             "feedbackToken": "AB9zfpISS-Wr9PfHEApooKrA8yDCdwJjtQejP9o4VPaA1XG1pc41jK9SlSBm5EVxOgX_Fa6TSk9qWBInUNTwnX5HbTdY47SLtc-XRE3WsfWsZ4EmohjqwlG4UiBHavS6P1aOpl-8jG2szqzqLD8linAMa1CLdY-sPeVIiiIs2NKFETgmGxesvqnswwYd3TAdhpd9wwQ5f3qMitTqNr0I49NsCgdvlusjUw"
+            }
+           },
+           "trackingParams": "CAMQ7_AMGAEiEwi2zp38zdqXAxX43vIHHXWlOxo=",
+           "style": "FEED_NUDGE_STYLE_BUTTONS",
+           "applyModernizedStyle": true,
+           "enableHorizontalButtons": false,
+           "contentsLocation": "FEED_NUDGE_CONTENTS_LOCATION_LEFT",
+           "trimStyle": "FEED_NUDGE_TRIM_STYLE_NO_TRIM",
+           "backgroundStyle": "FEED_NUDGE_BACKGROUND_STYLE_ACCENT_GRADIENT",
+           "disableDropShadow": false
+          }
+         }
+        ],
+        "trackingParams": "CAIQui8iEwi2zp38zdqXAxX43vIHHXWlOxo="
+       }
+      },
+      "trackingParams": "CAEQ0IwDIhMIts6d_M3alwMV-N7yBx11pTsa",
+      "targetId": "browse-feedFEtopics"
+     }
+    }
+   }
+  },
+  "trackingParams": "CAAQhGciEwi2zp38zdqXAxX43vIHHXWlOxrKAQTfrSlb",
+  "frameworkUpdates": {
+   "entityBatchUpdate": {
+    "mutations": [
+     {
+      "entityKey": "EgZ0b3BiYXIg9QEoAQ%3D%3D",
+      "type": "ENTITY_MUTATION_TYPE_DELETE",
+      "options": {
+       "persistenceOption": "ENTITY_PERSISTENCE_OPTION_INMEMORY_AND_PERSIST"
+      }
+     }
+    ],
+    "timestamp": {
+     "seconds": "1793118236",
+     "nanos": 614631228
+    }
+   }
+  }
+ }
+}

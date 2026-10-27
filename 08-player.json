@@ -1,0 +1,109 @@
+{
+ "url": "https://www.youtube.com/youtubei/v1/player",
+ "status": 200,
+ "request": null,
+ "response": {
+  "responseContext": {
+   "serviceTrackingParams": [
+    {
+     "service": "GFEEDBACK",
+     "params": [
+      {
+       "key": "is_viewed_live",
+       "value": "False"
+      },
+      {
+       "key": "ipcc",
+       "value": "0"
+      },
+      {
+       "key": "is_alc_surface",
+       "value": "false"
+      },
+      {
+       "key": "wh_paused",
+       "value": "0"
+      },
+      {
+       "key": "logged_in",
+       "value": "0"
+      }
+     ]
+    }
+   ],
+   "maxAgeSeconds": 0,
+   "responseId": "IhMIwuy11M7alwMVBYHkBh3tlQNg"
+  },
+  "playabilityStatus": {
+   "status": "LOGIN_REQUIRED",
+   "reason": "يُرجى تسجيل الدخول لتأكيد أنّك لست روبوت دردشة",
+   "errorScreen": {
+    "playerErrorCommandRenderer": {
+     "command": {
+      "clickTrackingParams": "CAAQu2kiEwjC7LXUztqXAxUFgeQGHe2VA2DKAQTfrSlb",
+      "authRequiredCommand": {
+       "identityActionContext": {
+        "eventTrigger": "ACCOUNT_EVENT_TRIGGER_VISITOR_SUSPICIOUS_REQUEST",
+        "nextEndpoint": {
+         "clickTrackingParams": "CAAQu2kiEwjC7LXUztqXAxUFgeQGHe2VA2DKAQTfrSlb",
+         "commandExecutorCommand": {
+          "commands": [
+           {
+            "clickTrackingParams": "CAAQu2kiEwjC7LXUztqXAxUFgeQGHe2VA2DKAQTfrSlb",
+            "signalAction": {
+             "signal": "CLOSE_POPUP"
+            }
+           },
+           {
+            "clickTrackingParams": "CAAQu2kiEwjC7LXUztqXAxUFgeQGHe2VA2DKAQTfrSlb",
+            "signalAction": {
+             "signal": "RELOAD_PLAYER"
+            }
+           }
+          ]
+         }
+        }
+       },
+       "dismissalCommand": {
+        "clickTrackingParams": "CAAQu2kiEwjC7LXUztqXAxUFgeQGHe2VA2DKAQTfrSlb",
+        "commandExecutorCommand": {
+         "commands": [
+          {
+           "clickTrackingParams": "CAAQu2kiEwjC7LXUztqXAxUFgeQGHe2VA2DKAQTfrSlb",
+           "signalAction": {
+            "signal": "HISTORY_BACK"
+           }
+          },
+          {
+           "clickTrackingParams": "CAAQu2kiEwjC7LXUztqXAxUFgeQGHe2VA2DKAQTfrSlb",
+           "signalAction": {
+            "signal": "CLOSE_POPUP"
+           }
+          }
+         ]
+        }
+       }
+      }
+     },
+     "trackingParams": "CAAQu2kiEwjC7LXUztqXAxUFgeQGHe2VA2DKAQTfrSlb"
+    }
+   },
+   "skip": {
+    "playabilityErrorSkipConfig": {
+     "skipOnPlayabilityError": false
+    }
+   },
+   "contextParams": "Q0FFU0FnZ0M="
+  },
+  "trackingParams": "CAAQu2kiEwjC7LXUztqXAxUFgeQGHe2VA2DKAQTfrSlb",
+  "onResponseReceivedActions": [
+   {
+    "clickTrackingParams": "CAAQu2kiEwjC7LXUztqXAxUFgeQGHe2VA2DKAQTfrSlb",
+    "signalAction": {
+     "signal": "INIT_ATT_SERVICE"
+    }
+   }
+  ],
+  "adBreakHeartbeatParams": "Q0FBJTNE"
+ }
+}

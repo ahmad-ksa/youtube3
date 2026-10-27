@@ -1,0 +1,2813 @@
+{
+ "url": "https://www.youtube.com/youtubei/v1/log_event?t=k7bNFXbk96letYD5",
+ "status": 200,
+ "request": {
+  "context": {
+   "client": {
+    "screenWidthPoints": 1920,
+    "screenHeightPoints": 1080,
+    "utcOffsetMinutes": 0,
+    "hl": "ar",
+    "gl": "US",
+    "remoteHost": "57.154.218.64",
+    "deviceMake": "LG",
+    "deviceModel": "",
+    "visitorData": "CgtGRGg2bW1FY0tQNCicoIPXBjIKCgJVUxIEGgAgMWKuAgqrAkN0MEJDQVVTandFQjhRWnVaaUFIZDhhTHU0bHRlOXN5Nnd0am56ZmxDV0VFV1Y3UFV5dV9WeE1TanUxcFFPQlBvMDh1UHQ2dWhScnRYS3d5b0pTaDdoMmYxUmVSRjQ1cVJKUmpRRWxCQTk4UWxJdzZhRHdOa2JqSjdFUGJCYnVia3BoN2JURDBhcnMySW5GTDQ0RDM4SHJUX0xqYVFYcGpRR2c3NHM1VWZHWGNLbXRBdHBRV1NITmZ0dkNrMWRjZTRLRkFVOWY1cFNnRk1rVUIzcW1kVHdSMlgwZVJBTklKa1B2UHRLczhueHZIRUQ4VUdBdnc5dnZteGI5cnVHVEZZUldQdktSQjJtZFRMVG1tanZQWVRCWktXRUFJcEF5WFVXazc4dVp3bGdR",
+    "userAgent": "Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 WebAppManager,gzip(gfe)",
+    "clientName": "TVHTML5",
+    "clientVersion": "7.20261025.19.00",
+    "osName": "webOS",
+    "osVersion": "",
+    "originalUrl": "https://www.youtube.com/tv",
+    "theme": "CLASSIC",
+    "platform": "TV",
+    "clientFormFactor": "UNKNOWN_FORM_FACTOR",
+    "webpSupport": false,
+    "configInfo": {
+     "appInstallData": "CJygg9cGEOrn0hwQyfaAExDK-4ATEPfo0hwQmP7SHBDV8dIcEJb90hwQwY_QHBDditMcEL22rgUQnOXSHBDxxtIcENut0hwQ18jSHBC45M4cENr3zhwQh6zOHBDlirgiEJ_PgBMQzN-uBRDevM4cEK_w0hwQ8N7RHBCBzc4cEJmNsQUQ9quwBRC-hNEcENPa0hwQoYDTHBD82tIcEOfr0RwQrt7RHBCkqdEcEMv70hwQrtbPHBDp8tIcEPyP0xwQ8bTQHBCQ79IcEJGB0xwQvoqwBRCe0LAFEJiv0hwQvKTQHBCl49IcEK6Z0hwQzqjRHBCv-NEcEImwzhwQtt7RHBC9-NIcEMvy0hwQwsDSHBCIi7giEOWfgRMQnf3SHCpsQ0FNU1RSVk8tWnEtRE1lVUVwVUNuQTc1Rlo0RnBfSVBnQTBIMVE3UUJQNEVvd2FuQnNpbDZRc3lxNndFazh3RHR1UUc1SVVYckxzRHlwa0ZCUVVGNVZpY2l3T243ZzdxZjJlQmt3YXpBeDBIMAA%3D"
+    },
+    "tvAppInfo": {
+     "appQuality": "TV_APP_QUALITY_FULL_ANIMATION",
+     "supportsNativeScrolling": false,
+     "signedInAccountCount": 0,
+     "watchPageInfo": {
+      "watchPageVersion": "WATCH_PAGE_VERSION_V2025",
+      "combineChannelSdEntrypoints": false,
+      "enableDirectToChannelPage": false,
+      "disableSpeedBumps": false
+     },
+     "voiceCapability": {
+      "hasSoftMicSupport": false,
+      "hasHardMicSupport": false,
+      "useHoldToTalkPrompt": false
+     }
+    },
+    "browserName": "LG Browser",
+    "browserVersion": "120.0.0.0",
+    "acceptHeader": "text/html,application/xhtml+xml,application/xml;q=0.9,image/jxl,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+    "deviceExperimentId": "ChxOemN3TVRNNE5ERTRNVGd6TVRZek1UazRNQT09EJygg9cGGJygg9cG",
+    "rolloutToken": "CJmX2aC2w_rN6QEQlcuP_M3alwMYlcuP_M3alwM%3D",
+    "windowWidthPoints": 1920,
+    "windowHeightPoints": 1080,
+    "screenDensityFloat": 1,
+    "memoryTotalKbytes": "16000000",
+    "mediaCapabilities": {
+     "videoFormatCapabilities": [
+      {
+       "videoCodec": 4
+      }
+     ]
+    }
+   },
+   "user": {
+    "enableSafetyMode": false
+   },
+   "request": {
+    "internalExperimentFlags": [],
+    "consistencyTokenJars": []
+   }
+  },
+  "events": [
+   {
+    "eventTimeMs": 1793118238287,
+    "latencyActionTicked": {
+     "tickName": "rps",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "1028"
+    }
+   },
+   {
+    "eventTimeMs": 1793118238287,
+    "latencyActionTicked": {
+     "tickName": "rpe",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "1028"
+    }
+   },
+   {
+    "eventTimeMs": 1793118238433,
+    "latencyActionTicked": {
+     "tickName": "r_connect_backend",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "1174"
+    }
+   },
+   {
+    "eventTimeMs": 1793118238433,
+    "latencyActionTicked": {
+     "tickName": "r_connect_backend",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "1174"
+    }
+   },
+   {
+    "eventTimeMs": 1793118238433,
+    "flowEvent": {
+     "flowNonce": "yk3CXt7X9zPgcPOk",
+     "flowType": "FLOW_TYPE_MDX_RECEIVER_CONNECTION",
+     "flowEventType": {
+      "flowEventNamespace": "FLOW_EVENT_NAMESPACE_MDX_RECEIVER_CONNECTION",
+      "flowEventType": 5
+     },
+     "flowMetadata": {
+      "mdxReceiverConnectionContext": {
+       "mdxSenderConnectedCounter": 0,
+       "supportsSmoothPairing": false,
+       "hasManuallyPairedRemotesOnAppStartup": false,
+       "appReloadCount": 0
+      }
+     }
+    },
+    "context": {
+     "lastActivityMs": "1175"
+    }
+   },
+   {
+    "eventTimeMs": 1793118238478,
+    "flowEvent": {
+     "flowNonce": "yk3CXt7X9zPgcPOk",
+     "flowType": "FLOW_TYPE_MDX_RECEIVER_CONNECTION",
+     "flowEventType": {
+      "flowEventNamespace": "FLOW_EVENT_NAMESPACE_MDX_RECEIVER_CONNECTION",
+      "flowEventType": 5
+     },
+     "flowMetadata": {
+      "mdxReceiverConnectionContext": {
+       "mdxSenderConnectedCounter": 0,
+       "supportsSmoothPairing": false,
+       "hasManuallyPairedRemotesOnAppStartup": false,
+       "appReloadCount": 0
+      }
+     }
+    },
+    "context": {
+     "lastActivityMs": "1220"
+    }
+   },
+   {
+    "eventTimeMs": 1793118238481,
+    "latencyActionTicked": {
+     "tickName": "rps",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "1223"
+    }
+   },
+   {
+    "eventTimeMs": 1793118238481,
+    "latencyActionTicked": {
+     "tickName": "rpe",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "1223"
+    }
+   },
+   {
+    "eventTimeMs": 1793118238503,
+    "flowEvent": {
+     "flowNonce": "yk3CXt7X9zPgcPOk",
+     "flowType": "FLOW_TYPE_MDX_RECEIVER_CONNECTION",
+     "flowEventType": {
+      "flowEventNamespace": "FLOW_EVENT_NAMESPACE_MDX_RECEIVER_CONNECTION",
+      "flowEventType": 3
+     },
+     "flowMetadata": {
+      "mdxReceiverConnectionContext": {
+       "mdxSenderConnectedCounter": 0,
+       "supportsSmoothPairing": false,
+       "hasManuallyPairedRemotesOnAppStartup": false,
+       "appReloadCount": 0
+      }
+     }
+    },
+    "context": {
+     "lastActivityMs": "1244"
+    }
+   },
+   {
+    "eventTimeMs": 1793118238526,
+    "flowEvent": {
+     "flowNonce": "yk3CXt7X9zPgcPOk",
+     "flowType": "FLOW_TYPE_MDX_RECEIVER_CONNECTION",
+     "flowEventType": {
+      "flowEventNamespace": "FLOW_EVENT_NAMESPACE_MDX_RECEIVER_CONNECTION",
+      "flowEventType": 4
+     },
+     "flowMetadata": {
+      "mdxReceiverConnectionContext": {
+       "mdxSenderConnectedCounter": 0,
+       "supportsSmoothPairing": false,
+       "hasManuallyPairedRemotesOnAppStartup": false,
+       "appReloadCount": 0
+      }
+     }
+    },
+    "context": {
+     "lastActivityMs": "1268"
+    }
+   },
+   {
+    "eventTimeMs": 1793118238527,
+    "flowEvent": {
+     "flowNonce": "yk3CXt7X9zPgcPOk",
+     "flowType": "FLOW_TYPE_MDX_RECEIVER_CONNECTION",
+     "flowEventType": {
+      "flowEventNamespace": "FLOW_EVENT_NAMESPACE_MDX_RECEIVER_CONNECTION",
+      "flowEventType": 16
+     },
+     "flowMetadata": {
+      "mdxReceiverConnectionContext": {
+       "mdxSenderConnectedCounter": 0,
+       "supportsSmoothPairing": false,
+       "hasManuallyPairedRemotesOnAppStartup": false,
+       "appReloadCount": 0
+      }
+     }
+    },
+    "context": {
+     "lastActivityMs": "1268"
+    }
+   },
+   {
+    "eventTimeMs": 1793118238548,
+    "flowEvent": {
+     "flowNonce": "2-e96CU6dMLluh5q",
+     "flowType": "FLOW_TYPE_MDX_RECEIVER_CONNECTION",
+     "flowEventType": {
+      "flowEventNamespace": "FLOW_EVENT_NAMESPACE_MDX_RECEIVER_CONNECTION",
+      "flowEventType": 1
+     },
+     "flowMetadata": {
+      "mdxReceiverConnectionContext": {
+       "mdxSenderConnectedCounter": 0,
+       "supportsSmoothPairing": false,
+       "hasManuallyPairedRemotesOnAppStartup": false,
+       "appReloadCount": 0
+      }
+     }
+    },
+    "context": {
+     "lastActivityMs": "1290"
+    }
+   },
+   {
+    "eventTimeMs": 1793118238735,
+    "flowEvent": {
+     "flowNonce": "2-e96CU6dMLluh5q",
+     "flowType": "FLOW_TYPE_MDX_RECEIVER_CONNECTION",
+     "flowEventType": {
+      "flowEventNamespace": "FLOW_EVENT_NAMESPACE_MDX_RECEIVER_CONNECTION",
+      "flowEventType": 6
+     },
+     "flowMetadata": {
+      "mdxReceiverConnectionContext": {
+       "mdxSenderConnectedCounter": 0,
+       "supportsSmoothPairing": false,
+       "hasManuallyPairedRemotesOnAppStartup": false,
+       "appReloadCount": 0
+      }
+     }
+    },
+    "context": {
+     "lastActivityMs": "1477"
+    }
+   },
+   {
+    "eventTimeMs": 1793118238735,
+    "latencyActionTicked": {
+     "tickName": "r_connect_backend_success",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "1477"
+    }
+   },
+   {
+    "eventTimeMs": 1793118238736,
+    "latencyActionTicked": {
+     "tickName": "r_connect_backend_success",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "1478"
+    }
+   },
+   {
+    "eventTimeMs": 1793118238737,
+    "latencyActionTicked": {
+     "tickName": "r_status_update",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "1479"
+    }
+   },
+   {
+    "eventTimeMs": 1793118238739,
+    "ipValidationStarted": {
+     "nonce": "14AF2CBF-A0AB-4A73-869E-41A34ED2197B",
+     "loungeToken": "AGdO5p-zSvDqbP67ByR9WHwEwgzNKen0e4srcgy2LKlgLAJtDmIfytjpeqsnnUjc5XUKT2Da2aJyiZu6TLfmOoI--6RKXvKrKfqHo7_NGhEU-TDLmhz_vTYs_m0aWvDemZ0y45Ij78NoPboumlOAjzeeo6C3jueELmDr56ohUgpnSwr2yEJUVM4"
+    },
+    "context": {
+     "lastActivityMs": "1480"
+    }
+   },
+   {
+    "eventTimeMs": 1793118238739,
+    "ipValidationStarted": {
+     "nonce": "14AF2CBF-A0AB-4A73-869E-41A34ED2197B",
+     "loungeToken": "AGdO5p-zSvDqbP67ByR9WHwEwgzNKen0e4srcgy2LKlgLAJtDmIfytjpeqsnnUjc5XUKT2Da2aJyiZu6TLfmOoI--6RKXvKrKfqHo7_NGhEU-TDLmhz_vTYs_m0aWvDemZ0y45Ij78NoPboumlOAjzeeo6C3jueELmDr56ohUgpnSwr2yEJUVM4"
+    },
+    "context": {
+     "lastActivityMs": "1480"
+    }
+   },
+   {
+    "eventTimeMs": 1793118238767,
+    "genericClientExperimentEvent": {
+     "eventType": "GENERIC_CLIENT_EXPERIMENT_EVENT_TYPE_IN_ZP_VOICE_CRASHY_SET"
+    },
+    "context": {
+     "lastActivityMs": "1508"
+    }
+   },
+   {
+    "eventTimeMs": 1793118238800,
+    "clientError": {
+     "errorMetadata": {
+      "pageUrl": "https://www.youtube.com/tv#/",
+      "kvPairs": [
+       {
+        "key": "client.name",
+        "value": "TVHTML5"
+       },
+       {
+        "key": "client.version",
+        "value": "7.20261025.19.00"
+       },
+       {
+        "key": "client.device.vendor",
+        "value": "Google Inc."
+       },
+       {
+        "key": "client.params.errorServiceSignature",
+        "value": "msg=7&cb=6"
+       },
+       {
+        "key": "client.params.serviceWorker",
+        "value": "false"
+       },
+       {
+        "key": "client.params.fscripts",
+        "value": "0"
+       },
+       {
+        "key": "server.name",
+        "value": "WebFE"
+       },
+       {
+        "key": "server.version",
+        "value": "prod"
+       },
+       {
+        "key": "client.player.version",
+        "value": "1.20261021.08.00"
+       }
+      ],
+      "experimentIds": [
+       52146636,
+       52251755,
+       52253088,
+       52265818,
+       52269476,
+       52286676,
+       52299916
+      ]
+     },
+     "stackTrace": {
+      "isObfuscated": true,
+      "browserStackInfo": {
+       "stackTrace": "    at aDa.A (https://www.youtube.com/s/_/kabuki/_/js/k=kabuki.base_cr.en_US.JJpyJjZUMLk.es5.O/ck=kabuki.base_cr.sv42As-pxto.R.W.O/am=AAAAAEBJAEAJACABNKAgACg/d=1/exm=OoTvYc,base,main/excm=main/ed=1/rs=ANjRhVlDI4ums4U9wYwF-l1GoinEwLXcBw/m=HZgGtc:852:172)\n    at qu (https://www.youtube.com/s/_/kabuki/_/js/k=kabuki.base_cr.en_US.JJpyJjZUMLk.es5.O/am=AAAAAEBJAEAJACABNKAgACg/d=1/excm=main/rs=ANjRhVna9Z-d4ONUI4eRBgczzNXzuQiI1A/m=base:990:40)\n    at dDa.next (https://www.youtube.com/s/_/kabuki/_/js/k=kabuki.base_cr.en_US.JJpyJjZUMLk.es5.O/am=AAAAAEBJAEAJACABNKAgACg/d=1/excm=main/rs=ANjRhVna9Z-d4ONUI4eRBgczzNXzuQiI1A/m=base:991:98)\n    at https://www.youtube.com/s/_/kabuki/_/js/k=kabuki.base_cr.en_US.JJpyJjZUMLk.es5.O/am=AAAAAEBJAEAJACABNKAgACg/d=1/excm=main/rs=ANjRhVna9Z-d4ONUI4eRBgczzNXzuQiI1A/m=base:993:194\n    at new Promise (<anonymous>)\n    at eDa (https://www.youtube.com/s/_/kabuki/_/js/k=kabuki.base_cr.en_US.JJpyJjZUMLk.es5.O/am=AAAAAEBJAEAJACABNKAgACg/d=1/excm=main/rs=ANjRhVna9Z-d4ONUI4eRBgczzNXzuQiI1A/m=base:993:87)\n    at _.A (https://www.youtube.com/s/_/kabuki/_/js/k=kabuki.base_cr.en_US.JJpyJjZUMLk.es5.O/am=AAAAAEBJAEAJACABNKAgACg/d=1/excm=main/rs=ANjRhVna9Z-d4ONUI4eRBgczzNXzuQiI1A/m=base:993:228)\n    at _.n.initialize (https://www.youtube.com/s/_/kabuki/_/js/k=kabuki.base_cr.en_US.JJpyJjZUMLk.es5.O/ck=kabuki.base_cr.sv42As-pxto.R.W.O/am=AAAAAEBJAEAJACABNKAgACg/d=1/exm=OoTvYc,base,main/excm=main/ed=1/rs=ANjRhVlDI4ums4U9wYwF-l1GoinEwLXcBw/m=HZgGtc:852:47)\n    at tGc (https://www.youtube.com/s/_/kabuki/_/js/k=kabuki.base_cr.en_US.JJpyJjZUMLk.es5.O/ck=kabuki.base_cr.sv42As-pxto.R.W.O/am=AAAAAEBJAEAJACABNKAgACg/d=1/exm=OoTvYc,base,main/excm=main/ed=1/rs=ANjRhVlDI4ums4U9wYwF-l1GoinEwLXcBw/m=HZgGtc:1094:297)\n    at aDa.A (https://www.youtube.com/s/_/kabuki/_/js/k=kabuki.base_cr.en_US.JJpyJjZUMLk.es5.O/ck=kabuki.base_cr.sv42As-pxto.R.W.O/am=AAAAAEBJAEAJACABNKAgACg/d=1/exm=OoTvYc,base,main/excm=main/ed=1/rs=ANjRhVlDI4ums4U9wYwF-l1GoinEwLXcBw/m=HZgGtc:1121:2279)\n    at qu (https://www.youtube.com/s/_/kabuki/_/js/k=kabuki.base_cr.en_US.JJpyJjZUMLk.es5.O/am=AAAAAEBJAEAJACABNKAgACg/d=1/excm=main/rs=ANjRhVna9Z-d4ONUI4eRBgczzNXzuQiI1A/m=base:990:40)\n    at dDa.next (https://www.youtube.com/s/_/kabuki/_/js/k=kabuki.base_cr.en_US.JJpyJjZUMLk.es5.O/am=AAAAAEBJAEAJACABNKAgACg/d=1/excm=main/rs=ANjRhVna9Z-d4ONUI4eRBgczzNXzuQiI1A/m=base:991:98)\n    at b (https://www.youtube.com/s/_/kabuki/_/js/k=kabuki.base_cr.en_US.JJpyJjZUMLk.es5.O/am=AAAAAEBJAEAJACABNKAgACg/d=1/excm=main/rs=ANjRhVna9Z-d4ONUI4eRBgczzNXzuQiI1A/m=base:993:40)",
+       "filename": "https://www.youtube.com/tv#/"
+      }
+     },
+     "logMessage": {
+      "level": "ERROR_LEVEL_WARNNING",
+      "message": "cj",
+      "errorClassName": "Error",
+      "sampleWeight": 1
+     }
+    },
+    "context": {
+     "lastActivityMs": "1541"
+    }
+   },
+   {
+    "eventTimeMs": 1793118238948,
+    "latencyActionTicked": {
+     "tickName": "aast_e",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "1690"
+    }
+   },
+   {
+    "eventTimeMs": 1793118238995,
+    "streamzIncremented": {
+     "serializedIncrementBatch": "ChYvY2xpZW50X3N0cmVhbXovYmcvZnJzEhAKDgoIYm90Z3VhcmQSAjUzGgJtayITCgYKBGFHSWYSCREAAAAAAOCYQA=="
+    },
+    "context": {
+     "lastActivityMs": "1737"
+    }
+   },
+   {
+    "eventTimeMs": 1793118238995,
+    "streamzIncremented": {
+     "serializedIncrementBatch": "ChUvY2xpZW50X3N0cmVhbXovYmcvZWMSEAoOCghib3RndWFyZBICNTMaAmVuGgJtayIRCgMKAW4KBgoEYUdJZhICCAEiEQoDCgFtCgYKBGFHSWYSAggB"
+    },
+    "context": {
+     "lastActivityMs": "1737"
+    }
+   },
+   {
+    "eventTimeMs": 1793118238996,
+    "streamzIncremented": {
+     "serializedIncrementBatch": "ChUvY2xpZW50X3N0cmVhbXovYmcvZWwSEAoOCghib3RndWFyZBICNTMaAmVuGgJtayIYCgMKAW4KBgoEYUdJZhIJEQDQzMzMzD5AIhgKAwoBaQoGCgRhR0lmEgkRAAA0MzMz0z8iGAoDCgFvCgYKBGFHSWYSCREAMzMzM6NjQCIYCgMKAWMKBgoEYUdJZhIJEQAAAAAAAAAAIhgKAwoBQwoGCgRhR0lmEgkRAACYmZmZyT8iGAoDCgFXCgYKBGFHSWYSCREAADIzMzPTPyIYCgMKAXgKBgoEYUdJZhIJEQAAAAAAAAAAIhgKAwoBbQoGCgRhR0lmEgkRAACZmZmZ6T8="
+    },
+    "context": {
+     "lastActivityMs": "1737"
+    }
+   },
+   {
+    "eventTimeMs": 1793118238996,
+    "streamzIncremented": {
+     "serializedIncrementBatch": "ChovY2xpZW50X3N0cmVhbXovYmcvcG8vY3dzYxIQCg4KCGJvdGd1YXJkEgI1MxoCc3UaAm1rIhEKAwoBcwoGCgRhR0lmEgIIAQ=="
+    },
+    "context": {
+     "lastActivityMs": "1737"
+    }
+   },
+   {
+    "eventTimeMs": 1793118239760,
+    "latencyActionBaselined": {
+     "clientActionNonce": "8UkW8nBDcLbCUIWT"
+    },
+    "context": {
+     "lastActivityMs": "2502"
+    }
+   },
+   {
+    "eventTimeMs": 1793118239760,
+    "latencyActionTicked": {
+     "tickName": "start",
+     "clientActionNonce": "8UkW8nBDcLbCUIWT"
+    },
+    "context": {
+     "lastActivityMs": "2502"
+    }
+   },
+   {
+    "eventTimeMs": 1793118248738,
+    "latencyActionTicked": {
+     "tickName": "aa",
+     "clientActionNonce": "tLN5ZzAObiUswAs1"
+    },
+    "context": {
+     "lastActivityMs": "2"
+    }
+   },
+   {
+    "eventTimeMs": 1793118248739,
+    "latencyActionInfo": {
+     "loadType": "warm",
+     "clientActionNonce": "548-2Z-C2aSfAhyG"
+    },
+    "context": {
+     "lastActivityMs": "2"
+    }
+   },
+   {
+    "eventTimeMs": 1793118248739,
+    "latencyActionBaselined": {
+     "clientActionNonce": "548-2Z-C2aSfAhyG"
+    },
+    "context": {
+     "lastActivityMs": "2"
+    }
+   },
+   {
+    "eventTimeMs": 1793118248739,
+    "latencyActionInfo": {
+     "isNavigation": true,
+     "actionType": "LATENCY_ACTION_ONBOARDING",
+     "previousAction": "LATENCY_ACTION_ONBOARDING",
+     "httpProtocol": "h2",
+     "transportProtocol": "tcp",
+     "clientScreenNonce": "V0_Pm0mVkhqcyCG9",
+     "isVisible": true,
+     "clientActionNonce": "548-2Z-C2aSfAhyG"
+    },
+    "context": {
+     "lastActivityMs": "2"
+    }
+   },
+   {
+    "eventTimeMs": 1793118248739,
+    "latencyActionInfo": {
+     "tvInfo": {
+      "label": "web_20261025_19_RC00",
+      "isPreloaded": false,
+      "appQuality": "TV_APP_QUALITY_LIMITED_MEMORY",
+      "isMdx": false
+     },
+     "clientActionNonce": "548-2Z-C2aSfAhyG"
+    },
+    "context": {
+     "lastActivityMs": "3"
+    }
+   },
+   {
+    "eventTimeMs": 1793118248739,
+    "latencyActionInfo": {
+     "kabukiInfo": {
+      "navigationType": "TV_NAVIGATION_TYPE_FORWARD"
+     },
+     "clientActionNonce": "548-2Z-C2aSfAhyG"
+    },
+    "context": {
+     "lastActivityMs": "3"
+    }
+   },
+   {
+    "eventTimeMs": 1793118248740,
+    "visualElementGestured": {
+     "csn": "V0_Pm0mVkhqcyCG9",
+     "ve": {
+      "veType": 272991,
+      "veCounter": 2
+     },
+     "gestureType": "INTERACTION_LOGGING_GESTURE_TYPE_GENERIC_CLICK"
+    },
+    "context": {
+     "lastActivityMs": "3"
+    }
+   },
+   {
+    "eventTimeMs": 1793118248740,
+    "latencyActionTicked": {
+     "tickName": "c_rns",
+     "clientActionNonce": "548-2Z-C2aSfAhyG"
+    },
+    "context": {
+     "lastActivityMs": "4"
+    }
+   },
+   {
+    "eventTimeMs": 1793118248753,
+    "latencyActionTicked": {
+     "tickName": "c_rnf",
+     "clientActionNonce": "548-2Z-C2aSfAhyG"
+    },
+    "context": {
+     "lastActivityMs": "16"
+    }
+   },
+   {
+    "eventTimeMs": 1793118248753,
+    "screenCreated": {
+     "csn": "VeAjKwW1Sw3qlMJ9",
+     "pageVe": {
+      "veType": 93044
+     },
+     "implicitGesture": {
+      "parentCsn": "V0_Pm0mVkhqcyCG9",
+      "gesturedVe": {
+       "veType": 93044
+      }
+     }
+    },
+    "context": {
+     "lastActivityMs": "16"
+    }
+   },
+   {
+    "eventTimeMs": 1793118248753,
+    "visualElementHidden": {
+     "csn": "V0_Pm0mVkhqcyCG9",
+     "ve": {
+      "veType": 93044
+     },
+     "eventType": 16
+    },
+    "context": {
+     "lastActivityMs": "16"
+    }
+   },
+   {
+    "eventTimeMs": 1793118248753,
+    "latencyActionInfo": {
+     "clientScreenNonce": "VeAjKwW1Sw3qlMJ9",
+     "clientActionNonce": "548-2Z-C2aSfAhyG"
+    },
+    "context": {
+     "lastActivityMs": "16"
+    }
+   },
+   {
+    "eventTimeMs": 1793118248753,
+    "visualElementAttached": {
+     "csn": "VeAjKwW1Sw3qlMJ9",
+     "parentVe": {
+      "veType": 93044
+     },
+     "childVes": [
+      {
+       "veType": 18440,
+       "veCounter": 3
+      }
+     ]
+    },
+    "context": {
+     "lastActivityMs": "17"
+    }
+   },
+   {
+    "eventTimeMs": 1793118248753,
+    "visualElementAttached": {
+     "csn": "VeAjKwW1Sw3qlMJ9",
+     "parentVe": {
+      "veType": 93044
+     },
+     "childVes": [
+      {
+       "trackingParams": "CAAQumkiEwiCy9L8zdqXAxVXBdYAHeRhFLvKAQTfrSlb"
+      }
+     ]
+    },
+    "context": {
+     "lastActivityMs": "17"
+    }
+   },
+   {
+    "eventTimeMs": 1793118248753,
+    "visualElementAttached": {
+     "csn": "VeAjKwW1Sw3qlMJ9",
+     "parentVe": {
+      "veType": 93044
+     },
+     "childVes": [
+      {
+       "veType": 100376,
+       "veCounter": 14
+      }
+     ]
+    },
+    "context": {
+     "lastActivityMs": "17"
+    }
+   },
+   {
+    "eventTimeMs": 1793118248753,
+    "visualElementAttached": {
+     "csn": "VeAjKwW1Sw3qlMJ9",
+     "parentVe": {
+      "veType": 93044
+     },
+     "childVes": [
+      {
+       "veType": 99781,
+       "veCounter": 15
+      }
+     ]
+    },
+    "context": {
+     "lastActivityMs": "17"
+    }
+   },
+   {
+    "eventTimeMs": 1793118248753,
+    "visualElementAttached": {
+     "csn": "VeAjKwW1Sw3qlMJ9",
+     "parentVe": {
+      "veType": 93044
+     },
+     "childVes": [
+      {
+       "veType": 74675,
+       "veCounter": 16
+      }
+     ]
+    },
+    "context": {
+     "lastActivityMs": "17"
+    }
+   },
+   {
+    "eventTimeMs": 1793118248753,
+    "visualElementAttached": {
+     "csn": "VeAjKwW1Sw3qlMJ9",
+     "parentVe": {
+      "veType": 93044
+     },
+     "childVes": [
+      {
+       "veType": 165763,
+       "veCounter": 17
+      }
+     ]
+    },
+    "context": {
+     "lastActivityMs": "17"
+    }
+   },
+   {
+    "eventTimeMs": 1793118248753,
+    "visualElementAttached": {
+     "csn": "VeAjKwW1Sw3qlMJ9",
+     "parentVe": {
+      "veType": 93044
+     },
+     "childVes": [
+      {
+       "veType": 100385,
+       "veCounter": 18
+      }
+     ]
+    },
+    "context": {
+     "lastActivityMs": "17"
+    }
+   },
+   {
+    "eventTimeMs": 1793118248770,
+    "latencyActionTicked": {
+     "tickName": "ol",
+     "clientActionNonce": "548-2Z-C2aSfAhyG"
+    },
+    "context": {
+     "lastActivityMs": "8"
+    }
+   },
+   {
+    "eventTimeMs": 1793118248770,
+    "latencyActionTicked": {
+     "tickName": "cpt",
+     "clientActionNonce": "548-2Z-C2aSfAhyG"
+    },
+    "context": {
+     "lastActivityMs": "8"
+    }
+   },
+   {
+    "eventTimeMs": 1793118248770,
+    "foregroundHeartbeatScreenAssociated": {
+     "clientDocumentNonce": "ppvr8c_X9vBMHrsO",
+     "clientScreenNonce": "VeAjKwW1Sw3qlMJ9"
+    },
+    "context": {
+     "lastActivityMs": "8"
+    }
+   },
+   {
+    "eventTimeMs": 1793118248865,
+    "latencyActionTicked": {
+     "tickName": "rps",
+     "clientActionNonce": "548-2Z-C2aSfAhyG"
+    },
+    "context": {
+     "lastActivityMs": "103"
+    }
+   },
+   {
+    "eventTimeMs": 1793118248866,
+    "visualElementAttached": {
+     "csn": "VeAjKwW1Sw3qlMJ9",
+     "parentVe": {
+      "veType": 99781,
+      "veCounter": 15
+     },
+     "childVes": [
+      {
+       "trackingParams": "CAAQpZsIIhMIm-eLgs7alwMVvVt0Bh3RQg92"
+      }
+     ]
+    },
+    "context": {
+     "lastActivityMs": "103"
+    }
+   },
+   {
+    "eventTimeMs": 1793118248866,
+    "visualElementShown": {
+     "csn": "VeAjKwW1Sw3qlMJ9",
+     "ve": {
+      "trackingParams": "CAAQpZsIIhMIm-eLgs7alwMVvVt0Bh3RQg92"
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "103"
+    }
+   },
+   {
+    "eventTimeMs": 1793118248868,
+    "visualElementAttached": {
+     "csn": "VeAjKwW1Sw3qlMJ9",
+     "parentVe": {
+      "veType": 93044
+     },
+     "childVes": [
+      {
+       "trackingParams": "CAAQpZsIIhMIm-eLgs7alwMVvVt0Bh3RQg92"
+      }
+     ]
+    },
+    "context": {
+     "lastActivityMs": "105"
+    }
+   },
+   {
+    "eventTimeMs": 1793118248868,
+    "latencyActionTicked": {
+     "tickName": "rpe",
+     "clientActionNonce": "548-2Z-C2aSfAhyG"
+    },
+    "context": {
+     "lastActivityMs": "105"
+    }
+   },
+   {
+    "eventTimeMs": 1793118248915,
+    "visualElementShown": {
+     "csn": "VeAjKwW1Sw3qlMJ9",
+     "ve": {
+      "veType": 100376,
+      "veCounter": 14
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "152"
+    }
+   },
+   {
+    "eventTimeMs": 1793118248915,
+    "visualElementShown": {
+     "csn": "VeAjKwW1Sw3qlMJ9",
+     "ve": {
+      "veType": 74675,
+      "veCounter": 16
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "152"
+    }
+   },
+   {
+    "eventTimeMs": 1793118248915,
+    "visualElementShown": {
+     "csn": "VeAjKwW1Sw3qlMJ9",
+     "ve": {
+      "veType": 165763,
+      "veCounter": 17
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "152"
+    }
+   },
+   {
+    "eventTimeMs": 1793118248915,
+    "visualElementShown": {
+     "csn": "VeAjKwW1Sw3qlMJ9",
+     "ve": {
+      "veType": 100385,
+      "veCounter": 18
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "152"
+    }
+   },
+   {
+    "eventTimeMs": 1793118248915,
+    "visualElementShown": {
+     "csn": "VeAjKwW1Sw3qlMJ9",
+     "ve": {
+      "veType": 99781,
+      "veCounter": 15
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "152"
+    }
+   },
+   {
+    "eventTimeMs": 1793118248915,
+    "visualElementShown": {
+     "csn": "VeAjKwW1Sw3qlMJ9",
+     "ve": {
+      "veType": 272991,
+      "veCounter": 2
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "152"
+    }
+   },
+   {
+    "eventTimeMs": 1793118248915,
+    "visualElementShown": {
+     "csn": "VeAjKwW1Sw3qlMJ9",
+     "ve": {
+      "veType": 352819,
+      "veCounter": 1
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "153"
+    }
+   },
+   {
+    "eventTimeMs": 1793118248915,
+    "visualElementShown": {
+     "csn": "VeAjKwW1Sw3qlMJ9",
+     "ve": {
+      "veType": 18440,
+      "veCounter": 3
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "153"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255603,
+    "visualElementGestured": {
+     "csn": "VeAjKwW1Sw3qlMJ9",
+     "ve": {
+      "veType": 100385,
+      "veCounter": 18
+     },
+     "gestureType": "INTERACTION_LOGGING_GESTURE_TYPE_GENERIC_CLICK"
+    },
+    "context": {
+     "lastActivityMs": "2"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255609,
+    "latencyActionTicked": {
+     "tickName": "aa",
+     "clientActionNonce": "548-2Z-C2aSfAhyG"
+    },
+    "context": {
+     "lastActivityMs": "8"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255609,
+    "latencyActionInfo": {
+     "loadType": "warm",
+     "clientActionNonce": "qu0RPPw22HJ6kCJq"
+    },
+    "context": {
+     "lastActivityMs": "8"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255609,
+    "latencyActionBaselined": {
+     "clientActionNonce": "qu0RPPw22HJ6kCJq"
+    },
+    "context": {
+     "lastActivityMs": "8"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255610,
+    "latencyActionInfo": {
+     "isNavigation": true,
+     "actionType": "LATENCY_ACTION_HOME",
+     "previousAction": "LATENCY_ACTION_ONBOARDING",
+     "httpProtocol": "h2",
+     "transportProtocol": "tcp",
+     "clientScreenNonce": "VeAjKwW1Sw3qlMJ9",
+     "isVisible": true,
+     "clientActionNonce": "qu0RPPw22HJ6kCJq"
+    },
+    "context": {
+     "lastActivityMs": "8"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255610,
+    "latencyActionInfo": {
+     "tvInfo": {
+      "label": "web_20261025_19_RC00",
+      "isPreloaded": false,
+      "appQuality": "TV_APP_QUALITY_LIMITED_MEMORY",
+      "isMdx": false
+     },
+     "clientActionNonce": "qu0RPPw22HJ6kCJq"
+    },
+    "context": {
+     "lastActivityMs": "8"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255610,
+    "latencyActionInfo": {
+     "kabukiInfo": {
+      "navigationType": "TV_NAVIGATION_TYPE_FORWARD"
+     },
+     "browseId": "default",
+     "clientActionNonce": "qu0RPPw22HJ6kCJq"
+    },
+    "context": {
+     "lastActivityMs": "8"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255611,
+    "latencyActionTicked": {
+     "tickName": "end",
+     "clientActionNonce": "8UkW8nBDcLbCUIWT"
+    },
+    "context": {
+     "lastActivityMs": "9"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255611,
+    "latencyActionInfo": {
+     "actionType": "LATENCY_ACTION_MDX_COMMAND",
+     "mdxInfo": {
+      "messageReceived": "onSetDiscoveryDeviceId",
+      "messageSent": "onIdentityChanged"
+     },
+     "clientActionNonce": "8UkW8nBDcLbCUIWT"
+    },
+    "context": {
+     "lastActivityMs": "9"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255614,
+    "latencyActionTicked": {
+     "tickName": "c_rns",
+     "clientActionNonce": "qu0RPPw22HJ6kCJq"
+    },
+    "context": {
+     "lastActivityMs": "12"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255625,
+    "visualElementGestured": {
+     "csn": "VeAjKwW1Sw3qlMJ9",
+     "ve": {
+      "trackingParams": "CAMQ7_AMGAEiEwi2zp38zdqXAxX43vIHHXWlOxrKAQTfrSlb"
+     },
+     "gestureType": "INTERACTION_LOGGING_GESTURE_TYPE_GENERIC_CLICK"
+    },
+    "context": {
+     "lastActivityMs": "24"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255626,
+    "latencyActionTicked": {
+     "tickName": "ftl_d",
+     "clientActionNonce": "qu0RPPw22HJ6kCJq"
+    },
+    "context": {
+     "lastActivityMs": "25"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255637,
+    "latencyActionTicked": {
+     "tickName": "c_rnf",
+     "clientActionNonce": "qu0RPPw22HJ6kCJq"
+    },
+    "context": {
+     "lastActivityMs": "36"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255639,
+    "screenCreated": {
+     "csn": "32-clnFbe7GHn60y",
+     "pageVe": {
+      "veType": 3854
+     },
+     "implicitGesture": {
+      "parentCsn": "VeAjKwW1Sw3qlMJ9",
+      "gesturedVe": {
+       "veType": 93044
+      }
+     }
+    },
+    "context": {
+     "lastActivityMs": "38"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255639,
+    "visualElementHidden": {
+     "csn": "VeAjKwW1Sw3qlMJ9",
+     "ve": {
+      "veType": 93044
+     },
+     "eventType": 16
+    },
+    "context": {
+     "lastActivityMs": "38"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255639,
+    "latencyActionInfo": {
+     "clientScreenNonce": "32-clnFbe7GHn60y",
+     "clientActionNonce": "qu0RPPw22HJ6kCJq"
+    },
+    "context": {
+     "lastActivityMs": "38"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255639,
+    "visualElementAttached": {
+     "csn": "32-clnFbe7GHn60y",
+     "parentVe": {
+      "veType": 3854
+     },
+     "childVes": [
+      {
+       "veType": 18440,
+       "veCounter": 3
+      }
+     ]
+    },
+    "context": {
+     "lastActivityMs": "38"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255639,
+    "visualElementAttached": {
+     "csn": "32-clnFbe7GHn60y",
+     "parentVe": {
+      "veType": 3854
+     },
+     "childVes": [
+      {
+       "trackingParams": "CAAQumkiEwiCy9L8zdqXAxVXBdYAHeRhFLvKAQTfrSlb"
+      }
+     ]
+    },
+    "context": {
+     "lastActivityMs": "38"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255639,
+    "visualElementAttached": {
+     "csn": "32-clnFbe7GHn60y",
+     "parentVe": {
+      "trackingParams": "CAUQoqIKGAAiEwi2zp38zdqXAxX43vIHHXWlOxo="
+     },
+     "childVes": [
+      {
+       "veType": 10349,
+       "veCounter": 20
+      }
+     ]
+    },
+    "context": {
+     "lastActivityMs": "38"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255639,
+    "visualElementAttached": {
+     "csn": "32-clnFbe7GHn60y",
+     "parentVe": {
+      "veType": 3854
+     },
+     "childVes": [
+      {
+       "veType": 168226,
+       "veCounter": 19
+      }
+     ]
+    },
+    "context": {
+     "lastActivityMs": "38"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255639,
+    "visualElementAttached": {
+     "csn": "32-clnFbe7GHn60y",
+     "parentVe": {
+      "veType": 3854
+     },
+     "childVes": [
+      {
+       "veType": 10349,
+       "veCounter": 22
+      }
+     ]
+    },
+    "context": {
+     "lastActivityMs": "38"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255639,
+    "visualElementAttached": {
+     "csn": "32-clnFbe7GHn60y",
+     "parentVe": {
+      "veType": 3854
+     },
+     "childVes": [
+      {
+       "veType": 168226,
+       "veCounter": 21
+      }
+     ]
+    },
+    "context": {
+     "lastActivityMs": "38"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255639,
+    "visualElementAttached": {
+     "csn": "32-clnFbe7GHn60y",
+     "parentVe": {
+      "veType": 3854
+     },
+     "childVes": [
+      {
+       "trackingParams": "CAAQhGciEwi2zp38zdqXAxX43vIHHXWlOxrKAQTfrSlb"
+      }
+     ]
+    },
+    "context": {
+     "lastActivityMs": "38"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255653,
+    "latencyActionTicked": {
+     "tickName": "ol",
+     "clientActionNonce": "qu0RPPw22HJ6kCJq"
+    },
+    "context": {
+     "lastActivityMs": "3"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255653,
+    "latencyActionTicked": {
+     "tickName": "cpt",
+     "clientActionNonce": "qu0RPPw22HJ6kCJq"
+    },
+    "context": {
+     "lastActivityMs": "3"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255653,
+    "latencyActionTicked": {
+     "tickName": "ol",
+     "clientActionNonce": "unJyKRXN1t-fMsju"
+    },
+    "context": {
+     "lastActivityMs": "4"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255654,
+    "foregroundHeartbeatScreenAssociated": {
+     "clientDocumentNonce": "ppvr8c_X9vBMHrsO",
+     "clientScreenNonce": "32-clnFbe7GHn60y"
+    },
+    "context": {
+     "lastActivityMs": "4"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255694,
+    "latencyActionTicked": {
+     "tickName": "rps",
+     "clientActionNonce": "qu0RPPw22HJ6kCJq"
+    },
+    "context": {
+     "lastActivityMs": "45"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255694,
+    "latencyActionTicked": {
+     "tickName": "rpe",
+     "clientActionNonce": "qu0RPPw22HJ6kCJq"
+    },
+    "context": {
+     "lastActivityMs": "45"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255797,
+    "visualElementShown": {
+     "csn": "32-clnFbe7GHn60y",
+     "ve": {
+      "trackingParams": "CAEQ0IwDIhMIts6d_M3alwMV-N7yBx11pTsa"
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "148"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255798,
+    "visualElementShown": {
+     "csn": "32-clnFbe7GHn60y",
+     "ve": {
+      "trackingParams": "CAIQui8iEwi2zp38zdqXAxX43vIHHXWlOxo="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "148"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255798,
+    "visualElementShown": {
+     "csn": "32-clnFbe7GHn60y",
+     "ve": {
+      "trackingParams": "CAUQoqIKGAAiEwi2zp38zdqXAxX43vIHHXWlOxo="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "148"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255798,
+    "visualElementShown": {
+     "csn": "32-clnFbe7GHn60y",
+     "ve": {
+      "veType": 10349,
+      "veCounter": 20
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "148"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255798,
+    "visualElementShown": {
+     "csn": "32-clnFbe7GHn60y",
+     "ve": {
+      "trackingParams": "CAMQ7_AMGAEiEwi2zp38zdqXAxX43vIHHXWlOxo="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "148"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255798,
+    "visualElementShown": {
+     "csn": "32-clnFbe7GHn60y",
+     "ve": {
+      "trackingParams": "CAQQ-McGIhMIts6d_M3alwMV-N7yBx11pTsa"
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "148"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255798,
+    "visualElementShown": {
+     "csn": "32-clnFbe7GHn60y",
+     "ve": {
+      "veType": 168226,
+      "veCounter": 21
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "148"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255798,
+    "visualElementShown": {
+     "csn": "32-clnFbe7GHn60y",
+     "ve": {
+      "veType": 10349,
+      "veCounter": 22
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "148"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255798,
+    "visualElementShown": {
+     "csn": "32-clnFbe7GHn60y",
+     "ve": {
+      "trackingParams": "CAAQumkiEwiCy9L8zdqXAxVXBdYAHeRhFLvKAQTfrSlb"
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "148"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255798,
+    "visualElementShown": {
+     "csn": "32-clnFbe7GHn60y",
+     "ve": {
+      "trackingParams": "CAMQtSwYACITCILL0vzN2pcDFVcF1gAd5GEUuw=="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "148"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255798,
+    "visualElementShown": {
+     "csn": "32-clnFbe7GHn60y",
+     "ve": {
+      "trackingParams": "CBMQtSwYACITCILL0vzN2pcDFVcF1gAd5GEUuw=="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "148"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255798,
+    "visualElementShown": {
+     "csn": "32-clnFbe7GHn60y",
+     "ve": {
+      "trackingParams": "CBIQtSwYASITCILL0vzN2pcDFVcF1gAd5GEUuw=="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "148"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255798,
+    "visualElementShown": {
+     "csn": "32-clnFbe7GHn60y",
+     "ve": {
+      "trackingParams": "CBAQtSwYAiITCILL0vzN2pcDFVcF1gAd5GEUuw=="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "148"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255798,
+    "visualElementShown": {
+     "csn": "32-clnFbe7GHn60y",
+     "ve": {
+      "trackingParams": "CA8QtSwYAyITCILL0vzN2pcDFVcF1gAd5GEUuw=="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "148"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255798,
+    "visualElementShown": {
+     "csn": "32-clnFbe7GHn60y",
+     "ve": {
+      "trackingParams": "CA4QtSwYBCITCILL0vzN2pcDFVcF1gAd5GEUuw=="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "148"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255798,
+    "visualElementShown": {
+     "csn": "32-clnFbe7GHn60y",
+     "ve": {
+      "trackingParams": "CA0QtSwYBSITCILL0vzN2pcDFVcF1gAd5GEUuw=="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "148"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255798,
+    "visualElementShown": {
+     "csn": "32-clnFbe7GHn60y",
+     "ve": {
+      "trackingParams": "CAwQnOQDGAYiEwiCy9L8zdqXAxVXBdYAHeRhFLs="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "148"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255798,
+    "visualElementShown": {
+     "csn": "32-clnFbe7GHn60y",
+     "ve": {
+      "trackingParams": "CAsQtSwYByITCILL0vzN2pcDFVcF1gAd5GEUuw=="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "148"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255798,
+    "visualElementShown": {
+     "csn": "32-clnFbe7GHn60y",
+     "ve": {
+      "trackingParams": "CAoQtSwYCCITCILL0vzN2pcDFVcF1gAd5GEUuw=="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "148"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255798,
+    "visualElementShown": {
+     "csn": "32-clnFbe7GHn60y",
+     "ve": {
+      "trackingParams": "CAkQtSwYCSITCILL0vzN2pcDFVcF1gAd5GEUuw=="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "148"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255798,
+    "visualElementShown": {
+     "csn": "32-clnFbe7GHn60y",
+     "ve": {
+      "trackingParams": "CAgQtSwYCiITCILL0vzN2pcDFVcF1gAd5GEUuw=="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "148"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255798,
+    "visualElementShown": {
+     "csn": "32-clnFbe7GHn60y",
+     "ve": {
+      "trackingParams": "CAcQtSwYCyITCILL0vzN2pcDFVcF1gAd5GEUuw=="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "148"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255798,
+    "visualElementShown": {
+     "csn": "32-clnFbe7GHn60y",
+     "ve": {
+      "trackingParams": "CAUQtSwYACITCILL0vzN2pcDFVcF1gAd5GEUuw=="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "148"
+    }
+   },
+   {
+    "eventTimeMs": 1793118255798,
+    "visualElementShown": {
+     "csn": "32-clnFbe7GHn60y",
+     "ve": {
+      "veType": 18440,
+      "veCounter": 3
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "148"
+    }
+   },
+   {
+    "eventTimeMs": 1793118263863,
+    "visualElementAttached": {
+     "csn": "32-clnFbe7GHn60y",
+     "parentVe": {
+      "trackingParams": "CAUQoqIKGAAiEwi2zp38zdqXAxX43vIHHXWlOxo="
+     },
+     "childVes": []
+    },
+    "context": {
+     "lastActivityMs": "2"
+    }
+   },
+   {
+    "eventTimeMs": 1793118263863,
+    "visualElementAttached": {
+     "csn": "32-clnFbe7GHn60y",
+     "parentVe": {
+      "veType": 3854
+     },
+     "childVes": []
+    },
+    "context": {
+     "lastActivityMs": "2"
+    }
+   },
+   {
+    "eventTimeMs": 1793118263864,
+    "visualElementAttached": {
+     "csn": "32-clnFbe7GHn60y",
+     "parentVe": {
+      "veType": 3854
+     },
+     "childVes": []
+    },
+    "context": {
+     "lastActivityMs": "2"
+    }
+   },
+   {
+    "eventTimeMs": 1793118263864,
+    "visualElementAttached": {
+     "csn": "32-clnFbe7GHn60y",
+     "parentVe": {
+      "veType": 3854
+     },
+     "childVes": []
+    },
+    "context": {
+     "lastActivityMs": "3"
+    }
+   },
+   {
+    "eventTimeMs": 1793118263865,
+    "visualElementGestured": {
+     "csn": "32-clnFbe7GHn60y",
+     "ve": {
+      "veType": 303301,
+      "veCounter": 10
+     },
+     "gestureType": "INTERACTION_LOGGING_GESTURE_TYPE_GENERIC_CLICK"
+    },
+    "context": {
+     "lastActivityMs": "4"
+    }
+   },
+   {
+    "eventTimeMs": 1793118263873,
+    "latencyActionTicked": {
+     "tickName": "ol",
+     "clientActionNonce": "unJyKRXN1t-fMsju"
+    },
+    "context": {
+     "lastActivityMs": "1"
+    }
+   },
+   {
+    "eventTimeMs": 1793118264291,
+    "latencyActionTicked": {
+     "tickName": "ol",
+     "clientActionNonce": "unJyKRXN1t-fMsju"
+    },
+    "context": {
+     "lastActivityMs": "9"
+    }
+   },
+   {
+    "eventTimeMs": 1793118265998,
+    "latencyActionTicked": {
+     "tickName": "aa",
+     "clientActionNonce": "qu0RPPw22HJ6kCJq"
+    },
+    "context": {
+     "lastActivityMs": "1716"
+    }
+   },
+   {
+    "eventTimeMs": 1793118265999,
+    "latencyActionInfo": {
+     "loadType": "warm",
+     "clientActionNonce": "0mpGTYwufM5FKbta"
+    },
+    "context": {
+     "lastActivityMs": "1716"
+    }
+   },
+   {
+    "eventTimeMs": 1793118265999,
+    "latencyActionBaselined": {
+     "clientActionNonce": "0mpGTYwufM5FKbta"
+    },
+    "context": {
+     "lastActivityMs": "1716"
+    }
+   },
+   {
+    "eventTimeMs": 1793118265999,
+    "latencyActionInfo": {
+     "isNavigation": true,
+     "actionType": "LATENCY_ACTION_HOME",
+     "previousAction": "LATENCY_ACTION_HOME",
+     "httpProtocol": "h2",
+     "transportProtocol": "tcp",
+     "clientScreenNonce": "32-clnFbe7GHn60y",
+     "isVisible": true,
+     "clientActionNonce": "0mpGTYwufM5FKbta"
+    },
+    "context": {
+     "lastActivityMs": "1716"
+    }
+   },
+   {
+    "eventTimeMs": 1793118265999,
+    "latencyActionInfo": {
+     "tvInfo": {
+      "label": "web_20261025_19_RC00",
+      "isPreloaded": false,
+      "appQuality": "TV_APP_QUALITY_LIMITED_MEMORY",
+      "isMdx": false
+     },
+     "clientActionNonce": "0mpGTYwufM5FKbta"
+    },
+    "context": {
+     "lastActivityMs": "1716"
+    }
+   },
+   {
+    "eventTimeMs": 1793118265999,
+    "latencyActionInfo": {
+     "kabukiInfo": {
+      "prevBrowseId": "default",
+      "navigationType": "TV_NAVIGATION_TYPE_FORWARD",
+      "commandSource": "TV_COMMAND_SOURCE_DEEPLINK"
+     },
+     "browseId": "FEytlg_trendWorld",
+     "clientActionNonce": "0mpGTYwufM5FKbta"
+    },
+    "context": {
+     "lastActivityMs": "1716"
+    }
+   },
+   {
+    "eventTimeMs": 1793118265999,
+    "latencyActionTicked": {
+     "tickName": "nreqs",
+     "clientActionNonce": "0mpGTYwufM5FKbta"
+    },
+    "context": {
+     "lastActivityMs": "1717"
+    }
+   },
+   {
+    "eventTimeMs": 1793118265999,
+    "latencyActionTicked": {
+     "tickName": "br_s",
+     "clientActionNonce": "0mpGTYwufM5FKbta"
+    },
+    "context": {
+     "lastActivityMs": "1717"
+    }
+   },
+   {
+    "eventTimeMs": 1793118267262,
+    "foregroundHeartbeat": {
+     "firstActivityMs": "18526",
+     "clientDocumentNonce": "ppvr8c_X9vBMHrsO",
+     "index": "1",
+     "lastEventDeltaMs": "30000",
+     "trigger": "FOREGROUND_HEARTBEAT_TRIGGER_ON_INTERVAL"
+    },
+    "context": {
+     "lastActivityMs": "2980"
+    }
+   },
+   {
+    "eventTimeMs": 1793118267899,
+    "streamzIncremented": {
+     "serializedIncrementBatch": "Ch8vY2xpZW50X3N0cmVhbXoveW91dHViZS9hYmEvZ2FjGgR0eXBlGghzZXF1ZW5jZSIMCgIQAQoCEAASAggB"
+    },
+    "context": {
+     "lastActivityMs": "3617"
+    }
+   },
+   {
+    "eventTimeMs": 1793118267900,
+    "streamzIncremented": {
+     "serializedIncrementBatch": "CjgvY2xpZW50X3N0cmVhbXoveW91dHViZS9saXZpbmdfcm9vbS9tZHgvbmV0d29yay9yZXF1ZXN0cxoEcGF0aCJtCmcKZWh0dHBzOi8vd3d3LnlvdXR1YmUuY29tL2FwaS9sb3VuZ2UvcGFpcmluZy9nZW5lcmF0ZV9zY3JlZW5faWQ/ZW5hYmxlX3NjcmVlbl9pZF9zZWNyZXRfZ2VuZXJhdGlvbj10cnVlEgIIASJJCkMKQWh0dHBzOi8vd3d3LnlvdXR1YmUuY29tL2FwaS9sb3VuZ2UvcGFpcmluZy9nZXRfbG91bmdlX3Rva2VuX2JhdGNoEgIIAQ=="
+    },
+    "context": {
+     "lastActivityMs": "3617"
+    }
+   },
+   {
+    "eventTimeMs": 1793118267900,
+    "streamzIncremented": {
+     "serializedIncrementBatch": "CkIvY2xpZW50X3N0cmVhbXoveW91dHViZS9saXZpbmdfcm9vbS9tZHgvbmV0d29yay9yZXF1ZXN0c19jb21wbGV0ZWQaBHBhdGgibQpnCmVodHRwczovL3d3dy55b3V0dWJlLmNvbS9hcGkvbG91bmdlL3BhaXJpbmcvZ2VuZXJhdGVfc2NyZWVuX2lkP2VuYWJsZV9zY3JlZW5faWRfc2VjcmV0X2dlbmVyYXRpb249dHJ1ZRICCAEiSQpDCkFodHRwczovL3d3dy55b3V0dWJlLmNvbS9hcGkvbG91bmdlL3BhaXJpbmcvZ2V0X2xvdW5nZV90b2tlbl9iYXRjaBICCAE="
+    },
+    "context": {
+     "lastActivityMs": "3617"
+    }
+   },
+   {
+    "eventTimeMs": 1793118267900,
+    "streamzIncremented": {
+     "serializedIncrementBatch": "CjYvY2xpZW50X3N0cmVhbXoveW91dHViZS9saXZpbmdfcm9vbS9tZHgvY2hhbm5lbC9vcGVuZWQaDGNoYW5uZWxfdHlwZSIXChEKD0JST1dTRVJfQ0hBTk5FTBICCAE="
+    },
+    "context": {
+     "lastActivityMs": "3617"
+    }
+   },
+   {
+    "eventTimeMs": 1793118267900,
+    "streamzIncremented": {
+     "serializedIncrementBatch": "CjcvY2xpZW50X3N0cmVhbXoveW91dHViZS9saXZpbmdfcm9vbS9tZHgvY2hhbm5lbC9zdWNjZXNzIgQSAggD"
+    },
+    "context": {
+     "lastActivityMs": "3617"
+    }
+   },
+   {
+    "eventTimeMs": 1793118267900,
+    "streamzIncremented": {
+     "serializedIncrementBatch": "CkAvY2xpZW50X3N0cmVhbXoveW91dHViZS9saXZpbmdfcm9vbS9tZHgvY2hhbm5lbC9tZXNzYWdlX3JlY2VpdmVkGgxjaGFubmVsX3R5cGUiFwoRCg9CUk9XU0VSX0NIQU5ORUwSAggF"
+    },
+    "context": {
+     "lastActivityMs": "3617"
+    }
+   },
+   {
+    "eventTimeMs": 1793118268063,
+    "sliEventBatch": {
+     "loggedEvents": [
+      {
+       "dimensions": {
+        "csn": "V0_Pm0mVkhqcyCG9"
+       },
+       "records": [
+        {
+         "name": "SLI_NAME_YOUTUBE_TVHTML5_SIGN_IN_RATE_SLI",
+         "state": "SLI_STATE_END",
+         "status": "SLI_STATUS_FAILURE"
+        },
+        {
+         "name": "SLI_NAME_YOUTUBE_TVHTML5_LOG_EVENT",
+         "state": "SLI_STATE_END",
+         "status": "SLI_STATUS_SUCCESS"
+        }
+       ]
+      },
+      {
+       "dimensions": {
+        "tvhtml5": {
+         "signInMethodType": "SIGN_IN_METHOD_TYPE_URL",
+         "accountEventTrigger": "ACCOUNT_EVENT_TRIGGER_APP_WELCOME",
+         "isFamilyGroupSignedOutConversion": false
+        },
+        "csn": "VeAjKwW1Sw3qlMJ9"
+       },
+       "records": [
+        {
+         "name": "SLI_NAME_YOUTUBE_TVHTML5_ACCOUNT_REGISTRY_SLI",
+         "state": "SLI_STATE_START",
+         "sliId": "2uLhIO6X"
+        }
+       ]
+      }
+     ],
+     "unloggedEvents": [],
+     "dimensions": {
+      "playerClientVersion": "1202610210800",
+      "playerCanaryState": "CLIENT_CANARY_STATE_NONE"
+     }
+    },
+    "context": {
+     "lastActivityMs": "3781"
+    }
+   },
+   {
+    "eventTimeMs": 1793118272599,
+    "latencyActionTicked": {
+     "tickName": "rps",
+     "clientActionNonce": "0mpGTYwufM5FKbta"
+    },
+    "context": {
+     "lastActivityMs": "8317"
+    }
+   },
+   {
+    "eventTimeMs": 1793118272599,
+    "latencyActionTicked": {
+     "tickName": "nrese",
+     "clientActionNonce": "0mpGTYwufM5FKbta"
+    },
+    "context": {
+     "lastActivityMs": "8317"
+    }
+   },
+   {
+    "eventTimeMs": 1793118272599,
+    "latencyActionTicked": {
+     "tickName": "br_r",
+     "clientActionNonce": "0mpGTYwufM5FKbta"
+    },
+    "context": {
+     "lastActivityMs": "8317"
+    }
+   },
+   {
+    "eventTimeMs": 1793118272599,
+    "latencyActionTicked": {
+     "tickName": "rpe",
+     "clientActionNonce": "0mpGTYwufM5FKbta"
+    },
+    "context": {
+     "lastActivityMs": "8317"
+    }
+   },
+   {
+    "eventTimeMs": 1793118272599,
+    "latencyActionTicked": {
+     "tickName": "c_rns",
+     "clientActionNonce": "0mpGTYwufM5FKbta"
+    },
+    "context": {
+     "lastActivityMs": "8317"
+    }
+   },
+   {
+    "eventTimeMs": 1793118272618,
+    "latencyActionTicked": {
+     "tickName": "c_rnf",
+     "clientActionNonce": "0mpGTYwufM5FKbta"
+    },
+    "context": {
+     "lastActivityMs": "8336"
+    }
+   },
+   {
+    "eventTimeMs": 1793118272619,
+    "screenCreated": {
+     "csn": "3Uhw1Cyzw1q7NSfK",
+     "pageVe": {
+      "veType": 6827
+     },
+     "implicitGesture": {
+      "parentCsn": "32-clnFbe7GHn60y",
+      "gesturedVe": {
+       "veType": 3854
+      }
+     }
+    },
+    "context": {
+     "lastActivityMs": "8336"
+    }
+   },
+   {
+    "eventTimeMs": 1793118272619,
+    "visualElementHidden": {
+     "csn": "32-clnFbe7GHn60y",
+     "ve": {
+      "veType": 3854
+     },
+     "eventType": 16
+    },
+    "context": {
+     "lastActivityMs": "8336"
+    }
+   },
+   {
+    "eventTimeMs": 1793118272619,
+    "latencyActionInfo": {
+     "clientScreenNonce": "3Uhw1Cyzw1q7NSfK",
+     "clientActionNonce": "0mpGTYwufM5FKbta"
+    },
+    "context": {
+     "lastActivityMs": "8336"
+    }
+   },
+   {
+    "eventTimeMs": 1793118272619,
+    "visualElementAttached": {
+     "csn": "3Uhw1Cyzw1q7NSfK",
+     "parentVe": {
+      "veType": 6827
+     },
+     "childVes": [
+      {
+       "veType": 18440,
+       "veCounter": 3
+      }
+     ]
+    },
+    "context": {
+     "lastActivityMs": "8337"
+    }
+   },
+   {
+    "eventTimeMs": 1793118272619,
+    "visualElementAttached": {
+     "csn": "3Uhw1Cyzw1q7NSfK",
+     "parentVe": {
+      "veType": 6827
+     },
+     "childVes": [
+      {
+       "trackingParams": "CAAQumkiEwiCy9L8zdqXAxVXBdYAHeRhFLvKAQTfrSlb"
+      }
+     ]
+    },
+    "context": {
+     "lastActivityMs": "8337"
+    }
+   },
+   {
+    "eventTimeMs": 1793118272619,
+    "tvhtml5LaunchUrlComponentChanged": {
+     "launchUrlComponentType": "LAUNCH_URL_COMPONENT_TYPE_FRAGMENT",
+     "clientScreenNonce": "3Uhw1Cyzw1q7NSfK",
+     "fragmentIdentifier": "FRAGMENT_IDENTIFIER_INVALID",
+     "inApp": false
+    },
+    "context": {
+     "lastActivityMs": "8337"
+    }
+   },
+   {
+    "eventTimeMs": 1793118272633,
+    "latencyActionTicked": {
+     "tickName": "ol",
+     "clientActionNonce": "0mpGTYwufM5FKbta"
+    },
+    "context": {
+     "lastActivityMs": "8350"
+    }
+   },
+   {
+    "eventTimeMs": 1793118272633,
+    "latencyActionTicked": {
+     "tickName": "cpt",
+     "clientActionNonce": "0mpGTYwufM5FKbta"
+    },
+    "context": {
+     "lastActivityMs": "8350"
+    }
+   },
+   {
+    "eventTimeMs": 1793118272634,
+    "latencyActionTicked": {
+     "tickName": "ol",
+     "clientActionNonce": "unJyKRXN1t-fMsju"
+    },
+    "context": {
+     "lastActivityMs": "8351"
+    }
+   },
+   {
+    "eventTimeMs": 1793118272634,
+    "foregroundHeartbeatScreenAssociated": {
+     "clientDocumentNonce": "ppvr8c_X9vBMHrsO",
+     "clientScreenNonce": "3Uhw1Cyzw1q7NSfK"
+    },
+    "context": {
+     "lastActivityMs": "8351"
+    }
+   },
+   {
+    "eventTimeMs": 1793118272780,
+    "visualElementShown": {
+     "csn": "3Uhw1Cyzw1q7NSfK",
+     "ve": {
+      "trackingParams": "CAAQumkiEwiCy9L8zdqXAxVXBdYAHeRhFLvKAQTfrSlb"
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "8498"
+    }
+   },
+   {
+    "eventTimeMs": 1793118272780,
+    "visualElementShown": {
+     "csn": "3Uhw1Cyzw1q7NSfK",
+     "ve": {
+      "trackingParams": "CAMQtSwYACITCILL0vzN2pcDFVcF1gAd5GEUuw=="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "8498"
+    }
+   },
+   {
+    "eventTimeMs": 1793118272780,
+    "visualElementShown": {
+     "csn": "3Uhw1Cyzw1q7NSfK",
+     "ve": {
+      "trackingParams": "CBAQtSwYAiITCILL0vzN2pcDFVcF1gAd5GEUuw=="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "8498"
+    }
+   },
+   {
+    "eventTimeMs": 1793118272780,
+    "visualElementShown": {
+     "csn": "3Uhw1Cyzw1q7NSfK",
+     "ve": {
+      "trackingParams": "CA8QtSwYAyITCILL0vzN2pcDFVcF1gAd5GEUuw=="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "8498"
+    }
+   },
+   {
+    "eventTimeMs": 1793118272780,
+    "visualElementShown": {
+     "csn": "3Uhw1Cyzw1q7NSfK",
+     "ve": {
+      "trackingParams": "CA4QtSwYBCITCILL0vzN2pcDFVcF1gAd5GEUuw=="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "8498"
+    }
+   },
+   {
+    "eventTimeMs": 1793118272780,
+    "visualElementShown": {
+     "csn": "3Uhw1Cyzw1q7NSfK",
+     "ve": {
+      "trackingParams": "CA0QtSwYBSITCILL0vzN2pcDFVcF1gAd5GEUuw=="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "8498"
+    }
+   },
+   {
+    "eventTimeMs": 1793118272780,
+    "visualElementShown": {
+     "csn": "3Uhw1Cyzw1q7NSfK",
+     "ve": {
+      "trackingParams": "CAwQnOQDGAYiEwiCy9L8zdqXAxVXBdYAHeRhFLs="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "8498"
+    }
+   },
+   {
+    "eventTimeMs": 1793118272780,
+    "visualElementShown": {
+     "csn": "3Uhw1Cyzw1q7NSfK",
+     "ve": {
+      "trackingParams": "CAsQtSwYByITCILL0vzN2pcDFVcF1gAd5GEUuw=="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "8498"
+    }
+   },
+   {
+    "eventTimeMs": 1793118272780,
+    "visualElementShown": {
+     "csn": "3Uhw1Cyzw1q7NSfK",
+     "ve": {
+      "trackingParams": "CAoQtSwYCCITCILL0vzN2pcDFVcF1gAd5GEUuw=="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "8498"
+    }
+   },
+   {
+    "eventTimeMs": 1793118272780,
+    "visualElementShown": {
+     "csn": "3Uhw1Cyzw1q7NSfK",
+     "ve": {
+      "trackingParams": "CAkQtSwYCSITCILL0vzN2pcDFVcF1gAd5GEUuw=="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "8498"
+    }
+   },
+   {
+    "eventTimeMs": 1793118272780,
+    "visualElementShown": {
+     "csn": "3Uhw1Cyzw1q7NSfK",
+     "ve": {
+      "trackingParams": "CAgQtSwYCiITCILL0vzN2pcDFVcF1gAd5GEUuw=="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "8498"
+    }
+   },
+   {
+    "eventTimeMs": 1793118272780,
+    "visualElementShown": {
+     "csn": "3Uhw1Cyzw1q7NSfK",
+     "ve": {
+      "trackingParams": "CAcQtSwYCyITCILL0vzN2pcDFVcF1gAd5GEUuw=="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "8498"
+    }
+   },
+   {
+    "eventTimeMs": 1793118272780,
+    "visualElementShown": {
+     "csn": "3Uhw1Cyzw1q7NSfK",
+     "ve": {
+      "trackingParams": "CAUQtSwYACITCILL0vzN2pcDFVcF1gAd5GEUuw=="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "8498"
+    }
+   },
+   {
+    "eventTimeMs": 1793118272781,
+    "visualElementShown": {
+     "csn": "3Uhw1Cyzw1q7NSfK",
+     "ve": {
+      "veType": 18440,
+      "veCounter": 3
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "8498"
+    }
+   },
+   {
+    "eventTimeMs": 1793118296440,
+    "latencyActionTicked": {
+     "tickName": "aa",
+     "clientActionNonce": "0mpGTYwufM5FKbta"
+    },
+    "context": {
+     "lastActivityMs": "32158"
+    }
+   },
+   {
+    "eventTimeMs": 1793118296440,
+    "latencyActionInfo": {
+     "loadType": "warm",
+     "clientActionNonce": "-eFbmoBbaRjRQLnP"
+    },
+    "context": {
+     "lastActivityMs": "32158"
+    }
+   },
+   {
+    "eventTimeMs": 1793118296440,
+    "latencyActionBaselined": {
+     "clientActionNonce": "-eFbmoBbaRjRQLnP"
+    },
+    "context": {
+     "lastActivityMs": "32158"
+    }
+   },
+   {
+    "eventTimeMs": 1793118296440,
+    "latencyActionInfo": {
+     "isNavigation": true,
+     "actionType": "LATENCY_ACTION_HOME",
+     "previousAction": "LATENCY_ACTION_HOME",
+     "httpProtocol": "h2",
+     "transportProtocol": "tcp",
+     "clientScreenNonce": "3Uhw1Cyzw1q7NSfK",
+     "isVisible": true,
+     "clientActionNonce": "-eFbmoBbaRjRQLnP"
+    },
+    "context": {
+     "lastActivityMs": "32158"
+    }
+   },
+   {
+    "eventTimeMs": 1793118296441,
+    "latencyActionInfo": {
+     "tvInfo": {
+      "label": "web_20261025_19_RC00",
+      "isPreloaded": false,
+      "appQuality": "TV_APP_QUALITY_LIMITED_MEMORY",
+      "isMdx": false
+     },
+     "clientActionNonce": "-eFbmoBbaRjRQLnP"
+    },
+    "context": {
+     "lastActivityMs": "32158"
+    }
+   },
+   {
+    "eventTimeMs": 1793118296441,
+    "latencyActionInfo": {
+     "kabukiInfo": {
+      "prevBrowseId": "FEytlg_trendWorld",
+      "navigationType": "TV_NAVIGATION_TYPE_FORWARD",
+      "commandSource": "TV_COMMAND_SOURCE_DEEPLINK"
+     },
+     "browseId": "FEytlg_exploreEgypt",
+     "clientActionNonce": "-eFbmoBbaRjRQLnP"
+    },
+    "context": {
+     "lastActivityMs": "32158"
+    }
+   },
+   {
+    "eventTimeMs": 1793118296441,
+    "latencyActionTicked": {
+     "tickName": "nreqs",
+     "clientActionNonce": "-eFbmoBbaRjRQLnP"
+    },
+    "context": {
+     "lastActivityMs": "32159"
+    }
+   },
+   {
+    "eventTimeMs": 1793118296441,
+    "latencyActionTicked": {
+     "tickName": "br_s",
+     "clientActionNonce": "-eFbmoBbaRjRQLnP"
+    },
+    "context": {
+     "lastActivityMs": "32159"
+    }
+   },
+   {
+    "eventTimeMs": 1793118297262,
+    "foregroundHeartbeat": {
+     "firstActivityMs": "-1",
+     "clientDocumentNonce": "ppvr8c_X9vBMHrsO",
+     "index": "2",
+     "lastEventDeltaMs": "30000",
+     "trigger": "FOREGROUND_HEARTBEAT_TRIGGER_ON_INTERVAL"
+    },
+    "context": {
+     "lastActivityMs": "32980"
+    }
+   },
+   {
+    "eventTimeMs": 1793118301258,
+    "latencyActionTicked": {
+     "tickName": "rps",
+     "clientActionNonce": "-eFbmoBbaRjRQLnP"
+    },
+    "context": {
+     "lastActivityMs": "36976"
+    }
+   },
+   {
+    "eventTimeMs": 1793118301258,
+    "latencyActionTicked": {
+     "tickName": "nrese",
+     "clientActionNonce": "-eFbmoBbaRjRQLnP"
+    },
+    "context": {
+     "lastActivityMs": "36976"
+    }
+   },
+   {
+    "eventTimeMs": 1793118301258,
+    "latencyActionTicked": {
+     "tickName": "br_r",
+     "clientActionNonce": "-eFbmoBbaRjRQLnP"
+    },
+    "context": {
+     "lastActivityMs": "36976"
+    }
+   },
+   {
+    "eventTimeMs": 1793118301258,
+    "latencyActionTicked": {
+     "tickName": "rpe",
+     "clientActionNonce": "-eFbmoBbaRjRQLnP"
+    },
+    "context": {
+     "lastActivityMs": "36976"
+    }
+   },
+   {
+    "eventTimeMs": 1793118301259,
+    "latencyActionTicked": {
+     "tickName": "c_rns",
+     "clientActionNonce": "-eFbmoBbaRjRQLnP"
+    },
+    "context": {
+     "lastActivityMs": "36976"
+    }
+   },
+   {
+    "eventTimeMs": 1793118301270,
+    "latencyActionTicked": {
+     "tickName": "c_rnf",
+     "clientActionNonce": "-eFbmoBbaRjRQLnP"
+    },
+    "context": {
+     "lastActivityMs": "36987"
+    }
+   },
+   {
+    "eventTimeMs": 1793118301270,
+    "screenCreated": {
+     "csn": "N7AQQp5RuLFlycNt",
+     "pageVe": {
+      "veType": 6827
+     },
+     "implicitGesture": {
+      "parentCsn": "3Uhw1Cyzw1q7NSfK",
+      "gesturedVe": {
+       "veType": 6827
+      }
+     }
+    },
+    "context": {
+     "lastActivityMs": "36988"
+    }
+   },
+   {
+    "eventTimeMs": 1793118301270,
+    "visualElementHidden": {
+     "csn": "3Uhw1Cyzw1q7NSfK",
+     "ve": {
+      "veType": 6827
+     },
+     "eventType": 16
+    },
+    "context": {
+     "lastActivityMs": "36988"
+    }
+   },
+   {
+    "eventTimeMs": 1793118301270,
+    "latencyActionInfo": {
+     "clientScreenNonce": "N7AQQp5RuLFlycNt",
+     "clientActionNonce": "-eFbmoBbaRjRQLnP"
+    },
+    "context": {
+     "lastActivityMs": "36988"
+    }
+   },
+   {
+    "eventTimeMs": 1793118301270,
+    "visualElementAttached": {
+     "csn": "N7AQQp5RuLFlycNt",
+     "parentVe": {
+      "veType": 6827
+     },
+     "childVes": [
+      {
+       "veType": 18440,
+       "veCounter": 3
+      }
+     ]
+    },
+    "context": {
+     "lastActivityMs": "36988"
+    }
+   },
+   {
+    "eventTimeMs": 1793118301271,
+    "visualElementAttached": {
+     "csn": "N7AQQp5RuLFlycNt",
+     "parentVe": {
+      "veType": 6827
+     },
+     "childVes": [
+      {
+       "trackingParams": "CAAQumkiEwiCy9L8zdqXAxVXBdYAHeRhFLvKAQTfrSlb"
+      }
+     ]
+    },
+    "context": {
+     "lastActivityMs": "36988"
+    }
+   },
+   {
+    "eventTimeMs": 1793118301271,
+    "tvhtml5LaunchUrlComponentChanged": {
+     "launchUrlComponentType": "LAUNCH_URL_COMPONENT_TYPE_FRAGMENT",
+     "clientScreenNonce": "N7AQQp5RuLFlycNt",
+     "fragmentIdentifier": "FRAGMENT_IDENTIFIER_INVALID",
+     "inApp": false
+    },
+    "context": {
+     "lastActivityMs": "36988"
+    }
+   },
+   {
+    "eventTimeMs": 1793118301281,
+    "latencyActionTicked": {
+     "tickName": "ol",
+     "clientActionNonce": "-eFbmoBbaRjRQLnP"
+    },
+    "context": {
+     "lastActivityMs": "36999"
+    }
+   },
+   {
+    "eventTimeMs": 1793118301281,
+    "latencyActionTicked": {
+     "tickName": "cpt",
+     "clientActionNonce": "-eFbmoBbaRjRQLnP"
+    },
+    "context": {
+     "lastActivityMs": "36999"
+    }
+   },
+   {
+    "eventTimeMs": 1793118301282,
+    "latencyActionTicked": {
+     "tickName": "ol",
+     "clientActionNonce": "unJyKRXN1t-fMsju"
+    },
+    "context": {
+     "lastActivityMs": "37000"
+    }
+   },
+   {
+    "eventTimeMs": 1793118301282,
+    "foregroundHeartbeatScreenAssociated": {
+     "clientDocumentNonce": "ppvr8c_X9vBMHrsO",
+     "clientScreenNonce": "N7AQQp5RuLFlycNt"
+    },
+    "context": {
+     "lastActivityMs": "37000"
+    }
+   },
+   {
+    "eventTimeMs": 1793118301420,
+    "visualElementShown": {
+     "csn": "N7AQQp5RuLFlycNt",
+     "ve": {
+      "trackingParams": "CAAQumkiEwiCy9L8zdqXAxVXBdYAHeRhFLvKAQTfrSlb"
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "37138"
+    }
+   },
+   {
+    "eventTimeMs": 1793118301420,
+    "visualElementShown": {
+     "csn": "N7AQQp5RuLFlycNt",
+     "ve": {
+      "trackingParams": "CAMQtSwYACITCILL0vzN2pcDFVcF1gAd5GEUuw=="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "37138"
+    }
+   },
+   {
+    "eventTimeMs": 1793118301420,
+    "visualElementShown": {
+     "csn": "N7AQQp5RuLFlycNt",
+     "ve": {
+      "trackingParams": "CBAQtSwYAiITCILL0vzN2pcDFVcF1gAd5GEUuw=="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "37138"
+    }
+   },
+   {
+    "eventTimeMs": 1793118301420,
+    "visualElementShown": {
+     "csn": "N7AQQp5RuLFlycNt",
+     "ve": {
+      "trackingParams": "CA8QtSwYAyITCILL0vzN2pcDFVcF1gAd5GEUuw=="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "37138"
+    }
+   },
+   {
+    "eventTimeMs": 1793118301420,
+    "visualElementShown": {
+     "csn": "N7AQQp5RuLFlycNt",
+     "ve": {
+      "trackingParams": "CA4QtSwYBCITCILL0vzN2pcDFVcF1gAd5GEUuw=="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "37138"
+    }
+   },
+   {
+    "eventTimeMs": 1793118301420,
+    "visualElementShown": {
+     "csn": "N7AQQp5RuLFlycNt",
+     "ve": {
+      "trackingParams": "CA0QtSwYBSITCILL0vzN2pcDFVcF1gAd5GEUuw=="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "37138"
+    }
+   },
+   {
+    "eventTimeMs": 1793118301420,
+    "visualElementShown": {
+     "csn": "N7AQQp5RuLFlycNt",
+     "ve": {
+      "trackingParams": "CAwQnOQDGAYiEwiCy9L8zdqXAxVXBdYAHeRhFLs="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "37138"
+    }
+   },
+   {
+    "eventTimeMs": 1793118301420,
+    "visualElementShown": {
+     "csn": "N7AQQp5RuLFlycNt",
+     "ve": {
+      "trackingParams": "CAsQtSwYByITCILL0vzN2pcDFVcF1gAd5GEUuw=="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "37138"
+    }
+   },
+   {
+    "eventTimeMs": 1793118301420,
+    "visualElementShown": {
+     "csn": "N7AQQp5RuLFlycNt",
+     "ve": {
+      "trackingParams": "CAoQtSwYCCITCILL0vzN2pcDFVcF1gAd5GEUuw=="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "37138"
+    }
+   },
+   {
+    "eventTimeMs": 1793118301420,
+    "visualElementShown": {
+     "csn": "N7AQQp5RuLFlycNt",
+     "ve": {
+      "trackingParams": "CAkQtSwYCSITCILL0vzN2pcDFVcF1gAd5GEUuw=="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "37138"
+    }
+   },
+   {
+    "eventTimeMs": 1793118301420,
+    "visualElementShown": {
+     "csn": "N7AQQp5RuLFlycNt",
+     "ve": {
+      "trackingParams": "CAgQtSwYCiITCILL0vzN2pcDFVcF1gAd5GEUuw=="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "37138"
+    }
+   },
+   {
+    "eventTimeMs": 1793118301420,
+    "visualElementShown": {
+     "csn": "N7AQQp5RuLFlycNt",
+     "ve": {
+      "trackingParams": "CAcQtSwYCyITCILL0vzN2pcDFVcF1gAd5GEUuw=="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "37138"
+    }
+   },
+   {
+    "eventTimeMs": 1793118301420,
+    "visualElementShown": {
+     "csn": "N7AQQp5RuLFlycNt",
+     "ve": {
+      "trackingParams": "CAUQtSwYACITCILL0vzN2pcDFVcF1gAd5GEUuw=="
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "37138"
+    }
+   },
+   {
+    "eventTimeMs": 1793118301420,
+    "visualElementShown": {
+     "csn": "N7AQQp5RuLFlycNt",
+     "ve": {
+      "veType": 18440,
+      "veCounter": 3
+     },
+     "eventType": 1
+    },
+    "context": {
+     "lastActivityMs": "37138"
+    }
+   }
+  ],
+  "serializedClientEventId": {
+   "serializedEventId": "HNDgaoHGEry6kucPm_y6qQk",
+   "clientCounter": "14267"
+  }
+ },
+ "response": {
+  "responseContext": {}
+ }
+}
