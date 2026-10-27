@@ -132,14 +132,18 @@ const say = (s) => {
       `PAGE ${id}: first cards after ${shown < 0 ? 'never' : shown + ' ms'}, searches ${searches - before}`
     );
   };
-  await open('FEytlg_exploreArab', 30000, '4-exploreArab');
-  await open('FEytlg_trendWorld', 30000, '4-trendWorld');
-  await open('FEytlg_musicArab', 30000, '4-musicArab-first');
+  // the player: open a video and capture the data YouTube's player bar is built from (/next, /player)
   await p.evaluate(() => {
-    location.hash = '#/';
+    location.hash = '#/watch?v=dQw4w9WgXcQ';
   });
-  await p.waitForTimeout(70000); // background: remaining singers + albums
-  await open('FEytlg_musicArab', 30000, '5-musicArab-second');
+  await p.waitForTimeout(15000);
+  await p.screenshot({ path: `${OUT}/6-player.png` });
+  await p.keyboard.press('Enter');
+  await p.waitForTimeout(1500);
+  await p.screenshot({ path: `${OUT}/7-player-bar.png` });
+  await p.keyboard.press('ArrowDown');
+  await p.waitForTimeout(1500);
+  await p.screenshot({ path: `${OUT}/8-player-bar-down.png` });
   const hooks = await p.evaluate(() => ({
     yttv:
       typeof window._yttv === 'object' ? Object.keys(window._yttv).length : 0,
