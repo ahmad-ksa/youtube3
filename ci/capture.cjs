@@ -3,6 +3,8 @@
 // (guide = side menu, browse = pages) and screenshots, so the app's own data formats can be studied.
 const { chromium } = require('playwright');
 const fs = require('fs');
+const injectLikeWebOS = (code) =>
+  `(() => { const run = () => { ${code}\n }; if (document.documentElement) run(); else { const o = new MutationObserver(() => { if (document.documentElement) { o.disconnect(); run(); } }); o.observe(document, { childList: true }); } })();`;
 
 const UA =
   'Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 WebAppManager';
@@ -30,7 +32,11 @@ const say = (s) => {
     locale: 'ar-SA'
   });
   if (fs.existsSync('dist/webOSUserScripts/userScript.js')) {
-    await ctx.addInitScript({ path: 'dist/webOSUserScripts/userScript.js' });
+    await ctx.addInitScript({
+      content: injectLikeWebOS(
+        fs.readFileSync('dist/webOSUserScripts/userScript.js', 'utf8')
+      )
+    });
   }
   const p = await ctx.newPage();
   let n = 0;
@@ -71,26 +77,32 @@ const say = (s) => {
     }
   });
   await p.goto('https://www.youtube.com/tv', { waitUntil: 'domcontentloaded' });
-  await p.waitForTimeout(15000);
-  await p.screenshot({ path: `${OUT}/1-home.png` });
-  // open the side menu (guide): Left from the first row, then walk down it
+  await p.waitForTimeout(12000);
+  await p.screenshot({ path: `${OUT}/1-start.png` });
+  // past the welcome screen ("البدء" / Get started) as a guest
+  for (let i = 0; i < 3; i++) {
+    await p.keyboard.press('Enter');
+    await p.waitForTimeout(4000);
+  }
+  await p.screenshot({ path: `${OUT}/2-after-welcome.png` });
+  // side menu
+  await p.keyboard.press('ArrowRight');
+  await p.waitForTimeout(400); // RTL: menu is on the right
   await p.keyboard.press('ArrowLeft');
   await p.waitForTimeout(1500);
-  await p.screenshot({ path: `${OUT}/2-guide.png` });
-  for (let i = 0; i < 4; i++) {
-    await p.keyboard.press('ArrowDown');
-    await p.waitForTimeout(400);
+  await p.screenshot({ path: `${OUT}/3-menu.png` });
+  // our pages, opened the way the app opens a page
+  for (const id of [
+    'FEytlg_exploreArab',
+    'FEytlg_trendWorld',
+    'FEytlg_musicArab'
+  ]) {
+    await p.evaluate((x) => {
+      location.hash = '#/browse?c=' + x;
+    }, id);
+    await p.waitForTimeout(id === 'FEytlg_musicArab' ? 45000 : 25000);
+    await p.screenshot({ path: `${OUT}/4-${id}.png` });
   }
-  await p.screenshot({ path: `${OUT}/3-guide-down.png` });
-  await p.keyboard.press('Enter');
-  await p.waitForTimeout(6000);
-  await p.screenshot({ path: `${OUT}/4-guide-item-page.png` });
-  // search page as a grid sample
-  await p.evaluate(() => {
-    location.hash = '#/search?q=' + encodeURIComponent('وثائقي');
-  });
-  await p.waitForTimeout(8000);
-  await p.screenshot({ path: `${OUT}/5-search.png` });
   const hooks = await p.evaluate(() => ({
     yttv:
       typeof window._yttv === 'object' ? Object.keys(window._yttv).length : 0,

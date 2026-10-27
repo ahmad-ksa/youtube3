@@ -1,0 +1,863 @@
+// Our lists for YouTube's TV interface: Explore / Trending (world, Arab, Saudi, Gulf), music, favourites, new.
+// Same queries, filters and region logic as youtube2 (tested there); searches go out in the TV app's own
+// identity with Restricted Mode on and are paced by the shared gate. Every list is sorted newest -> oldest.
+import { api, channelRss, rssFeed } from './net.js';
+import { extract } from './extract.js';
+import {
+  favorites,
+  history,
+  itemAge,
+  relTime,
+  pool,
+  shuffle,
+  cached,
+  cache,
+  read,
+  write
+} from './util.js';
+
+const DAY = 86400;
+
+// search "sp" params (protobuf): sort 3 = view count; upload filter 2 = today, 3 = week, 4 = month; type 1 = video
+const SP = {
+  relevance: { today: 'EgQIAhAB', week: 'EgQIAxAB', month: 'EgQIBBAB' },
+  views: { today: 'CAMSBAgCEAE=', week: 'CAMSBAgDEAE=', month: 'CAMSBAgEEAE=' }
+};
+
+// Successive age windows: each batch only keeps videos older than the previous one, so appending batches
+// keeps the whole list sorted newest -> oldest.
+const WINDOWS = [
+  { sp: 'today', min: 0, max: DAY },
+  { sp: 'week', min: DAY, max: 7 * DAY },
+  { sp: 'month', min: 7 * DAY, max: 31 * DAY }
+];
+
+// ---------------------------------------------------------------- query pools
+
+// Europe, Americas, Russia, Korea (English, French, German, Spanish, Italian, Portuguese, Dutch, Polish,
+// Swedish, Russian, Korean)
+const WORLD_EXPLORE = [
+  'documentary',
+  'cooking',
+  'street food',
+  'travel vlog',
+  'tech review',
+  'science experiment',
+  'space',
+  'history',
+  'comedy sketch',
+  'car review',
+  'DIY',
+  'woodworking',
+  'restoration',
+  'nature',
+  'wildlife',
+  'live session',
+  'interview',
+  'podcast',
+  'challenge',
+  'gaming',
+  'speedrun',
+  'animation',
+  'short film',
+  'magic trick',
+  'drawing',
+  'workout',
+  'architecture',
+  'engineering',
+  'chess',
+  'football',
+  'NBA',
+  'NFL',
+  'fishing',
+  'camping',
+  'van life',
+  'recette',
+  'voyage',
+  'documentaire',
+  'humour',
+  'Rezept',
+  'Reise',
+  'Doku',
+  'receta',
+  'viaje',
+  'documental',
+  'ricetta',
+  'viaggio',
+  'receita',
+  'viagem',
+  'reis',
+  'podróż',
+  'resa',
+  'рецепт',
+  'путешествие',
+  'документальный',
+  'обзор',
+  'юмор',
+  'наука',
+  '요리',
+  '여행',
+  '브이로그',
+  '리뷰',
+  '예능',
+  '과학'
+];
+// Every Arab country, plus subjects (Arabic only)
+const ARAB_EXPLORE = [
+  'السعودية',
+  'مصر',
+  'الإمارات',
+  'الكويت',
+  'قطر',
+  'البحرين',
+  'عمان',
+  'اليمن',
+  'العراق',
+  'سوريا',
+  'لبنان',
+  'الأردن',
+  'فلسطين',
+  'المغرب',
+  'الجزائر',
+  'تونس',
+  'ليبيا',
+  'السودان',
+  'موريتانيا',
+  'الصومال',
+  'جيبوتي',
+  'جزر القمر',
+  'وثائقي',
+  'طبخ',
+  'أكلات شعبية',
+  'سفر',
+  'رحلة',
+  'تقنية',
+  'مراجعة',
+  'علوم',
+  'تاريخ',
+  'قصة',
+  'كوميديا',
+  'مقالب',
+  'سيارات',
+  'تعليم',
+  'بودكاست',
+  'تحدي',
+  'حيوانات',
+  'طبيعة',
+  'صحراء',
+  'تراث',
+  'فن',
+  'خط عربي',
+  'شعر',
+  'إنشاد',
+  'كرة القدم',
+  'رياضة',
+  'لياقة',
+  'اقتصاد',
+  'برمجة',
+  'ألعاب',
+  'مطاعم',
+  'زراعة',
+  'بناء',
+  'رمضان',
+  'سوالف',
+  'فلوق'
+];
+// Broad, high-traffic subjects for "most watched now"
+const WORLD_TREND = [
+  'music video',
+  'official video',
+  'trailer',
+  'news',
+  'football',
+  'highlights',
+  'gaming',
+  'podcast',
+  'comedy',
+  'challenge',
+  'review',
+  'vlog',
+  'reaction',
+  'interview',
+  'documentary',
+  'anime',
+  'clip officiel',
+  'canción',
+  'клип',
+  'новости',
+  '뮤직비디오',
+  'MV'
+];
+// songs only, many languages and styles (most-watched music worldwide)
+const MUSIC_TREND = [
+  'official music video',
+  'music video',
+  'official audio',
+  'lyric video',
+  'new song',
+  'MV',
+  'kpop MV',
+  'pop song',
+  'hip hop',
+  'rap song',
+  'reggaeton',
+  'afrobeats',
+  'rock song',
+  'EDM',
+  'country song',
+  'video oficial',
+  'clip officiel',
+  'клип',
+  'фит',
+  'Musikvideo',
+  'فيديو كليب',
+  'أغنية',
+  '뮤직비디오',
+  'live performance'
+];
+const ARAB_TREND = [
+  'فيديو كليب',
+  'أغنية',
+  'اخبار',
+  'عاجل',
+  'مباراة',
+  'ملخص',
+  'أهداف',
+  'برنامج',
+  'مسلسل',
+  'حلقة',
+  'بودكاست',
+  'تحدي',
+  'مقلب',
+  'فلوق',
+  'ردة فعل',
+  'مقابلة',
+  'كوميدي',
+  'شيلة',
+  'مهرجان',
+  'السعودية',
+  'مصر',
+  'المغرب'
+];
+
+// Saudi Arabia: cities, football, food, culture, desert life, entertainment
+const SAUDI_EXPLORE = [
+  'الرياض',
+  'جدة',
+  'الدمام',
+  'الخبر',
+  'مكة',
+  'المدينة المنورة',
+  'أبها',
+  'الطائف',
+  'القصيم',
+  'حائل',
+  'تبوك',
+  'العلا',
+  'نيوم',
+  'موسم الرياض',
+  'فلوق سعودي',
+  'طبخ سعودي',
+  'كبسة',
+  'مندي',
+  'قهوة سعودية',
+  'كشتة',
+  'رحلة برية',
+  'تطعيس',
+  'مقناص',
+  'هجن',
+  'خيل',
+  'سيارات سعودية',
+  'سوالف',
+  'قصة سعودية',
+  'بودكاست سعودي',
+  'مسلسل سعودي',
+  'كوميديا سعودية',
+  'دوري روشن',
+  'تقنية سعودي',
+  'مطاعم الرياض',
+  'تراث سعودي',
+  'العرضة السعودية',
+  'تحدي سعودي',
+  'مخيم'
+];
+const SAUDI_TREND = [
+  'السعودية',
+  'سعودي',
+  'الرياض',
+  'جدة',
+  'دوري روشن',
+  'الهلال',
+  'النصر',
+  'الاتحاد',
+  'الأهلي',
+  'شيلة',
+  'موسم الرياض',
+  'مسلسل سعودي',
+  'بودكاست سعودي',
+  'سنابات',
+  'فلوق سعودي',
+  'ملخص مباراة',
+  'أخبار السعودية',
+  'عاجل السعودية',
+  'برنامج سعودي'
+];
+// Gulf: the six GCC countries
+const GULF_EXPLORE = [
+  'الرياض',
+  'جدة',
+  'فلوق سعودي',
+  'كبسة',
+  'كشتة',
+  'الكويت',
+  'فلوق كويتي',
+  'مطاعم الكويت',
+  'الدوحة',
+  'قطر',
+  'دبي',
+  'أبوظبي',
+  'الشارقة',
+  'فلوق إماراتي',
+  'البحرين',
+  'المنامة',
+  'مسقط',
+  'صلالة',
+  'سلطنة عمان سياحة',
+  'طبخ خليجي',
+  'مجبوس',
+  'مسلسل خليجي',
+  'غوص',
+  'صيد سمك',
+  'برية',
+  'تراث خليجي',
+  'سيارات',
+  'سوالف خليجية',
+  'بودكاست خليجي',
+  'مخيم',
+  'هجن'
+];
+const GULF_TREND = [
+  'السعودية',
+  'الكويت',
+  'قطر',
+  'الإمارات',
+  'دبي',
+  'البحرين',
+  'سلطنة عمان',
+  'خليجي',
+  'مسلسل خليجي',
+  'شيلة',
+  'دوري روشن',
+  'دوري نجوم قطر',
+  'الدوري الإماراتي',
+  'الدوري الكويتي',
+  'أخبار الخليج',
+  'عاجل',
+  'ملخص مباراة',
+  'فلوق',
+  'بودكاست خليجي',
+  'كليب خليجي'
+];
+const GULF_SESSIONS = ['gl:SA', 'gl:AE', 'gl:KW', 'gl:QA', 'gl:BH', 'gl:OM'];
+
+// whole-word place / nationality markers (with or without "ال", and nisba endings: سعودي، سعودية، سعوديين…)
+const W = (words) =>
+  new RegExp(
+    `(?:^|[\\s\\p{P}\\p{S}])(?:ال)?(?:${words})(?:ي|ية|يه|يين|يون)?(?=$|[\\s\\p{P}\\p{S}])`,
+    'u'
+  );
+const SAUDI_MARK = W(
+  'سعود|رياض|جدة|جده|دمام|خبر|مكة|مكه|المدينة المنورة|أبها|ابها|طائف|قصيم|حائل|تبوك|علا|نيوم|هلال|نصر|اتحاد|أهلي|اهلي|روشن|نجد|حجاز'
+);
+// bare "عمان" is left out on purpose: it is also Amman (Jordan); Omani videos say سلطنة عمان / عماني / مسقط / صلالة
+const GULF_OTHER = W(
+  'كويت|قطر|إمارات|امارات|دبي|أبوظبي|ابوظبي|شارقة|شارقه|بحرين|منامة|سلطنة عمان|عماني|مسقط|صلالة|دوحة|دوحه'
+);
+const NON_GULF = W(
+  'مصر|قاهرة|قاهره|إسكندرية|اسكندرية|مغرب|جزائر|تونس|ليبيا|ليب|عراق|بغداد|سوريا|سوري|شام|دمشق|حلب|لبنان|بيروت|أردن|اردن|فلسطين|غزة|غزه|سودان|يمن|صنعاء|موريتاني|صومال'
+);
+
+// ---------------------------------------------------------------- filters
+
+const ARABIC = /[؀-ۿ]/;
+// letters used by Urdu / Persian but not by Arabic (keeps Pakistani / Iranian titles out of the Arab lists)
+const URDU_PERSIAN = /[ٹڈڑںھہےیکگپچژ]/;
+// Indic scripts, Tagalog/Filipino and South-Asian markers (for "Explore the World")
+const SOUTH_ASIA_SCRIPT = /[ऀ-෿]/; // Devanagari, Bengali, Gurmukhi, Gujarati, Oriya, Tamil, Telugu, Kannada, Malayalam, Sinhala
+const SOUTH_ASIA_WORDS =
+  /\b(hindi|bollywood|tamil|telugu|punjabi|bhojpuri|marathi|kannada|malayalam|bangla|bengali|urdu|desi|india|indian|pakistan|pakistani|lahore|karachi|mumbai|delhi|pinoy|filipino|filipina|tagalog|philippines|manila|ofw|kapuso|kapamilya)\b/i;
+// sexual / adult content (titles or channel names), several languages; Restricted Mode is the main filter
+const ADULT =
+  /\b(sex|sexy|porn|nsfw|nude|naked|erotic|onlyfans|18\+|xxx|hot girl|bikini try|lingerie|strip|секс|эрот|порно|섹시|노출|야한)\b|سكس|إباح|اباح|عاري|جنس|مثيرة?\s|بدون ملابس/i;
+
+export const isAdult = (it) => ADULT.test(`${it.title} ${it.sub}`);
+const RULES = {
+  world: (it) =>
+    !isAdult(it) &&
+    !ARABIC.test(it.title) &&
+    !SOUTH_ASIA_SCRIPT.test(`${it.title} ${it.sub}`) &&
+    !SOUTH_ASIA_WORDS.test(`${it.title} ${it.sub}`),
+  arab: (it) =>
+    !isAdult(it) &&
+    ARABIC.test(it.title) &&
+    !URDU_PERSIAN.test(it.title) &&
+    !SOUTH_ASIA_SCRIPT.test(it.title),
+  worldTrend: (it) => !isAdult(it),
+  // Saudi lists: Arabic; kept when it names Saudi places / clubs, dropped when it points to another country
+  saudi: (it) => {
+    if (!RULES.arab(it)) return false;
+    const t = `${it.title} ${it.sub}`;
+    return SAUDI_MARK.test(t) || (!GULF_OTHER.test(t) && !NON_GULF.test(t));
+  },
+  // Gulf lists: Arabic; kept when it names a Gulf country / place, dropped when it points outside the Gulf
+  gulf: (it) => {
+    if (!RULES.arab(it)) return false;
+    const t = `${it.title} ${it.sub}`;
+    return SAUDI_MARK.test(t) || GULF_OTHER.test(t) || !NON_GULF.test(t);
+  }
+};
+
+// ---------------------------------------------------------------- searching
+
+/** kind -> request overrides: region + language of the search, Restricted Mode always on */
+function regionOf(kind) {
+  if (kind === 'world') return { gl: 'US', hl: 'en', safe: true };
+  if (kind.startsWith('gl:'))
+    return { gl: kind.slice(3), hl: 'ar', safe: true };
+  return { gl: 'SA', hl: 'ar', safe: true };
+}
+
+async function search(kind, query, sp) {
+  try {
+    const j = await api('search', { query, params: sp }, regionOf(kind));
+    return extract(j, { noShorts: true }).items.filter(
+      (i) => i.type === 'video' && !i.live && !i.short
+    );
+  } catch (e) {
+    console.warn('[ytlg] search', query, e?.message);
+    return [];
+  }
+}
+
+/** Channels and videos that belong to the viewer (left out of Explore). */
+function personal() {
+  const ids = new Set();
+  const names = new Set();
+  const vids = new Set();
+  for (const c of favorites.list()) {
+    if (c.channelId) ids.add(c.channelId);
+    if (c.name) names.add(c.name);
+  }
+  for (const c of history.channels()) {
+    if (c.channelId) ids.add(c.channelId);
+    if (c.name) names.add(c.name);
+  }
+  for (const v of history.list()) vids.add(v.id);
+  return { ids, names, vids };
+}
+
+/**
+ * A date-windowed list: searches today's uploads, then this week's (older than a day), up to `windows`,
+ * keeping each batch inside its age window so the whole list stays newest -> oldest.
+ */
+async function feed({
+  kind,
+  queries,
+  perQuery,
+  sort,
+  perChannel,
+  rule,
+  excludePersonal,
+  windows = 2
+}) {
+  const pool_ = shuffle(queries.slice());
+  let qi = 0;
+  const seen = new Set();
+  const perCh = new Map();
+  const own = excludePersonal ? personal() : null;
+  const out = [];
+  for (const win of WINDOWS.slice(0, windows)) {
+    const take = [];
+    for (let k = 0; k < perQuery; k++) take.push(pool_[qi++ % pool_.length]);
+    const kinds = [].concat(kind);
+    const lists = await Promise.all(
+      take.map((q, k) => search(kinds[k % kinds.length], q, SP[sort][win.sp]))
+    );
+    const batch = [];
+    for (const it of lists.flat()) {
+      const age = itemAge(it);
+      if (age < win.min || age >= win.max || seen.has(it.id) || !rule(it))
+        continue;
+      if (
+        own &&
+        (own.vids.has(it.id) ||
+          own.ids.has(it.channelId) ||
+          own.names.has(it.sub))
+      )
+        continue;
+      const ch = it.channelId || it.sub;
+      const n = perCh.get(ch) || 0;
+      if (n >= perChannel) continue;
+      perCh.set(ch, n + 1);
+      seen.add(it.id);
+      batch.push({ ...it, age });
+    }
+    batch.sort((a, b) => a.age - b.age);
+    out.push(...batch);
+  }
+  return out;
+}
+
+/** Cached for 45 min (reopening a page sends no new searches); `fresh` skips the cache. */
+async function cachedList(name, make, fresh) {
+  if (!fresh) {
+    const hit = cached('list.' + name, 45 * 60e3);
+    if (hit) return hit.map((i) => ({ ...i, age: itemAge(i) }));
+  }
+  const items = await make();
+  if (items.length) cache('list.' + name, items);
+  return items;
+}
+
+export const LISTS = {
+  exploreWorld: {
+    title: 'استكشف العالم',
+    make: () =>
+      feed({
+        kind: 'world',
+        queries: WORLD_EXPLORE,
+        perQuery: 6,
+        sort: 'relevance',
+        perChannel: 1,
+        rule: RULES.world,
+        excludePersonal: true
+      })
+  },
+  exploreArab: {
+    title: 'استكشف العرب',
+    make: () =>
+      feed({
+        kind: 'arab',
+        queries: ARAB_EXPLORE,
+        perQuery: 6,
+        sort: 'relevance',
+        perChannel: 1,
+        rule: RULES.arab,
+        excludePersonal: true
+      })
+  },
+  exploreSaudi: {
+    title: 'استكشف السعودية',
+    make: () =>
+      feed({
+        kind: 'gl:SA',
+        queries: SAUDI_EXPLORE,
+        perQuery: 6,
+        sort: 'relevance',
+        perChannel: 1,
+        rule: RULES.saudi,
+        excludePersonal: true
+      })
+  },
+  exploreGulf: {
+    title: 'استكشف الخليج',
+    make: () =>
+      feed({
+        kind: GULF_SESSIONS,
+        queries: GULF_EXPLORE,
+        perQuery: 6,
+        sort: 'relevance',
+        perChannel: 1,
+        rule: RULES.gulf,
+        excludePersonal: true
+      })
+  },
+  trendWorld: {
+    title: 'تريند العالم',
+    make: () =>
+      feed({
+        kind: 'world',
+        queries: WORLD_TREND,
+        perQuery: 8,
+        sort: 'views',
+        perChannel: 2,
+        rule: RULES.worldTrend
+      })
+  },
+  trendArab: {
+    title: 'الترند العربي',
+    make: () =>
+      feed({
+        kind: 'arab',
+        queries: ARAB_TREND,
+        perQuery: 8,
+        sort: 'views',
+        perChannel: 2,
+        rule: RULES.arab
+      })
+  },
+  trendSaudi: {
+    title: 'الترند السعودي',
+    make: () =>
+      feed({
+        kind: 'gl:SA',
+        queries: SAUDI_TREND,
+        perQuery: 8,
+        sort: 'views',
+        perChannel: 2,
+        rule: RULES.saudi
+      })
+  },
+  trendGulf: {
+    title: 'ترند الخليج',
+    make: () =>
+      feed({
+        kind: GULF_SESSIONS,
+        queries: GULF_TREND,
+        perQuery: 8,
+        sort: 'views',
+        perChannel: 2,
+        rule: RULES.gulf
+      })
+  },
+  trendMusic: {
+    title: 'تريند الأغاني العالمي',
+    make: () =>
+      feed({
+        kind: 'world',
+        queries: MUSIC_TREND,
+        perQuery: 8,
+        sort: 'views',
+        perChannel: 2,
+        rule: RULES.worldTrend
+      })
+  }
+};
+
+export function list(name, fresh) {
+  return cachedList(name, LISTS[name].make, fresh);
+}
+
+// ---------------------------------------------------------------- favourites / new (exact times via RSS)
+
+/** Newest video of each channel, ONE list sorted by publish time across channels. */
+async function newestPerChannel(channels) {
+  const out = [];
+  await pool(channels, 6, async (c) => {
+    let vids = [];
+    try {
+      vids = await channelRss(c.channelId);
+    } catch {
+      /* feed down: skip this time */
+    }
+    const v = vids[0];
+    if (!v) return;
+    const age = itemAge(v);
+    out.push({
+      ...v,
+      sub: v.sub || c.name,
+      channelId: c.channelId,
+      age,
+      meta: relTime(age)
+    });
+  });
+  out.sort((a, b) => a.age - b.age);
+  return out;
+}
+
+/** المفضلة: the newest video of each hearted channel. */
+export const favoritesList = () => newestPerChannel(favorites.list());
+/** الجديد: the newest video of each channel you watched (last 25 channels). */
+export const newList = () => newestPerChannel(history.channels().slice(0, 25));
+
+// ---------------------------------------------------------------- music (newest song + newest album per singer)
+
+const ARAB_ARTISTS = [
+  'محمد عبده',
+  'عبدالمجيد عبدالله',
+  'راشد الماجد',
+  'رابح صقر',
+  'ماجد المهندس',
+  'حسين الجسمي',
+  'أصالة',
+  'أحلام',
+  'نوال الكويتية',
+  'بلقيس',
+  'داليا مبارك',
+  'عايض',
+  'فؤاد عبدالواحد',
+  'محمد عساف',
+  'عمرو دياب',
+  'تامر حسني',
+  'محمد حماقي',
+  'شيرين عبد الوهاب',
+  'أنغام',
+  'ويجز',
+  'مروان موسى',
+  'نانسي عجرم',
+  'إليسا',
+  'وائل كفوري',
+  'راغب علامة',
+  'ناصيف زيتون',
+  'كاظم الساهر',
+  'سعد لمجرد',
+  'حاتم عمور',
+  'الشاب خالد'
+];
+const WORLD_ARTISTS = [
+  'Taylor Swift',
+  'The Weeknd',
+  'Ed Sheeran',
+  'Billie Eilish',
+  'Dua Lipa',
+  'Bruno Mars',
+  'Ariana Grande',
+  'Justin Bieber',
+  'Drake',
+  'Rihanna',
+  'Beyoncé',
+  'Lady Gaga',
+  'Coldplay',
+  'Imagine Dragons',
+  'Maroon 5',
+  'Shakira',
+  'Bad Bunny',
+  'Karol G',
+  'Sabrina Carpenter',
+  'Olivia Rodrigo',
+  'Post Malone',
+  'Sia',
+  'Adele',
+  'Miley Cyrus',
+  'Harry Styles',
+  'Selena Gomez',
+  'Charlie Puth',
+  'Calvin Harris',
+  'David Guetta',
+  'BLACKPINK',
+  'Stray Kids',
+  'ROSÉ',
+  'Kendrick Lamar',
+  'SZA',
+  'Eminem',
+  'Doja Cat',
+  'Linkin Park',
+  'Katy Perry'
+];
+const NOT_SONG =
+  /شيل[ةه]|شيلات|نشيد|أنشودة|انشودة|إنشاد|اناشيد|أناشيد|قرآن|تلاوة|محاضرة|بودكاست|\b(podcast|interview|reaction|behind the scenes|tutorial|lesson|vlog)\b/i;
+const SP_CHANNEL = 'EgIQAg==';
+const SP_PLAYLIST = 'EgIQAw==';
+const norm = (s) =>
+  String(s || '')
+    .replace(/[أإآ]/g, 'ا')
+    .replace(/ة/g, 'ه')
+    .replace(/ى/g, 'ي')
+    .replace(/\s+|-|topic|توبيك/gi, '')
+    .toLowerCase();
+
+async function rawSearch(kind, query, sp) {
+  try {
+    return extract(await api('search', { query, params: sp }, regionOf(kind)), {
+      noShorts: true
+    }).items;
+  } catch {
+    return [];
+  }
+}
+
+async function resolveArtist(kind, name) {
+  const ids = read('artistIds', {});
+  const hit = ids[name];
+  if (hit && Date.now() - hit.at < 30 * 86400e3)
+    return hit.id ? { channelId: hit.id, name } : null;
+  const want = norm(name);
+  const ch = (await rawSearch(kind, name, SP_CHANNEL)).find(
+    (c) => c.type === 'channel' && norm(c.title).includes(want)
+  );
+  ids[name] = { id: ch?.id || '', at: Date.now() };
+  write('artistIds', ids);
+  return ch ? { channelId: ch.id, name } : null;
+}
+
+async function newestSong(c) {
+  const v = (await channelRss(c.channelId)).find(
+    (x) => !NOT_SONG.test(x.title) && !isAdult(x)
+  );
+  if (!v) return null;
+  const age = itemAge(v);
+  return age > 120 * DAY
+    ? null
+    : { ...v, sub: v.sub || c.name, age, meta: relTime(age) };
+}
+
+/** Newest official album (OLAK playlist, owner = the singer, 3+ tracks), date = newest track (RSS). 12 h cache. */
+async function newestAlbum(kind, c, word) {
+  const key = 'album.' + c.channelId;
+  const hit = cached(key, 12 * 3600e3);
+  if (hit !== null)
+    return (
+      hit && {
+        ...hit,
+        age: itemAge(hit),
+        meta: `ألبوم • ${relTime(itemAge(hit))}`
+      }
+    );
+  const cands = (await rawSearch(kind, `${c.name} ${word}`, SP_PLAYLIST))
+    .filter((p) => p.type === 'playlist' && /^OLAK5uy_/.test(p.id))
+    .slice(0, 4);
+  const want = norm(c.name);
+  let best = null;
+  for (const p of cands) {
+    let f;
+    try {
+      f = await rssFeed(`playlist_id=${p.id}`);
+    } catch {
+      continue;
+    }
+    if (f.entries.length < 3 || !norm(f.owner).includes(want)) continue;
+    const at = Math.max(...f.entries.map((e) => e.publishedAt));
+    if (!best || at > best.publishedAt)
+      best = {
+        type: 'playlist',
+        id: p.id,
+        title: p.title,
+        sub: c.name,
+        channelId: c.channelId,
+        publishedAt: at,
+        videoId: f.entries[0].id,
+        tracks: f.entries.length,
+        thumb: `https://i.ytimg.com/vi/${f.entries[0].id}/hqdefault.jpg`
+      };
+  }
+  cache(key, best || false);
+  if (!best) return null;
+  const age = itemAge(best);
+  return { ...best, age, meta: `ألبوم • ${relTime(age)}` };
+}
+
+const MUSIC = {
+  arab: { kind: 'arab', artists: ARAB_ARTISTS, word: 'ألبوم' },
+  world: { kind: 'world', artists: WORLD_ARTISTS, word: 'album' }
+};
+
+/** الموسيقى العربية / الأجنبية: newest song + newest album of each singer, one list newest first. */
+export function music(which, fresh) {
+  const cfg = MUSIC[which];
+  return cachedList(
+    'music.' + which,
+    async () => {
+      const singers = (
+        await pool(cfg.artists, 2, (n) => resolveArtist(cfg.kind, n))
+      ).filter(Boolean);
+      const [songs, albums] = await Promise.all([
+        pool(singers, 6, newestSong),
+        pool(singers, 2, (c) => newestAlbum(cfg.kind, c, cfg.word))
+      ]);
+      const out = [...songs, ...albums].filter(Boolean);
+      out.sort((a, b) => a.age - b.age);
+      return out;
+    },
+    fresh
+  );
+}

@@ -88,6 +88,17 @@ const configs = [
   },
 
   {
+    // our module (src/ytlg): Arabic / Indic Unicode ranges in regexes are intended, and some loops await on
+    // purpose (requests are paced one window / one album at a time)
+    files: ['src/ytlg/**/*.js'],
+    rules: {
+      'regexp/no-obscure-range': 'off',
+      'regexp/no-misleading-unicode-character': 'off',
+      'regexp/no-unused-capturing-group': 'off',
+      'no-await-in-loop': 'off'
+    }
+  },
+  {
     // `ignores` field must be in the very bottom config.
     ignores: ['dist/**/*', '**/*-polyfill.*', 'ci/**/*']
   }

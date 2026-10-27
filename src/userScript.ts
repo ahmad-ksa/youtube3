@@ -14,6 +14,9 @@ document.addEventListener(
 
 import './app_api/index';
 import './adblock.js';
+// our pages and features inside YouTube's TV interface. Loaded early: modules further down wait (top-level
+// await) for YouTube's app object, and our side-menu entries must be in place before the menu is built.
+import './ytlg/index.js';
 import './hooks/json-stringify';
 import './shorts.js';
 import './sponsorblock.js';
