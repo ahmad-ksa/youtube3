@@ -1,16 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <defs>
-    <linearGradient id="ring" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#ff4d4d"/>
-      <stop offset="1" stop-color="#c4001a"/>
-    </linearGradient>
-    <radialGradient id="face" cx="0.5" cy="0.42" r="0.6">
-      <stop offset="0" stop-color="#ffffff"/>
-      <stop offset="1" stop-color="#eeeeee"/>
-    </radialGradient>
-  </defs>
-  <circle cx="256" cy="256" r="252" fill="url(#ring)"/>
-  <circle cx="256" cy="256" r="236" fill="url(#face)"/>
-  <rect x="106" y="151" width="300" height="210" rx="58" fill="#ff0033"/>
-  <path d="M222 205 L312 256 L222 307 Z" fill="#ffffff" stroke="#ffffff" stroke-width="10" stroke-linejoin="round"/>
+  <path fill="#ee0000" d="M108 97 C190 92 322 92 404 97 C452 100 472 130 475 168 C480 228 480 284 475 344 C472 382 452 412 404 415 C322 420 190 420 108 415 C60 412 40 382 37 344 C32 284 32 228 37 168 C40 130 60 100 108 97 Z"/>
+  <circle cx="256" cy="256" r="121" fill="none" stroke="#ffffff" stroke-width="14"/>
+  <path fill="#ffffff" d="M214 189 L328 256 L214 323 Z"/>
 </svg>
