@@ -79,11 +79,22 @@ const say = (s) => {
   await p.goto('https://www.youtube.com/tv', { waitUntil: 'domcontentloaded' });
   await p.waitForTimeout(12000);
   await p.screenshot({ path: `${OUT}/1-start.png` });
-  // past the welcome screen ("البدء" / Get started) as a guest
-  for (let i = 0; i < 3; i++) {
-    await p.keyboard.press('Enter');
-    await p.waitForTimeout(4000);
+  // welcome screen: "البدء" (Get started), then the sign-in screen: walk down to "المشاهدة كضيف" (Watch as guest)
+  await p.keyboard.press('Enter');
+  await p.waitForTimeout(5000);
+  for (let i = 0; i < 6; i++) {
+    const txt = await p.evaluate(() =>
+      (
+        document.querySelector('[class*="focused"], :focus')?.textContent || ''
+      ).trim()
+    );
+    say(`focused: ${txt.slice(0, 60)}`);
+    if (/كضيف|guest/i.test(txt)) break;
+    await p.keyboard.press('ArrowDown');
+    await p.waitForTimeout(600);
   }
+  await p.keyboard.press('Enter');
+  await p.waitForTimeout(8000);
   await p.screenshot({ path: `${OUT}/2-after-welcome.png` });
   // side menu
   await p.keyboard.press('ArrowRight');

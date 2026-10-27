@@ -24,19 +24,19 @@ async function bodyOf(resource, init) {
   return null;
 }
 
-function remember(body, resource, init) {
+/** Remembers the TV app's context + identity headers from one of its requests; returns the parsed body. */
+function remember(body, hdrs) {
   try {
     const j = JSON.parse(body);
     if (j?.context?.client) {
       ctx = j.context;
-      const h = new Headers(
-        (resource instanceof Request && resource.headers) || init?.headers || {}
-      );
       const keep = {};
-      h.forEach((v, k) => {
+      const add = (v, k) => {
         if (/^x-(youtube|goog)-/i.test(k) && !/authuser|pageid/i.test(k))
           keep[k] = v;
-      });
+      };
+      if (hdrs instanceof Headers) hdrs.forEach(add);
+      else for (const k in hdrs || {}) add(hdrs[k], k);
       headers = keep;
       while (ctxWaiters.length) ctxWaiters.shift()(ctx);
     }
@@ -46,31 +46,87 @@ function remember(body, resource, init) {
   }
 }
 
-const json = (obj) =>
-  new Response(JSON.stringify(obj), {
-    status: 200,
-    headers: { 'Content-Type': 'application/json; charset=utf-8' }
-  });
+async function build(id, j) {
+  try {
+    return await pages.get(id)(j);
+  } catch (e) {
+    console.warn('[ytlg] page failed', id, e);
+    return errorPage(e?.message || String(e));
+  }
+}
 
-// Outermost fetch wrapper (installed after AdFree's FetchRegistry, so it runs first).
+const isOurPage = (url, j) =>
+  !!(j?.browseId && pages.has(j.browseId) && url.includes(API + 'browse'));
+
+// ---- fetch (outermost wrapper)
 const origFetch = window.fetch.bind(window);
 window.fetch = async (resource, init) => {
   const url = resource instanceof Request ? resource.url : String(resource);
   if (url.includes(API)) {
     const body = await bodyOf(resource, init);
-    const j = body ? remember(body, resource, init) : null;
-    const id = j?.browseId;
-    if (id && pages.has(id) && url.includes(API + 'browse')) {
-      try {
-        return json(await pages.get(id)(j));
-      } catch (e) {
-        console.warn('[ytlg] page failed', id, e);
-        return json(errorPage(e?.message || String(e)));
-      }
+    const j = body
+      ? remember(
+          body,
+          (resource instanceof Request && resource.headers) ||
+            init?.headers ||
+            {}
+        )
+      : null;
+    if (isOurPage(url, j)) {
+      return new Response(JSON.stringify(await build(j.browseId, j)), {
+        status: 200,
+        headers: { 'Content-Type': 'application/json; charset=utf-8' }
+      });
     }
   }
   return origFetch(resource, init);
 };
+
+// ---- XMLHttpRequest (what YouTube's TV app actually uses for InnerTube)
+const XHR = XMLHttpRequest.prototype;
+const xOpen = XHR.open;
+const xSend = XHR.send;
+const xHeader = XHR.setRequestHeader;
+XHR.open = function (method, url, ...rest) {
+  this.__ytlg = { url: String(url), headers: {} };
+  return xOpen.call(this, method, url, ...rest);
+};
+XHR.setRequestHeader = function (k, v) {
+  if (this.__ytlg) this.__ytlg.headers[k] = v;
+  return xHeader.call(this, k, v);
+};
+XHR.send = function (body) {
+  const m = this.__ytlg;
+  if (m && m.url.includes(API) && typeof body === 'string') {
+    const j = remember(body, m.headers);
+    if (isOurPage(m.url, j)) {
+      answerXhr(this, m.url, j);
+      return undefined;
+    }
+  }
+  return xSend.call(this, body);
+};
+
+/** Completes an XHR with our page instead of sending it (same events and fields a real response has). */
+function answerXhr(xhr, url, j) {
+  build(j.browseId, j).then((obj) => {
+    const text = JSON.stringify(obj);
+    const def = (k, v) =>
+      Object.defineProperty(xhr, k, { configurable: true, get: () => v });
+    def('readyState', 4);
+    def('status', 200);
+    def('statusText', 'OK');
+    def('responseURL', new URL(url, location.href).href);
+    def('responseText', text);
+    def('response', xhr.responseType === 'json' ? JSON.parse(text) : text);
+    xhr.getAllResponseHeaders = () =>
+      'content-type: application/json; charset=utf-8\r\n';
+    xhr.getResponseHeader = (n) =>
+      /^content-type$/i.test(n) ? 'application/json; charset=utf-8' : null;
+    for (const ev of ['readystatechange', 'load', 'loadend'])
+      xhr.dispatchEvent(new Event(ev));
+  });
+}
 
 /** The TV app's context (waits for its first request). */
 export function context() {

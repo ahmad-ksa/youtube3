@@ -143,6 +143,21 @@ const PAGE =
           })
         );
       out.fav = rowsOf(await page('FEytlg_fav'));
+      // the TV app itself uses XMLHttpRequest: same page through XHR
+      out.xhr = await new Promise((ok) => {
+        const x = new XMLHttpRequest();
+        x.open('POST', '/youtubei/v1/browse?prettyPrint=false');
+        x.setRequestHeader('Content-Type', 'application/json');
+        x.onreadystatechange = () => {
+          if (x.readyState === 4)
+            ok({
+              status: x.status,
+              rows: rowsOf(JSON.parse(x.responseText)).length,
+              via: 'onreadystatechange'
+            });
+        };
+        x.send(JSON.stringify({ context: ctx0, browseId: 'FEytlg_fav' }));
+      });
       const ex = await page('FEytlg_exploreArab');
       out.explore = rowsOf(ex).map((r) => ({
         title: r.title,
@@ -169,6 +184,7 @@ const PAGE =
   console.log('EXPLORE ARAB page:');
   for (const r of res.explore)
     console.log('  ' + r.title + ' (' + r.n + '): ' + r.first.join('  ->  '));
+  console.log('XHR page:', JSON.stringify(res.xhr));
   console.log('card long-press menu:', res.cardMenu.join(' | '));
   const s = sent[0] || {};
   console.log(
