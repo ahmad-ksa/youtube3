@@ -65,6 +65,10 @@ export function installPlayerButton(current, isFav) {
     if (Orig.__ytlg) return;
     const isClass = /^class[\s{]/.test(Function.prototype.toString.call(Orig));
     let method = null;
+<<<<<<< HEAD
+=======
+    let logged = false;
+>>>>>>> main
 
     function Wrapped(...args) {
       if (!(this instanceof Wrapped))
@@ -85,6 +89,15 @@ export function installPlayerButton(current, isFav) {
             const res = own.apply(this, a);
             try {
               if (Array.isArray(res) && !res.some((b) => b?.__ytlg)) {
+<<<<<<< HEAD
+=======
+                if (!logged) {
+                  logged = true;
+                  console.info(
+                    '[ytlg] ❤ added to the player bar (' + method + ')'
+                  );
+                }
+>>>>>>> main
                 const ch = current();
                 const on = !!(ch && isFav(ch.channelId));
                 res.push({
